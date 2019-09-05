@@ -18,6 +18,7 @@
     <tags>Flexberry ORM BigData ClickHouse</tags>
     <dependencies>
       <dependency id="NewPlatform.Flexberry.ORM" version="5.1.0-beta05" />
+      <dependency id="NewPlatform.Flexberry.ClickHouse.Ado" version="1.1.17-alpha01" />
     </dependencies>
   </metadata>
   <files>
