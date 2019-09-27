@@ -1,32 +1,43 @@
 ﻿namespace NewPlatform.Flexberry.ORM
 {
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Collections.Specialized;
     using System.Data;
     using System.Globalization;
     using System.Text;
+
     using ClickHouse.Ado;
+
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
-    using ICSSoft.STORMNET.KeyGen;
-    using ICSSoft.STORMNET.Business.Audit;
-    using ICSSoft.STORMNET.FunctionalLanguage;
-    using ICSSoft.STORMNET.FunctionalLanguage.SQLWhere;
+    using ICSSoft.STORMNET.Business.Audit.HelpStructures;
+    using ICSSoft.STORMNET.Business.Audit.Objects;
     using ICSSoft.STORMNET.Security;
     using STORMDO = ICSSoft.STORMNET;
-    using System.Collections;
-    using System.Collections.Generic;
-    using ICSSoft.STORMNET.Business.Audit.HelpStructures;
-    using System.Collections.Specialized;
 
     /// <summary>
     /// Flexberry ORM DataService for ClickHouse Storage.
     /// </summary>
     public class ClickHouseDataService : SQLDataService
     {
-
+        /// <summary>
+        /// Creates new instance of <see cref="ClickHouseDataService"/>.
+        /// </summary>
         public ClickHouseDataService():base()
         {
         }
+
+        /// <summary>
+        /// Перед выполнением обновления объектов в базе. После отработки бизнес-серверов.
+        /// </summary>
+        public event BeforeUpdateObjectsEventHandler BeforeUpdateObjects;
+
+        /// <summary>
+        /// После выполнения обновления объектов в базе.
+        /// </summary>
+        public event AfterUpdateObjectsEventHandler AfterUpdateObjects;
 
         /// <summary>
         /// 
@@ -41,7 +52,7 @@
             return cnn;
         }
 
-
+        /// <inheritdoc />
         public override string GetConvertToTypeExpression(Type valType, string value)
         {
             if (valType == typeof(Guid))
@@ -71,7 +82,7 @@
                 return "NULL";
             }
 
-            System.Type valType = value.GetType();
+            Type valType = value.GetType();
             if (valType == typeof(string))
             {
                 if ((string)value == string.Empty)
@@ -243,7 +254,6 @@
             var DeleteQueries = new StringCollection();
             var UpdateQueries = new StringCollection();
             var UpdateFirstQueries = new StringCollection();
-            var UpdateLastQueries = new StringCollection();
             var InsertQueries = new StringCollection();
 
             var DeleteTables = new StringCollection();
@@ -256,13 +266,11 @@
 
             var auditOperationInfoList = new List<AuditAdditionalInfo>();
             var extraProcessingList = new List<DataObject>();
-            GenerateQueriesForUpdateObjects(DeleteQueries, DeleteTables, UpdateQueries, UpdateFirstQueries, UpdateLastQueries, UpdateTables, InsertQueries, InsertTables, TableOperations, QueryOrder, true, AllQueriedObjects, DataObjectCache, extraProcessingList, objects);
+            GenerateQueriesForUpdateObjects(DeleteQueries, DeleteTables, UpdateQueries, UpdateFirstQueries, UpdateTables, InsertQueries, InsertTables, TableOperations, QueryOrder, true, AllQueriedObjects, DataObjectCache, extraProcessingList, objects);
 
             GenerateAuditForAggregators(AllQueriedObjects, DataObjectCache, ref extraProcessingList);
 
-            //lanin
-            //OnBeforeUpdateObjects(AllQueriedObjects);
-
+            OnBeforeUpdateObjects(AllQueriedObjects);
 
             // Сортируем объекты в порядке заданным графом связности.
             extraProcessingList.Sort((x, y) =>
@@ -305,22 +313,17 @@
                     /* Аудит проводится именно здесь, поскольку на этот момент все бизнес-сервера на объектах уже выполнились,
                      * объекты находятся именно в том состоянии, в каком должны были пойти в базу + в будущем можно транзакцию передать на исполнение
                      */
-                    
-                    //lanin
-                    //AuditOperation(extraProcessingList, auditOperationInfoList); // TODO: подумать, как записывать аудит до OnBeforeUpdateObjects, но уже потенциально с транзакцией
+                    AuditOperation(extraProcessingList, auditOperationInfoList); // TODO: подумать, как записывать аудит до OnBeforeUpdateObjects, но уже потенциально с транзакцией
                 }
 
                 conection.Open();
-                //IDbTransaction trans = null;
 
                 string query = string.Empty;
                 string prevQueries = string.Empty;
                 object subTask = null;
                 try
                 {
-                    //trans = CreateTransaction(conection);
                     IDbCommand command = conection.CreateCommand();
-                    //command.Transaction = trans;
 
                     #region прошли вглубь обрабатывая only Update||Insert
                     bool go = true;
@@ -334,9 +337,9 @@
 
                         var ops = (OperationType)TableOperations[table];
 
-                        if ((ops & OperationType.Delete) != OperationType.Delete && UpdateLastQueries.Count == 0)
+                        if ((ops & OperationType.Delete) != OperationType.Delete)
                         {
-                            // Смотрим есть ли Инсерты
+                            // Смотрим есть ли Инсерты.
                             if ((ops & OperationType.Insert) == OperationType.Insert)
                             {
                                 if (
@@ -353,7 +356,7 @@
                                 }
                             }
 
-                            // Смотрим есть ли Update
+                            // Смотрим есть ли Update.
                             if (go && ((ops & OperationType.Update) == OperationType.Update))
                             {
                                 if ((ex = RunCommands(UpdateQueries, UpdateTables, table, command, id, AlwaysThrowException)) == null)
@@ -394,7 +397,7 @@
                             {
                                 var ops = (OperationType)TableOperations[table];
 
-                                if (ops == OperationType.Update && UpdateLastQueries.Count == 0)
+                                if (ops == OperationType.Update)
                                 {
                                     if (
                                         (ex = RunCommands(UpdateQueries, UpdateTables, table, command, id, AlwaysThrowException)) == null)
@@ -446,7 +449,7 @@
                         }
                     }
 
-                    // А теперь опять с начала
+                    // А теперь опять с начала.
                     foreach (string table in QueryOrder)
                     {
                         if ((ex = RunCommands(InsertQueries, InsertTables, table, command, id, AlwaysThrowException)) != null)
@@ -460,41 +463,20 @@
                         }
                     }
 
-                    foreach (string table in QueryOrder)
-                    {
-                        if ((ex = RunCommands(UpdateLastQueries, UpdateTables, table, command, id, AlwaysThrowException)) != null)
-                        {
-                            throw ex;
-                        }
-                    }
-
                     if (AuditService.IsAuditEnabled && auditOperationInfoList.Count > 0)
                     { // Нужно зафиксировать операции аудита (то есть сообщить, что всё было корректно выполнено и запомнить время)
-                        //lanin
-                        //AuditService.RatifyAuditOperationWithAutoFields(
-                        //    tExecutionVariant.Executed,
-                        //    AuditAdditionalInfo.SetNewFieldValuesForList(trans, this, auditOperationInfoList),
-                        //    this,
-                        //    true);
+                        AuditService.RatifyAuditOperationWithAutoFields(
+                            tExecutionVariant.Executed,
+                            AuditAdditionalInfo.SetNewFieldValuesForList(null, this, auditOperationInfoList),
+                            this,
+                            true);
                     }
-
-                    //if (trans != null)
-                    //{
-                    //    trans.Commit();
-                    //}
                 }
                 catch (Exception excpt)
                 {
-                    //if (trans != null)
-                    //{
-                    //    trans.Rollback();
-                    //}
-
                     if (AuditService.IsAuditEnabled && auditOperationInfoList.Count > 0)
                     { // Нужно зафиксировать операции аудита (то есть сообщить, что всё было откачено)
-
-                        //lanin
-                        //AuditService.RatifyAuditOperationWithAutoFields(tExecutionVariant.Failed, auditOperationInfoList, this, false);
+                        AuditService.RatifyAuditOperationWithAutoFields(tExecutionVariant.Failed, auditOperationInfoList, this, false);
                     }
 
                     conection.Close();
@@ -530,11 +512,69 @@
                 BusinessTaskMonitor.EndTask(id);
             }
 
-            //if (AfterUpdateObjects != null)
-            //{
-            //    AfterUpdateObjects(this, new DataObjectsEventArgs(objects));
-            //}
+            AfterUpdateObjects?.Invoke(this, new DataObjectsEventArgs(objects));
         }
 
+        private void OnBeforeUpdateObjects(ArrayList allQueriedObjects)
+        {
+            if (BeforeUpdateObjects == null)
+            {
+                return;
+            }
+
+            var changedObjects = new List<DataObject>(allQueriedObjects.Count);
+
+            foreach (var obj in allQueriedObjects)
+            {
+                changedObjects.Add(obj as DataObject);
+            }
+
+            BeforeUpdateObjects(this, new DataObjectsEventArgs(changedObjects.ToArray()));
+        }
+
+        /// <summary>
+        /// Провести аудит операции для одного объекта.
+        /// </summary>
+        /// <param name="dobject"> Объект, аудит которого нужно провести. </param>
+        /// <param name="auditOperationInfoList"> Список id записей аудита. </param>
+        /// <param name="transaction">
+        /// Транзакция, через которую необходимо проводить выполнение зачиток из БД приложения аудиту
+        /// (при работе AuditService иногда необходимо дочитать объект или получить сохранённую копию,
+        /// а выполнение данного действия без транзакции может привести к взаимоблокировке).
+        /// </param>
+        private void AuditOperation(DataObject dobject, ICollection<AuditAdditionalInfo> auditOperationInfoList, IDbTransaction transaction)
+        {
+            if (dobject != null && AuditService.IsAuditEnabled)
+            {
+                AuditAdditionalInfo auditAdditionalInfo =
+                            AuditService.WriteCommonAuditOperationWithAutoFields(dobject, this, true, transaction); // Если что, то исключение будет проброшено
+                if (auditAdditionalInfo != null && auditAdditionalInfo.AuditRecordPrimaryKey != Guid.Empty)
+                {
+                    auditOperationInfoList.Add(auditAdditionalInfo);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Провести аудит операции для нескольких объектов.
+        /// </summary>
+        /// <param name="dobjects"> Объект, аудит которого нужно провести. </param>
+        /// <param name="auditOperationInfoList"> Список id записей аудита. </param>
+        /// <param name="transaction">
+        /// Транзакция, через которую необходимо проводить выполнение зачиток из БД приложения аудиту
+        /// (при работе AuditService иногда необходимо дочитать объект или получить сохранённую копию,
+        /// а выполнение данного действия без транзакции может привести к взаимоблокировке).
+        /// По умолчанию - null.
+        /// </param>
+        private void AuditOperation(IEnumerable<DataObject> dobjects, ICollection<AuditAdditionalInfo> auditOperationInfoList, IDbTransaction transaction = null)
+        {
+            if (dobjects != null)
+            {
+                foreach (var dobject in dobjects)
+                {
+                    AuditOperation(dobject, auditOperationInfoList, transaction);
+                }
+            }
+        }
     }
 }
