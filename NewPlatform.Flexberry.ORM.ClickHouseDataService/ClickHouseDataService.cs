@@ -219,6 +219,55 @@
         }
 
         /// <summary>
+        /// Вычитка следующей порции данных
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="loadingBufferSize"></param>
+        /// <returns></returns>
+        public override object[][] ReadNext(ref object state, int loadingBufferSize)
+        {
+            if (state == null || !state.GetType().IsArray)
+            {
+                return null;
+            }
+
+            IDataReader reader = (IDataReader)((object[])state)[1];
+
+            object[][] result = null;
+            var arl = new ArrayList();
+            int i = 1;
+            int fieldCount = reader.FieldCount;
+            while (reader.RecordsAffected > 0 && (i <= loadingBufferSize || loadingBufferSize == 0))
+            {
+                while (reader.Read())
+                {
+                    object[] tmp = new object[fieldCount];
+                    reader.GetValues(tmp);
+                    arl.Add(tmp);
+                    i++;
+                }
+                reader.NextResult();
+            }
+
+            if (arl.Count > 0)
+            {
+                result = (object[][])arl.ToArray(typeof(object[]));
+            }
+
+            if (i <= loadingBufferSize || loadingBufferSize == 0)
+            {
+                reader.Close();
+                IDbConnection connection = (IDbConnection)((object[])state)[0];
+                connection.Close();
+                state = null;
+            }
+
+            return result;
+        }
+
+
+
+        /// <summary>
         /// Обновить хранилище по объектам (есть параметр, указывающий, всегда ли необходимо взводить ошибку
         /// и откатывать транзакцию при неудачном запросе в базу данных). Если
         /// он true, всегда взводится ошибка. Иначе, выполнение продолжается.
