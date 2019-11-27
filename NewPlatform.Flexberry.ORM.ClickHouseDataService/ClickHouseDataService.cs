@@ -100,7 +100,7 @@
 
             if (valType == typeof(DateTime))
             {
-                return "'" + ((DateTime)value).ToString(System.Globalization.DateTimeFormatInfo.InvariantInfo) + "." + ((DateTime)value).ToString("fff") + "'";
+                return "'" + ((DateTime)value).ToString("yyyy-MM-dd HH:mm:ss") + "'";
             }
 
             if (valType == typeof(TimeSpan))
