@@ -623,5 +623,26 @@
                 }
             }
         }
+
+        public override void GenerateSQLRowNumber(LoadingCustomizationStruct customizationStruct, ref string resQuery, string orderByExpr)
+        {
+            string nl = Environment.NewLine;
+            if (customizationStruct.RowNumber != null)
+            {
+                int fromInd = resQuery.IndexOf("FROM (");
+                string селектСамогоВерхнегоУр = resQuery.Substring(0, fromInd);
+
+                if (!string.IsNullOrEmpty(orderByExpr))
+                {
+                    resQuery = resQuery.Replace(orderByExpr, string.Empty);
+                }
+                    resQuery = resQuery.Insert(fromInd, "," + nl + "rowNumberInAllBlocks() as \"RowNumber\"" + nl);
+
+                int startRow = customizationStruct.RowNumber.StartRow - 1;
+                int endRow = customizationStruct.RowNumber.EndRow - 1;
+                resQuery = селектСамогоВерхнегоУр + nl + "FROM (" + nl + resQuery + ") rn" + nl + "where \"RowNumber\" between " + startRow.ToString() + " and " + endRow.ToString() + nl +
+                    orderByExpr;
+            }
+        }
     }
 }
