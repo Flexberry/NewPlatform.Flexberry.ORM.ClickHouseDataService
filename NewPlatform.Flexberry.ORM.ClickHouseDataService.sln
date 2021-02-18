@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewPlatform.Flexberry.ORM.ClickHouseDataService", "NewPlatform.Flexberry.ORM.ClickHouseDataService\NewPlatform.Flexberry.ORM.ClickHouseDataService.csproj", "{98F968BE-A11A-4733-AC65-D89425486C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewPlatform.Flexberry.ORM.ClickHouseDataService", "NewPlatform.Flexberry.ORM.ClickHouseDataService\NewPlatform.Flexberry.ORM.ClickHouseDataService.csproj", "{98F968BE-A11A-4733-AC65-D89425486C68}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Open Source", "Open Source", "{F1839B86-9688-44B1-87B3-F348BB0DF0DC}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		.travis.yml = .travis.yml
+		.github\workflows\build.yml = .github\workflows\build.yml
 		CHANGELOG.md = CHANGELOG.md
 		LICENSE.md = LICENSE.md
 		NewPlatform.Flexberry.ORM.ClickHouseDataService.nuspec = NewPlatform.Flexberry.ORM.ClickHouseDataService.nuspec
@@ -30,7 +30,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A6315904-5D95-4F3A-B470-6E5A99405502}
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+		SolutionGuid = {A6315904-5D95-4F3A-B470-6E5A99405502}
 	EndGlobalSection
 EndGlobal
