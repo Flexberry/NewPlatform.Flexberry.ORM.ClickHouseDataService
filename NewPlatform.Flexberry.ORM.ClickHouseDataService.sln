@@ -11,7 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Open Source", "Open Source"
 		.github\workflows\build.yml = .github\workflows\build.yml
 		CHANGELOG.md = CHANGELOG.md
 		LICENSE.md = LICENSE.md
-		NewPlatform.Flexberry.ORM.ClickHouseDataService.nuspec = NewPlatform.Flexberry.ORM.ClickHouseDataService.nuspec
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -30,7 +29,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 		SolutionGuid = {A6315904-5D95-4F3A-B470-6E5A99405502}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal
