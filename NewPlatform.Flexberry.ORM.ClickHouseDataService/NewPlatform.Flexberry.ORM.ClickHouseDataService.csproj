@@ -7,7 +7,7 @@
     <Copyright>Copyright New Platform Ltd 2021</Copyright>
     <Company>New Platform Ltd</Company>
     <PackageTags>Flexberry ORM BigData ClickHouse</PackageTags>
-    <VersionPrefix>6.0.0-alpha01</VersionPrefix>
+    <VersionPrefix>6.0.0-alpha02</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <Product>Flexberry PLATFORM</Product>
     <PackageId>NewPlatform.Flexberry.ORM.ClickHouseDataService</PackageId>

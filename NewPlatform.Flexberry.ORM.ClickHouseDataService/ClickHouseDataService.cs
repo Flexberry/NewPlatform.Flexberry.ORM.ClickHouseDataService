@@ -38,6 +38,12 @@
         public event AfterUpdateObjectsEventHandler AfterUpdateObjects;
 
         /// <inheritdoc />
+        protected override IDbTransaction CreateTransaction(IDbConnection connection)
+        {
+            return new FakeDbTransaction() { Connection = connection };
+        }
+
+        /// <inheritdoc />
         public override IDbConnection GetConnection()
         {
             var settings = new ClickHouseConnectionSettings(CustomizationString);
@@ -280,7 +286,7 @@
                 CustomizationString = string.IsNullOrEmpty(cs) ? CustomizationString : cs;
             }
 
-            using (DbTransactionWrapper dbTransactionWrapper = new DbTransactionWrapper(this))
+            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(GetConnection()))
             {
                 try
                 {
