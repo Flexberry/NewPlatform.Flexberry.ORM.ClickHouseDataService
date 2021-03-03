@@ -90,7 +90,11 @@
                     return "NULL";
                 }
 
-                return "'" + value.ToString().Replace("'", "''") + "'";
+                string returnedString = "'" + value.ToString().Replace("'", "''") + "'";
+                returnedString = returnedString.Replace("\\", "/");
+                returnedString = returnedString.Replace("\"", string.Empty);
+
+                return returnedString;
             }
 
             if (value is char)
