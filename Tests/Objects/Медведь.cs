@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -27,8 +27,8 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     // *** Start programmer edit section *** (Медведь CustomAttributes)
 
     // *** End programmer edit section *** (Медведь CustomAttributes)
-    [BusinessServer("NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.МедведьБС, Flexberry.ORM.Cl" +
-        "ickHouseDataService.Tests.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAnyEvent)]
+    [BusinessServer("NewPlatform.ClickHouseDataService.Tests.МедведьБС, ClickHouseDataService.Tests.Bu" +
+        "sinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAnyEvent)]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("LoadTestView", new string[] {
@@ -91,19 +91,19 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fЦветГлаз;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пол fПол;
+        private NewPlatform.ClickHouseDataService.Tests.Пол fПол;
         
         private ICSSoft.STORMNET.UserDataTypes.NullableDateTime fДатаРождения;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь fПапа;
+        private NewPlatform.ClickHouseDataService.Tests.Медведь fПапа;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес fЛесОбитания;
+        private NewPlatform.ClickHouseDataService.Tests.Лес fЛесОбитания;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь fДруг;
+        private NewPlatform.ClickHouseDataService.Tests.Медведь fДруг;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь fМама;
+        private NewPlatform.ClickHouseDataService.Tests.Медведь fМама;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfБерлога fБерлога;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfБерлога fБерлога;
         
         // *** Start programmer edit section *** (Медведь CustomMembers)
 
@@ -210,14 +210,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Медведь.Пол CustomAttributes)
 
         // *** End programmer edit section *** (Медведь.Пол CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пол Пол
+        public virtual NewPlatform.ClickHouseDataService.Tests.Пол Пол
         {
             get
             {
                 // *** Start programmer edit section *** (Медведь.Пол Get start)
 
                 // *** End programmer edit section *** (Медведь.Пол Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пол result = this.fПол;
+                NewPlatform.ClickHouseDataService.Tests.Пол result = this.fПол;
                 // *** Start programmer edit section *** (Медведь.Пол Get end)
 
                 // *** End programmer edit section *** (Медведь.Пол Get end)
@@ -274,7 +274,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Медведь.МедведьСтрокой CustomAttributes)
         [ICSSoft.STORMNET.NotStored()]
         [StrLen(255)]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.MSSQLDataService), "\'ПорядковыйНомер:\' + @ПорядковыйНомер@ + \", Цвет глаз мамы:\" + isnull(@Мама.ЦветГ" +
+        [DataServiceExpression(typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService), "\'ПорядковыйНомер:\' + @ПорядковыйНомер@ + \", Цвет глаз мамы:\" + isnull(@Мама.ЦветГ" +
             "лаз@,\'\')")]
         public virtual string МедведьСтрокой
         {
@@ -300,7 +300,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Медведь.ВычислимоеПоле CustomAttributes)
         [ICSSoft.STORMNET.NotStored()]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.MSSQLDataService), "@ПорядковыйНомер@ + @Вес@")]
+        [DataServiceExpression(typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService), "@ПорядковыйНомер@ + @Вес@")]
         public virtual int ВычислимоеПоле
         {
             get
@@ -326,14 +326,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Медведь.Папа CustomAttributes)
         [PropertyStorage(new string[] {
                 "Папа"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь Папа
+        public virtual NewPlatform.ClickHouseDataService.Tests.Медведь Папа
         {
             get
             {
                 // *** Start programmer edit section *** (Медведь.Папа Get start)
 
                 // *** End programmer edit section *** (Медведь.Папа Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь result = this.fПапа;
+                NewPlatform.ClickHouseDataService.Tests.Медведь result = this.fПапа;
                 // *** Start programmer edit section *** (Медведь.Папа Get end)
 
                 // *** End programmer edit section *** (Медведь.Папа Get end)
@@ -359,14 +359,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Медведь.ЛесОбитания CustomAttributes)
         [PropertyStorage(new string[] {
                 "ЛесОбитания"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес ЛесОбитания
+        public virtual NewPlatform.ClickHouseDataService.Tests.Лес ЛесОбитания
         {
             get
             {
                 // *** Start programmer edit section *** (Медведь.ЛесОбитания Get start)
 
                 // *** End programmer edit section *** (Медведь.ЛесОбитания Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес result = this.fЛесОбитания;
+                NewPlatform.ClickHouseDataService.Tests.Лес result = this.fЛесОбитания;
                 // *** Start programmer edit section *** (Медведь.ЛесОбитания Get end)
 
                 // *** End programmer edit section *** (Медведь.ЛесОбитания Get end)
@@ -390,14 +390,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Медведь.Друг CustomAttributes)
 
         // *** End programmer edit section *** (Медведь.Друг CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь Друг
+        public virtual NewPlatform.ClickHouseDataService.Tests.Медведь Друг
         {
             get
             {
                 // *** Start programmer edit section *** (Медведь.Друг Get start)
 
                 // *** End programmer edit section *** (Медведь.Друг Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь result = this.fДруг;
+                NewPlatform.ClickHouseDataService.Tests.Медведь result = this.fДруг;
                 // *** Start programmer edit section *** (Медведь.Друг Get end)
 
                 // *** End programmer edit section *** (Медведь.Друг Get end)
@@ -423,14 +423,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Медведь.Мама CustomAttributes)
         [PropertyStorage(new string[] {
                 "Мама"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь Мама
+        public virtual NewPlatform.ClickHouseDataService.Tests.Медведь Мама
         {
             get
             {
                 // *** Start programmer edit section *** (Медведь.Мама Get start)
 
                 // *** End programmer edit section *** (Медведь.Мама Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь result = this.fМама;
+                NewPlatform.ClickHouseDataService.Tests.Медведь result = this.fМама;
                 // *** Start programmer edit section *** (Медведь.Мама Get end)
 
                 // *** End programmer edit section *** (Медведь.Мама Get end)
@@ -454,7 +454,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Медведь.Берлога CustomAttributes)
 
         // *** End programmer edit section *** (Медведь.Берлога CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfБерлога Берлога
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfБерлога Берлога
         {
             get
             {
@@ -463,9 +463,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Медведь.Берлога Get start)
                 if ((this.fБерлога == null))
                 {
-                    this.fБерлога = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfБерлога(this);
+                    this.fБерлога = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfБерлога(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfБерлога result = this.fБерлога;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfБерлога result = this.fБерлога;
                 // *** Start programmer edit section *** (Медведь.Берлога Get end)
 
                 // *** End programmer edit section *** (Медведь.Берлога Get end)
@@ -496,7 +496,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("LoadTestView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь));
+                    return ICSSoft.STORMNET.Information.GetView("LoadTestView", typeof(NewPlatform.ClickHouseDataService.Tests.Медведь));
                 }
             }
             
@@ -507,7 +507,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("OrderNumberTest", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь));
+                    return ICSSoft.STORMNET.Information.GetView("OrderNumberTest", typeof(NewPlatform.ClickHouseDataService.Tests.Медведь));
                 }
             }
             
@@ -518,7 +518,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("МедведьE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь));
+                    return ICSSoft.STORMNET.Information.GetView("МедведьE", typeof(NewPlatform.ClickHouseDataService.Tests.Медведь));
                 }
             }
             
@@ -529,7 +529,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("МедведьL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь));
+                    return ICSSoft.STORMNET.Information.GetView("МедведьL", typeof(NewPlatform.ClickHouseDataService.Tests.Медведь));
                 }
             }
             
@@ -540,7 +540,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("МедведьShort", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь));
+                    return ICSSoft.STORMNET.Information.GetView("МедведьShort", typeof(NewPlatform.ClickHouseDataService.Tests.Медведь));
                 }
             }
             
@@ -551,7 +551,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("МедведьСДелейломИВычислимымСвойством", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь));
+                    return ICSSoft.STORMNET.Information.GetView("МедведьСДелейломИВычислимымСвойством", typeof(NewPlatform.ClickHouseDataService.Tests.Медведь));
                 }
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -86,13 +86,13 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private System.Nullable<System.Guid> fPoleNullGuid;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum fPoleEnum;
+        private NewPlatform.ClickHouseDataService.Tests.PoleEnum fPoleEnum;
         
         private char fPoleChar;
         
         private System.Nullable<System.Char> fPoleNullChar;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator fFullTypesMainAgregator;
+        private NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator fFullTypesMainAgregator;
         
         // *** Start programmer edit section *** (FullTypesDetail2 CustomMembers)
 
@@ -633,14 +633,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (FullTypesDetail2.PoleEnum CustomAttributes)
 
         // *** End programmer edit section *** (FullTypesDetail2.PoleEnum CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum PoleEnum
+        public virtual NewPlatform.ClickHouseDataService.Tests.PoleEnum PoleEnum
         {
             get
             {
                 // *** Start programmer edit section *** (FullTypesDetail2.PoleEnum Get start)
 
                 // *** End programmer edit section *** (FullTypesDetail2.PoleEnum Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum result = this.fPoleEnum;
+                NewPlatform.ClickHouseDataService.Tests.PoleEnum result = this.fPoleEnum;
                 // *** Start programmer edit section *** (FullTypesDetail2.PoleEnum Get end)
 
                 // *** End programmer edit section *** (FullTypesDetail2.PoleEnum Get end)
@@ -721,7 +721,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator.
         /// </summary>
         // *** Start programmer edit section *** (FullTypesDetail2.FullTypesMainAgregator CustomAttributes)
 
@@ -730,14 +730,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "FullTypesMainAgregator"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator FullTypesMainAgregator
+        public virtual NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator FullTypesMainAgregator
         {
             get
             {
                 // *** Start programmer edit section *** (FullTypesDetail2.FullTypesMainAgregator Get start)
 
                 // *** End programmer edit section *** (FullTypesDetail2.FullTypesMainAgregator Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator result = this.fFullTypesMainAgregator;
+                NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator result = this.fFullTypesMainAgregator;
                 // *** Start programmer edit section *** (FullTypesDetail2.FullTypesMainAgregator Get end)
 
                 // *** End programmer edit section *** (FullTypesDetail2.FullTypesMainAgregator Get end)
@@ -768,7 +768,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("FullTypesDetail2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesDetail2));
+                    return ICSSoft.STORMNET.Information.GetView("FullTypesDetail2E", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesDetail2));
                 }
             }
         }
@@ -783,9 +783,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfFullTypesDetail2 : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 members)
 
         
         /// <summary>
@@ -797,20 +797,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type FullTypesDetail2.
         /// </summary>
-        public DetailArrayOfFullTypesDetail2(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator fFullTypesMainAgregator) : 
+        public DetailArrayOfFullTypesDetail2(NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator fFullTypesMainAgregator) : 
                 base(typeof(FullTypesDetail2), ((ICSSoft.STORMNET.DataObject)(fFullTypesMainAgregator)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesDetail2 this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.FullTypesDetail2 this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesDetail2)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.FullTypesDetail2)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesDetail2 dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.FullTypesDetail2 dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

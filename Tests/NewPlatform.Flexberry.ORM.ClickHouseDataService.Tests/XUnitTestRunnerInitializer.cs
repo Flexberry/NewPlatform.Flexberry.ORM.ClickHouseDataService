@@ -1,6 +1,6 @@
-﻿[assembly: Xunit.TestFramework("NewPlatform.Flexberry.LogService.Tests.XUnitTestRunnerInitializer", "NewPlatform.Flexberry.LogService.Tests")]
+﻿[assembly: Xunit.TestFramework("NewPlatform.ClickHouseDataService.Tests.XUnitTestRunnerInitializer", "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests")]
 
-namespace NewPlatform.Flexberry.LogService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
 #if NETCORE
     using System.Configuration;

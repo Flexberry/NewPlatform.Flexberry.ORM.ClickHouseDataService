@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -36,12 +36,12 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     [View("Cabbage2L", new string[] {
             "Type as \'Type\'",
             "Name as \'Name\'"})]
-    public class Cabbage2 : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2
+    public class Cabbage2 : NewPlatform.ClickHouseDataService.Tests.Plant2
     {
         
         private string fType;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2 fCabbageParts;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2 fCabbageParts;
         
         // *** Start programmer edit section *** (Cabbage2 CustomMembers)
 
@@ -86,7 +86,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Cabbage2.CabbageParts CustomAttributes)
 
         // *** End programmer edit section *** (Cabbage2.CabbageParts CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2 CabbageParts
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2 CabbageParts
         {
             get
             {
@@ -95,9 +95,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Cabbage2.CabbageParts Get start)
                 if ((this.fCabbageParts == null))
                 {
-                    this.fCabbageParts = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2(this);
+                    this.fCabbageParts = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2 result = this.fCabbageParts;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCabbagePart2 result = this.fCabbageParts;
                 // *** Start programmer edit section *** (Cabbage2.CabbageParts Get end)
 
                 // *** End programmer edit section *** (Cabbage2.CabbageParts Get end)
@@ -128,7 +128,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Cabbage2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2));
+                    return ICSSoft.STORMNET.Information.GetView("Cabbage2E", typeof(NewPlatform.ClickHouseDataService.Tests.Cabbage2));
                 }
             }
             
@@ -139,7 +139,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Cabbage2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2));
+                    return ICSSoft.STORMNET.Information.GetView("Cabbage2L", typeof(NewPlatform.ClickHouseDataService.Tests.Cabbage2));
                 }
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -87,7 +87,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Plant2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2));
+                    return ICSSoft.STORMNET.Information.GetView("Plant2E", typeof(NewPlatform.ClickHouseDataService.Tests.Plant2));
                 }
             }
             
@@ -98,7 +98,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Plant2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2));
+                    return ICSSoft.STORMNET.Information.GetView("Plant2L", typeof(NewPlatform.ClickHouseDataService.Tests.Plant2));
                 }
             }
         }

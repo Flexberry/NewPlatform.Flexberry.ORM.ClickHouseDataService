@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -40,7 +40,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private int fHomeNumber;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 fCountry;
+        private NewPlatform.ClickHouseDataService.Tests.Country2 fCountry;
         
         // *** Start programmer edit section *** (Adress2 CustomMembers)
 
@@ -85,14 +85,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Adress2.Country CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 Country
+        public virtual NewPlatform.ClickHouseDataService.Tests.Country2 Country
         {
             get
             {
                 // *** Start programmer edit section *** (Adress2.Country Get start)
 
                 // *** End programmer edit section *** (Adress2.Country Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 result = this.fCountry;
+                NewPlatform.ClickHouseDataService.Tests.Country2 result = this.fCountry;
                 // *** Start programmer edit section *** (Adress2.Country Get end)
 
                 // *** End programmer edit section *** (Adress2.Country Get end)
@@ -123,7 +123,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Adress2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Adress2));
+                    return ICSSoft.STORMNET.Information.GetView("Adress2E", typeof(NewPlatform.ClickHouseDataService.Tests.Adress2));
                 }
             }
             
@@ -134,7 +134,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Adress2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Adress2));
+                    return ICSSoft.STORMNET.Information.GetView("Adress2L", typeof(NewPlatform.ClickHouseDataService.Tests.Adress2));
                 }
             }
         }

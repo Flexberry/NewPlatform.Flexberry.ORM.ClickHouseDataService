@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -33,7 +33,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fStringPropertyForInformationTestClass4;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass3 fMasterOfInformationTestClass3;
+        private NewPlatform.ClickHouseDataService.Tests.InformationTestClass3 fMasterOfInformationTestClass3;
         
         // *** Start programmer edit section *** (InformationTestClass4 CustomMembers)
 
@@ -82,14 +82,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "MasterOfInformationTestClass3"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass3 MasterOfInformationTestClass3
+        public virtual NewPlatform.ClickHouseDataService.Tests.InformationTestClass3 MasterOfInformationTestClass3
         {
             get
             {
                 // *** Start programmer edit section *** (InformationTestClass4.MasterOfInformationTestClass3 Get start)
 
                 // *** End programmer edit section *** (InformationTestClass4.MasterOfInformationTestClass3 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass3 result = this.fMasterOfInformationTestClass3;
+                NewPlatform.ClickHouseDataService.Tests.InformationTestClass3 result = this.fMasterOfInformationTestClass3;
                 // *** Start programmer edit section *** (InformationTestClass4.MasterOfInformationTestClass3 Get end)
 
                 // *** End programmer edit section *** (InformationTestClass4.MasterOfInformationTestClass3 Get end)

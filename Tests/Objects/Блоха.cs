@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -33,7 +33,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fКличка;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь fМедведьОбитания;
+        private NewPlatform.ClickHouseDataService.Tests.Медведь fМедведьОбитания;
         
         // *** Start programmer edit section *** (Блоха CustomMembers)
 
@@ -80,14 +80,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Блоха.МедведьОбитания CustomAttributes)
         [PropertyStorage(new string[] {
                 "МедведьОбитания"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь МедведьОбитания
+        public virtual NewPlatform.ClickHouseDataService.Tests.Медведь МедведьОбитания
         {
             get
             {
                 // *** Start programmer edit section *** (Блоха.МедведьОбитания Get start)
 
                 // *** End programmer edit section *** (Блоха.МедведьОбитания Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь result = this.fМедведьОбитания;
+                NewPlatform.ClickHouseDataService.Tests.Медведь result = this.fМедведьОбитания;
                 // *** Start programmer edit section *** (Блоха.МедведьОбитания Get end)
 
                 // *** End programmer edit section *** (Блоха.МедведьОбитания Get end)

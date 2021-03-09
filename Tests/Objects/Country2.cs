@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -38,12 +38,12 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             "CountryName as \'Country name\'",
             "XCoordinate as \'X coordinate\'",
             "YCoordinate as \'Y coordinate\'"})]
-    public class Country2 : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2
+    public class Country2 : NewPlatform.ClickHouseDataService.Tests.Territory2
     {
         
         private string fCountryName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfRegion fRegion;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfRegion fRegion;
         
         // *** Start programmer edit section *** (Country2 CustomMembers)
 
@@ -88,7 +88,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Country2.Region CustomAttributes)
 
         // *** End programmer edit section *** (Country2.Region CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfRegion Region
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfRegion Region
         {
             get
             {
@@ -97,9 +97,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Country2.Region Get start)
                 if ((this.fRegion == null))
                 {
-                    this.fRegion = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfRegion(this);
+                    this.fRegion = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfRegion(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfRegion result = this.fRegion;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfRegion result = this.fRegion;
                 // *** Start programmer edit section *** (Country2.Region Get end)
 
                 // *** End programmer edit section *** (Country2.Region Get end)
@@ -130,7 +130,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Country2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2));
+                    return ICSSoft.STORMNET.Information.GetView("Country2E", typeof(NewPlatform.ClickHouseDataService.Tests.Country2));
                 }
             }
             
@@ -141,7 +141,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Country2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2));
+                    return ICSSoft.STORMNET.Information.GetView("Country2L", typeof(NewPlatform.ClickHouseDataService.Tests.Country2));
                 }
             }
         }

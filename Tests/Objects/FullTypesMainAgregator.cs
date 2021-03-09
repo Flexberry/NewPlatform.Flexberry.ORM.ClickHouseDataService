@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -165,17 +165,17 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private System.Nullable<System.Guid> fPoleNullGuid;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum fPoleEnum;
+        private NewPlatform.ClickHouseDataService.Tests.PoleEnum fPoleEnum;
         
         private char fPoleChar;
         
         private System.Nullable<System.Char> fPoleNullChar;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMaster1 fFullTypesMaster1;
+        private NewPlatform.ClickHouseDataService.Tests.FullTypesMaster1 fFullTypesMaster1;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 fFullTypesDetail2;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 fFullTypesDetail2;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1 fFullTypesDetail1;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1 fFullTypesDetail1;
         
         // *** Start programmer edit section *** (FullTypesMainAgregator CustomMembers)
 
@@ -716,14 +716,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (FullTypesMainAgregator.PoleEnum CustomAttributes)
 
         // *** End programmer edit section *** (FullTypesMainAgregator.PoleEnum CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum PoleEnum
+        public virtual NewPlatform.ClickHouseDataService.Tests.PoleEnum PoleEnum
         {
             get
             {
                 // *** Start programmer edit section *** (FullTypesMainAgregator.PoleEnum Get start)
 
                 // *** End programmer edit section *** (FullTypesMainAgregator.PoleEnum Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum result = this.fPoleEnum;
+                NewPlatform.ClickHouseDataService.Tests.PoleEnum result = this.fPoleEnum;
                 // *** Start programmer edit section *** (FullTypesMainAgregator.PoleEnum Get end)
 
                 // *** End programmer edit section *** (FullTypesMainAgregator.PoleEnum Get end)
@@ -810,14 +810,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesMaster1 CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMaster1 FullTypesMaster1
+        public virtual NewPlatform.ClickHouseDataService.Tests.FullTypesMaster1 FullTypesMaster1
         {
             get
             {
                 // *** Start programmer edit section *** (FullTypesMainAgregator.FullTypesMaster1 Get start)
 
                 // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesMaster1 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMaster1 result = this.fFullTypesMaster1;
+                NewPlatform.ClickHouseDataService.Tests.FullTypesMaster1 result = this.fFullTypesMaster1;
                 // *** Start programmer edit section *** (FullTypesMainAgregator.FullTypesMaster1 Get end)
 
                 // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesMaster1 Get end)
@@ -841,7 +841,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (FullTypesMainAgregator.FullTypesDetail2 CustomAttributes)
 
         // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesDetail2 CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 FullTypesDetail2
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 FullTypesDetail2
         {
             get
             {
@@ -850,9 +850,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesDetail2 Get start)
                 if ((this.fFullTypesDetail2 == null))
                 {
-                    this.fFullTypesDetail2 = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2(this);
+                    this.fFullTypesDetail2 = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 result = this.fFullTypesDetail2;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail2 result = this.fFullTypesDetail2;
                 // *** Start programmer edit section *** (FullTypesMainAgregator.FullTypesDetail2 Get end)
 
                 // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesDetail2 Get end)
@@ -876,7 +876,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (FullTypesMainAgregator.FullTypesDetail1 CustomAttributes)
 
         // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesDetail1 CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1 FullTypesDetail1
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1 FullTypesDetail1
         {
             get
             {
@@ -885,9 +885,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesDetail1 Get start)
                 if ((this.fFullTypesDetail1 == null))
                 {
-                    this.fFullTypesDetail1 = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1(this);
+                    this.fFullTypesDetail1 = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1 result = this.fFullTypesDetail1;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfFullTypesDetail1 result = this.fFullTypesDetail1;
                 // *** Start programmer edit section *** (FullTypesMainAgregator.FullTypesDetail1 Get end)
 
                 // *** End programmer edit section *** (FullTypesMainAgregator.FullTypesDetail1 Get end)
@@ -918,7 +918,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("FullView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator));
+                    return ICSSoft.STORMNET.Information.GetView("FullView", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator));
                 }
             }
             
@@ -929,7 +929,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("FullViewWithDetail1", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator));
+                    return ICSSoft.STORMNET.Information.GetView("FullViewWithDetail1", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator));
                 }
             }
             
@@ -940,7 +940,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("FullViewWithDetail1and2", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator));
+                    return ICSSoft.STORMNET.Information.GetView("FullViewWithDetail1and2", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator));
                 }
             }
             
@@ -951,7 +951,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("MasterInvisibleView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator));
+                    return ICSSoft.STORMNET.Information.GetView("MasterInvisibleView", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator));
                 }
             }
             
@@ -962,7 +962,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("OwnInvisibleView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMainAgregator));
+                    return ICSSoft.STORMNET.Information.GetView("OwnInvisibleView", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesMainAgregator));
                 }
             }
         }

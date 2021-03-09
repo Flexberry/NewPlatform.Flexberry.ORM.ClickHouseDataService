@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -28,7 +28,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     // *** End programmer edit section *** (НаследникМ1 CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
-    public class НаследникМ1 : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.МастерМ
+    public class НаследникМ1 : NewPlatform.ClickHouseDataService.Tests.МастерМ
     {
         
         // *** Start programmer edit section *** (НаследникМ1 CustomMembers)

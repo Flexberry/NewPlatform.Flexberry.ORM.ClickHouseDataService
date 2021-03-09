@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -32,7 +32,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class ClassWithCaptions : ICSSoft.STORMNET.DataObject
     {
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass4 fInformationTestClass4;
+        private NewPlatform.ClickHouseDataService.Tests.InformationTestClass4 fInformationTestClass4;
         
         // *** Start programmer edit section *** (ClassWithCaptions CustomMembers)
 
@@ -48,14 +48,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "InformationTestClass4"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass4 InformationTestClass4
+        public virtual NewPlatform.ClickHouseDataService.Tests.InformationTestClass4 InformationTestClass4
         {
             get
             {
                 // *** Start programmer edit section *** (ClassWithCaptions.InformationTestClass4 Get start)
 
                 // *** End programmer edit section *** (ClassWithCaptions.InformationTestClass4 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass4 result = this.fInformationTestClass4;
+                NewPlatform.ClickHouseDataService.Tests.InformationTestClass4 result = this.fInformationTestClass4;
                 // *** Start programmer edit section *** (ClassWithCaptions.InformationTestClass4 Get end)
 
                 // *** End programmer edit section *** (ClassWithCaptions.InformationTestClass4 Get end)

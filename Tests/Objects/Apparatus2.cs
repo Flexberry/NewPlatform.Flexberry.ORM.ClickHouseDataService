@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -43,9 +43,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fApparatusName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 fExporter;
+        private NewPlatform.ClickHouseDataService.Tests.Country2 fExporter;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 fMaker;
+        private NewPlatform.ClickHouseDataService.Tests.Country2 fMaker;
         
         // *** Start programmer edit section *** (Apparatus2 CustomMembers)
 
@@ -91,14 +91,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Apparatus2.Exporter CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 Exporter
+        public virtual NewPlatform.ClickHouseDataService.Tests.Country2 Exporter
         {
             get
             {
                 // *** Start programmer edit section *** (Apparatus2.Exporter Get start)
 
                 // *** End programmer edit section *** (Apparatus2.Exporter Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 result = this.fExporter;
+                NewPlatform.ClickHouseDataService.Tests.Country2 result = this.fExporter;
                 // *** Start programmer edit section *** (Apparatus2.Exporter Get end)
 
                 // *** End programmer edit section *** (Apparatus2.Exporter Get end)
@@ -122,14 +122,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Apparatus2.Maker CustomAttributes)
 
         // *** End programmer edit section *** (Apparatus2.Maker CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 Maker
+        public virtual NewPlatform.ClickHouseDataService.Tests.Country2 Maker
         {
             get
             {
                 // *** Start programmer edit section *** (Apparatus2.Maker Get start)
 
                 // *** End programmer edit section *** (Apparatus2.Maker Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 result = this.fMaker;
+                NewPlatform.ClickHouseDataService.Tests.Country2 result = this.fMaker;
                 // *** Start programmer edit section *** (Apparatus2.Maker Get end)
 
                 // *** End programmer edit section *** (Apparatus2.Maker Get end)
@@ -160,7 +160,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Apparatus2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Apparatus2));
+                    return ICSSoft.STORMNET.Information.GetView("Apparatus2E", typeof(NewPlatform.ClickHouseDataService.Tests.Apparatus2));
                 }
             }
             
@@ -171,7 +171,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Apparatus2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Apparatus2));
+                    return ICSSoft.STORMNET.Information.GetView("Apparatus2L", typeof(NewPlatform.ClickHouseDataService.Tests.Apparatus2));
                 }
             }
         }

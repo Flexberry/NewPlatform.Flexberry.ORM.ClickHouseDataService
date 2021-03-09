@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -42,7 +42,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fDetailField2;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ComputedMaster fComputedMaster;
+        private NewPlatform.ClickHouseDataService.Tests.ComputedMaster fComputedMaster;
         
         // *** Start programmer edit section *** (ComputedDetail CustomMembers)
 
@@ -121,12 +121,8 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (ComputedDetail.DetailComputedField1 CustomAttributes)
         [ICSSoft.STORMNET.NotStored()]
         [StrLen(255)]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.MSSQLDataService), "@DetailField1@ + \\\'  \\\' + @DetailField2@ + \\\'  \\\' + @ComputedMaster.MasterCompute" +
+        [DataServiceExpression(typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService), "@DetailField1@ + \\\'  \\\' + @DetailField2@ + \\\'  \\\' + @ComputedMaster.MasterCompute" +
             "dField1@")]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.OracleDataService), "@DetailField1@ || \\\'  \\\' || @DetailField2@ + \\\'  \\\' + @ComputedMaster.MasterCompu" +
-            "tedField1@")]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.PostgresDataService), "@DetailField1@ || \\\' \\\' || @DetailField2@ || \\\' \\\' || @ComputedMaster.MasterCompu" +
-            "tedField1@")]
         public virtual string DetailComputedField1
         {
             get
@@ -153,14 +149,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "ComputedMaster"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ComputedMaster ComputedMaster
+        public virtual NewPlatform.ClickHouseDataService.Tests.ComputedMaster ComputedMaster
         {
             get
             {
                 // *** Start programmer edit section *** (ComputedDetail.ComputedMaster Get start)
 
                 // *** End programmer edit section *** (ComputedDetail.ComputedMaster Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ComputedMaster result = this.fComputedMaster;
+                NewPlatform.ClickHouseDataService.Tests.ComputedMaster result = this.fComputedMaster;
                 // *** Start programmer edit section *** (ComputedDetail.ComputedMaster Get end)
 
                 // *** End programmer edit section *** (ComputedDetail.ComputedMaster Get end)
@@ -191,7 +187,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ComputedDetail", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ComputedDetail));
+                    return ICSSoft.STORMNET.Information.GetView("ComputedDetail", typeof(NewPlatform.ClickHouseDataService.Tests.ComputedDetail));
                 }
             }
         }

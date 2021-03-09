@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -41,9 +41,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private int fНомерХозДоговора;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора fУчастникХозДоговора;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора fУчастникХозДоговора;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора fИФХозДоговора;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора fИФХозДоговора;
         
         // *** Start programmer edit section *** (ХозДоговор CustomMembers)
 
@@ -88,7 +88,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (ХозДоговор.УчастникХозДоговора CustomAttributes)
 
         // *** End programmer edit section *** (ХозДоговор.УчастникХозДоговора CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора УчастникХозДоговора
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора УчастникХозДоговора
         {
             get
             {
@@ -97,9 +97,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (ХозДоговор.УчастникХозДоговора Get start)
                 if ((this.fУчастникХозДоговора == null))
                 {
-                    this.fУчастникХозДоговора = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора(this);
+                    this.fУчастникХозДоговора = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора result = this.fУчастникХозДоговора;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfУчастникХозДоговора result = this.fУчастникХозДоговора;
                 // *** Start programmer edit section *** (ХозДоговор.УчастникХозДоговора Get end)
 
                 // *** End programmer edit section *** (ХозДоговор.УчастникХозДоговора Get end)
@@ -123,7 +123,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (ХозДоговор.ИФХозДоговора CustomAttributes)
 
         // *** End programmer edit section *** (ХозДоговор.ИФХозДоговора CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора ИФХозДоговора
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора ИФХозДоговора
         {
             get
             {
@@ -132,9 +132,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (ХозДоговор.ИФХозДоговора Get start)
                 if ((this.fИФХозДоговора == null))
                 {
-                    this.fИФХозДоговора = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора(this);
+                    this.fИФХозДоговора = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора result = this.fИФХозДоговора;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfИФХозДоговора result = this.fИФХозДоговора;
                 // *** Start programmer edit section *** (ХозДоговор.ИФХозДоговора Get end)
 
                 // *** End programmer edit section *** (ХозДоговор.ИФХозДоговора Get end)
@@ -165,7 +165,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ХозДоговорE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ХозДоговор));
+                    return ICSSoft.STORMNET.Information.GetView("ХозДоговорE", typeof(NewPlatform.ClickHouseDataService.Tests.ХозДоговор));
                 }
             }
             
@@ -176,7 +176,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ХозДоговорL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ХозДоговор));
+                    return ICSSoft.STORMNET.Information.GetView("ХозДоговорL", typeof(NewPlatform.ClickHouseDataService.Tests.ХозДоговор));
                 }
             }
         }

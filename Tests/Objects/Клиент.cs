@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -122,9 +122,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Клиент.NotStoredGuid CustomAttributes)
         [ICSSoft.STORMNET.NotStored()]
         [StrLen(255)]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.SQLDataService), "select newid()")]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.OracleDataService), "select SYS_GUID()")]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.PostgresDataService), "select uuid_in(md5(random()::text || now()::text)::cstring)")]
+        [DataServiceExpression(typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService), "select newid()")]
         [TrimmedStringStorage(false)]
         public virtual string NotStoredGuid
         {
@@ -156,7 +154,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("TestNotStoredGuid", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Клиент));
+                    return ICSSoft.STORMNET.Information.GetView("TestNotStoredGuid", typeof(NewPlatform.ClickHouseDataService.Tests.Клиент));
                 }
             }
             
@@ -167,7 +165,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КлиентViewE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Клиент));
+                    return ICSSoft.STORMNET.Information.GetView("КлиентViewE", typeof(NewPlatform.ClickHouseDataService.Tests.Клиент));
                 }
             }
             
@@ -178,7 +176,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КлиентViewL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Клиент));
+                    return ICSSoft.STORMNET.Information.GetView("КлиентViewL", typeof(NewPlatform.ClickHouseDataService.Tests.Клиент));
                 }
             }
         }

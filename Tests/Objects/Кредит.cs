@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -68,13 +68,13 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private int fСрокКредита;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ВидКредита fВидКредита;
+        private NewPlatform.ClickHouseDataService.Tests.ВидКредита fВидКредита;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Клиент fКлиент;
+        private NewPlatform.ClickHouseDataService.Tests.Клиент fКлиент;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИнспекторПоКредиту fИнспекторПоКредиту;
+        private NewPlatform.ClickHouseDataService.Tests.ИнспекторПоКредиту fИнспекторПоКредиту;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfВыплаты fВыплаты;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfВыплаты fВыплаты;
         
         // *** Start programmer edit section *** (Кредит CustomMembers)
 
@@ -180,14 +180,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Кредит.ВидКредита CustomAttributes)
 
         // *** End programmer edit section *** (Кредит.ВидКредита CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ВидКредита ВидКредита
+        public virtual NewPlatform.ClickHouseDataService.Tests.ВидКредита ВидКредита
         {
             get
             {
                 // *** Start programmer edit section *** (Кредит.ВидКредита Get start)
 
                 // *** End programmer edit section *** (Кредит.ВидКредита Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ВидКредита result = this.fВидКредита;
+                NewPlatform.ClickHouseDataService.Tests.ВидКредита result = this.fВидКредита;
                 // *** Start programmer edit section *** (Кредит.ВидКредита Get end)
 
                 // *** End programmer edit section *** (Кредит.ВидКредита Get end)
@@ -213,14 +213,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Кредит.Клиент CustomAttributes)
         [PropertyStorage(new string[] {
                 "Клиент"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Клиент Клиент
+        public virtual NewPlatform.ClickHouseDataService.Tests.Клиент Клиент
         {
             get
             {
                 // *** Start programmer edit section *** (Кредит.Клиент Get start)
 
                 // *** End programmer edit section *** (Кредит.Клиент Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Клиент result = this.fКлиент;
+                NewPlatform.ClickHouseDataService.Tests.Клиент result = this.fКлиент;
                 // *** Start programmer edit section *** (Кредит.Клиент Get end)
 
                 // *** End programmer edit section *** (Кредит.Клиент Get end)
@@ -246,14 +246,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Кредит.ИнспекторПоКредиту CustomAttributes)
         [PropertyStorage(new string[] {
                 "ИнспекторПоКред"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИнспекторПоКредиту ИнспекторПоКредиту
+        public virtual NewPlatform.ClickHouseDataService.Tests.ИнспекторПоКредиту ИнспекторПоКредиту
         {
             get
             {
                 // *** Start programmer edit section *** (Кредит.ИнспекторПоКредиту Get start)
 
                 // *** End programmer edit section *** (Кредит.ИнспекторПоКредиту Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИнспекторПоКредиту result = this.fИнспекторПоКредиту;
+                NewPlatform.ClickHouseDataService.Tests.ИнспекторПоКредиту result = this.fИнспекторПоКредиту;
                 // *** Start programmer edit section *** (Кредит.ИнспекторПоКредиту Get end)
 
                 // *** End programmer edit section *** (Кредит.ИнспекторПоКредиту Get end)
@@ -277,7 +277,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Кредит.Выплаты CustomAttributes)
 
         // *** End programmer edit section *** (Кредит.Выплаты CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfВыплаты Выплаты
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfВыплаты Выплаты
         {
             get
             {
@@ -286,9 +286,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Кредит.Выплаты Get start)
                 if ((this.fВыплаты == null))
                 {
-                    this.fВыплаты = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfВыплаты(this);
+                    this.fВыплаты = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfВыплаты(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfВыплаты result = this.fВыплаты;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfВыплаты result = this.fВыплаты;
                 // *** Start programmer edit section *** (Кредит.Выплаты Get end)
 
                 // *** End programmer edit section *** (Кредит.Выплаты Get end)
@@ -319,7 +319,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("C__КредитE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит));
+                    return ICSSoft.STORMNET.Information.GetView("C__КредитE", typeof(NewPlatform.ClickHouseDataService.Tests.Кредит));
                 }
             }
             
@@ -330,7 +330,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КредитViewE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит));
+                    return ICSSoft.STORMNET.Information.GetView("КредитViewE", typeof(NewPlatform.ClickHouseDataService.Tests.Кредит));
                 }
             }
             
@@ -341,7 +341,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КредитViewL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит));
+                    return ICSSoft.STORMNET.Information.GetView("КредитViewL", typeof(NewPlatform.ClickHouseDataService.Tests.Кредит));
                 }
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -44,7 +44,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private bool fОбязательный = false;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс fКонкурс;
+        private NewPlatform.ClickHouseDataService.Tests.Конкурс fКонкурс;
         
         // *** Start programmer edit section *** (КритерийОценки CustomMembers)
 
@@ -177,21 +177,21 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Конкурс.
         /// </summary>
         // *** Start programmer edit section *** (КритерийОценки.Конкурс CustomAttributes)
 
         // *** End programmer edit section *** (КритерийОценки.Конкурс CustomAttributes)
         [Agregator()]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс Конкурс
+        public virtual NewPlatform.ClickHouseDataService.Tests.Конкурс Конкурс
         {
             get
             {
                 // *** Start programmer edit section *** (КритерийОценки.Конкурс Get start)
 
                 // *** End programmer edit section *** (КритерийОценки.Конкурс Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс result = this.fКонкурс;
+                NewPlatform.ClickHouseDataService.Tests.Конкурс result = this.fКонкурс;
                 // *** Start programmer edit section *** (КритерийОценки.Конкурс Get end)
 
                 // *** End programmer edit section *** (КритерийОценки.Конкурс Get end)
@@ -222,7 +222,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КритерийОценкиE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки));
+                    return ICSSoft.STORMNET.Information.GetView("КритерийОценкиE", typeof(NewPlatform.ClickHouseDataService.Tests.КритерийОценки));
                 }
             }
         }
@@ -237,9 +237,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfКритерийОценки : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки members)
 
         
         /// <summary>
@@ -251,20 +251,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type КритерийОценки.
         /// </summary>
-        public DetailArrayOfКритерийОценки(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс fКонкурс) : 
+        public DetailArrayOfКритерийОценки(NewPlatform.ClickHouseDataService.Tests.Конкурс fКонкурс) : 
                 base(typeof(КритерийОценки), ((ICSSoft.STORMNET.DataObject)(fКонкурс)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.КритерийОценки this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.КритерийОценки)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.КритерийОценки dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

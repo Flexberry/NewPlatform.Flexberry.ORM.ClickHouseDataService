@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -29,7 +29,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     [ClassStorage("TypeUsageProviderTestClassChil")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
-    public class TypeUsageProviderTestClassChildClass : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeUsageProviderTestClass
+    public class TypeUsageProviderTestClassChildClass : NewPlatform.ClickHouseDataService.Tests.TypeUsageProviderTestClass
     {
         
         // *** Start programmer edit section *** (TypeUsageProviderTestClassChildClass CustomMembers)

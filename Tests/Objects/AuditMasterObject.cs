@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -37,7 +37,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fSurname;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditMasterMasterObject fMasterObject;
+        private NewPlatform.ClickHouseDataService.Tests.AuditMasterMasterObject fMasterObject;
         
         // *** Start programmer edit section *** (AuditMasterObject CustomMembers)
 
@@ -173,14 +173,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (AuditMasterObject.MasterObject CustomAttributes)
         [PropertyStorage(new string[] {
                 "MasterObject"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditMasterMasterObject MasterObject
+        public virtual NewPlatform.ClickHouseDataService.Tests.AuditMasterMasterObject MasterObject
         {
             get
             {
                 // *** Start programmer edit section *** (AuditMasterObject.MasterObject Get start)
 
                 // *** End programmer edit section *** (AuditMasterObject.MasterObject Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditMasterMasterObject result = this.fMasterObject;
+                NewPlatform.ClickHouseDataService.Tests.AuditMasterMasterObject result = this.fMasterObject;
                 // *** Start programmer edit section *** (AuditMasterObject.MasterObject Get end)
 
                 // *** End programmer edit section *** (AuditMasterObject.MasterObject Get end)

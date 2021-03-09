@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -42,9 +42,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private System.DateTime fДата;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипПерелома fТип;
+        private NewPlatform.ClickHouseDataService.Tests.ТипПерелома fТип;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лапа fЛапа;
+        private NewPlatform.ClickHouseDataService.Tests.Лапа fЛапа;
         
         // *** Start programmer edit section *** (Перелом CustomMembers)
 
@@ -88,14 +88,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Перелом.Тип CustomAttributes)
 
         // *** End programmer edit section *** (Перелом.Тип CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипПерелома Тип
+        public virtual NewPlatform.ClickHouseDataService.Tests.ТипПерелома Тип
         {
             get
             {
                 // *** Start programmer edit section *** (Перелом.Тип Get start)
 
                 // *** End programmer edit section *** (Перелом.Тип Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипПерелома result = this.fТип;
+                NewPlatform.ClickHouseDataService.Tests.ТипПерелома result = this.fТип;
                 // *** Start programmer edit section *** (Перелом.Тип Get end)
 
                 // *** End programmer edit section *** (Перелом.Тип Get end)
@@ -114,21 +114,21 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лапа.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Лапа.
         /// </summary>
         // *** Start programmer edit section *** (Перелом.Лапа CustomAttributes)
 
         // *** End programmer edit section *** (Перелом.Лапа CustomAttributes)
         [Agregator()]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лапа Лапа
+        public virtual NewPlatform.ClickHouseDataService.Tests.Лапа Лапа
         {
             get
             {
                 // *** Start programmer edit section *** (Перелом.Лапа Get start)
 
                 // *** End programmer edit section *** (Перелом.Лапа Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лапа result = this.fЛапа;
+                NewPlatform.ClickHouseDataService.Tests.Лапа result = this.fЛапа;
                 // *** Start programmer edit section *** (Перелом.Лапа Get end)
 
                 // *** End programmer edit section *** (Перелом.Лапа Get end)
@@ -159,7 +159,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_ПереломE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Перелом));
+                    return ICSSoft.STORMNET.Information.GetView("k_ПереломE", typeof(NewPlatform.ClickHouseDataService.Tests.Перелом));
                 }
             }
             
@@ -170,7 +170,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ПереломD", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Перелом));
+                    return ICSSoft.STORMNET.Information.GetView("ПереломD", typeof(NewPlatform.ClickHouseDataService.Tests.Перелом));
                 }
             }
             
@@ -181,7 +181,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ПереломE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Перелом));
+                    return ICSSoft.STORMNET.Information.GetView("ПереломE", typeof(NewPlatform.ClickHouseDataService.Tests.Перелом));
                 }
             }
         }
@@ -196,9 +196,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfПерелом : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfПерелом members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfПерелом members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfПерелом members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfПерелом members)
 
         
         /// <summary>
@@ -210,20 +210,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type Перелом.
         /// </summary>
-        public DetailArrayOfПерелом(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лапа fЛапа) : 
+        public DetailArrayOfПерелом(NewPlatform.ClickHouseDataService.Tests.Лапа fЛапа) : 
                 base(typeof(Перелом), ((ICSSoft.STORMNET.DataObject)(fЛапа)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Перелом this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.Перелом this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Перелом)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.Перелом)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Перелом dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.Перелом dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -32,11 +32,11 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class Этап : ICSSoft.STORMNET.DataObject
     {
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса fСтатус;
+        private NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса fСтатус;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КонфигурацияЭтапа fКонфигурацияЭтапа;
+        private NewPlatform.ClickHouseDataService.Tests.КонфигурацияЭтапа fКонфигурацияЭтапа;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Запрос fЗапрос;
+        private NewPlatform.ClickHouseDataService.Tests.Запрос fЗапрос;
         
         // *** Start programmer edit section *** (Этап CustomMembers)
 
@@ -49,14 +49,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Этап.Статус CustomAttributes)
 
         // *** End programmer edit section *** (Этап.Статус CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса Статус
+        public virtual NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса Статус
         {
             get
             {
                 // *** Start programmer edit section *** (Этап.Статус Get start)
 
                 // *** End programmer edit section *** (Этап.Статус Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса result = this.fСтатус;
+                NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса result = this.fСтатус;
                 // *** Start programmer edit section *** (Этап.Статус Get end)
 
                 // *** End programmer edit section *** (Этап.Статус Get end)
@@ -81,14 +81,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Этап.КонфигурацияЭтапа CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КонфигурацияЭтапа КонфигурацияЭтапа
+        public virtual NewPlatform.ClickHouseDataService.Tests.КонфигурацияЭтапа КонфигурацияЭтапа
         {
             get
             {
                 // *** Start programmer edit section *** (Этап.КонфигурацияЭтапа Get start)
 
                 // *** End programmer edit section *** (Этап.КонфигурацияЭтапа Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КонфигурацияЭтапа result = this.fКонфигурацияЭтапа;
+                NewPlatform.ClickHouseDataService.Tests.КонфигурацияЭтапа result = this.fКонфигурацияЭтапа;
                 // *** Start programmer edit section *** (Этап.КонфигурацияЭтапа Get end)
 
                 // *** End programmer edit section *** (Этап.КонфигурацияЭтапа Get end)
@@ -107,7 +107,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Запрос.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Запрос.
         /// </summary>
         // *** Start programmer edit section *** (Этап.Запрос CustomAttributes)
 
@@ -116,14 +116,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "Запрос"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Запрос Запрос
+        public virtual NewPlatform.ClickHouseDataService.Tests.Запрос Запрос
         {
             get
             {
                 // *** Start programmer edit section *** (Этап.Запрос Get start)
 
                 // *** End programmer edit section *** (Этап.Запрос Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Запрос result = this.fЗапрос;
+                NewPlatform.ClickHouseDataService.Tests.Запрос result = this.fЗапрос;
                 // *** Start programmer edit section *** (Этап.Запрос Get end)
 
                 // *** End programmer edit section *** (Этап.Запрос Get end)
@@ -151,9 +151,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfЭтап : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтап members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтап members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтап members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтап members)
 
         
         /// <summary>
@@ -165,20 +165,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type Этап.
         /// </summary>
-        public DetailArrayOfЭтап(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Запрос fЗапрос) : 
+        public DetailArrayOfЭтап(NewPlatform.ClickHouseDataService.Tests.Запрос fЗапрос) : 
                 base(typeof(Этап), ((ICSSoft.STORMNET.DataObject)(fЗапрос)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Этап this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.Этап this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Этап)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.Этап)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Этап dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.Этап dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

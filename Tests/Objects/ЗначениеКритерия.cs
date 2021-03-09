@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -40,9 +40,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private double fСредняяОценкаЭксперта;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки fКритерий;
+        private NewPlatform.ClickHouseDataService.Tests.КритерийОценки fКритерий;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея fИдея;
+        private NewPlatform.ClickHouseDataService.Tests.Идея fИдея;
         
         // *** Start programmer edit section *** (ЗначениеКритерия CustomMembers)
 
@@ -120,14 +120,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (ЗначениеКритерия.Критерий CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки Критерий
+        public virtual NewPlatform.ClickHouseDataService.Tests.КритерийОценки Критерий
         {
             get
             {
                 // *** Start programmer edit section *** (ЗначениеКритерия.Критерий Get start)
 
                 // *** End programmer edit section *** (ЗначениеКритерия.Критерий Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КритерийОценки result = this.fКритерий;
+                NewPlatform.ClickHouseDataService.Tests.КритерийОценки result = this.fКритерий;
                 // *** Start programmer edit section *** (ЗначениеКритерия.Критерий Get end)
 
                 // *** End programmer edit section *** (ЗначениеКритерия.Критерий Get end)
@@ -146,21 +146,21 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Идея.
         /// </summary>
         // *** Start programmer edit section *** (ЗначениеКритерия.Идея CustomAttributes)
 
         // *** End programmer edit section *** (ЗначениеКритерия.Идея CustomAttributes)
         [Agregator()]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея Идея
+        public virtual NewPlatform.ClickHouseDataService.Tests.Идея Идея
         {
             get
             {
                 // *** Start programmer edit section *** (ЗначениеКритерия.Идея Get start)
 
                 // *** End programmer edit section *** (ЗначениеКритерия.Идея Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея result = this.fИдея;
+                NewPlatform.ClickHouseDataService.Tests.Идея result = this.fИдея;
                 // *** Start programmer edit section *** (ЗначениеКритерия.Идея Get end)
 
                 // *** End programmer edit section *** (ЗначениеКритерия.Идея Get end)
@@ -191,7 +191,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ЗначениеКритерияE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЗначениеКритерия));
+                    return ICSSoft.STORMNET.Information.GetView("ЗначениеКритерияE", typeof(NewPlatform.ClickHouseDataService.Tests.ЗначениеКритерия));
                 }
             }
         }
@@ -206,9 +206,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfЗначениеКритерия : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия members)
 
         
         /// <summary>
@@ -220,20 +220,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type ЗначениеКритерия.
         /// </summary>
-        public DetailArrayOfЗначениеКритерия(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея fИдея) : 
+        public DetailArrayOfЗначениеКритерия(NewPlatform.ClickHouseDataService.Tests.Идея fИдея) : 
                 base(typeof(ЗначениеКритерия), ((ICSSoft.STORMNET.DataObject)(fИдея)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЗначениеКритерия this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.ЗначениеКритерия this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЗначениеКритерия)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.ЗначениеКритерия)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЗначениеКритерия dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.ЗначениеКритерия dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

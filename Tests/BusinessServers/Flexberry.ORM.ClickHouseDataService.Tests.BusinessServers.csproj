@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <Configurations>Debug;Release</Configurations>
     <LangVersion>8</LangVersion>
-    <RootNamespace>Flexberry.ORM.ClickHouseDataService.Tests</RootNamespace>
+    <RootNamespace>NewPlatform.ClickHouseDataService.Tests</RootNamespace>
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>Flexberry.ORM.ClickHouseDataService.Tests.BusinessServers.snk</AssemblyOriginatorKeyFile>
@@ -25,6 +25,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="6.0.0-beta16" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

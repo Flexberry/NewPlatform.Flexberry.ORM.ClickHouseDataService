@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -38,7 +38,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private int fГлупость;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка fКошка;
+        private NewPlatform.ClickHouseDataService.Tests.Кошка fКошка;
         
         // *** Start programmer edit section *** (Котенок CustomMembers)
 
@@ -117,14 +117,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "Кошка"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка Кошка
+        public virtual NewPlatform.ClickHouseDataService.Tests.Кошка Кошка
         {
             get
             {
                 // *** Start programmer edit section *** (Котенок.Кошка Get start)
 
                 // *** End programmer edit section *** (Котенок.Кошка Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка result = this.fКошка;
+                NewPlatform.ClickHouseDataService.Tests.Кошка result = this.fКошка;
                 // *** Start programmer edit section *** (Котенок.Кошка Get end)
 
                 // *** End programmer edit section *** (Котенок.Кошка Get end)
@@ -155,7 +155,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КотенокE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Котенок));
+                    return ICSSoft.STORMNET.Information.GetView("КотенокE", typeof(NewPlatform.ClickHouseDataService.Tests.Котенок));
                 }
             }
         }

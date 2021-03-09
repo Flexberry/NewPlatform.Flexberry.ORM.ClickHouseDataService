@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -27,8 +27,8 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     // *** Start programmer edit section *** (Берлога CustomAttributes)
 
     // *** End programmer edit section *** (Берлога CustomAttributes)
-    [BusinessServer("NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.БерлогаБС, Flexberry.ORM.Cl" +
-        "ickHouseDataService.Tests.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
+    [BusinessServer("NewPlatform.ClickHouseDataService.Tests.БерлогаБС, ClickHouseDataService.Tests.Bu" +
+        "sinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("LoadTestView", new string[] {
@@ -50,9 +50,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private bool fЗаброшена;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес fЛесРасположения;
+        private NewPlatform.ClickHouseDataService.Tests.Лес fЛесРасположения;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь fМедведь;
+        private NewPlatform.ClickHouseDataService.Tests.Медведь fМедведь;
         
         // *** Start programmer edit section *** (Берлога CustomMembers)
 
@@ -161,14 +161,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Берлога.ЛесРасположения CustomAttributes)
         [PropertyStorage(new string[] {
                 "ЛесРасположения"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес ЛесРасположения
+        public virtual NewPlatform.ClickHouseDataService.Tests.Лес ЛесРасположения
         {
             get
             {
                 // *** Start programmer edit section *** (Берлога.ЛесРасположения Get start)
 
                 // *** End programmer edit section *** (Берлога.ЛесРасположения Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес result = this.fЛесРасположения;
+                NewPlatform.ClickHouseDataService.Tests.Лес result = this.fЛесРасположения;
                 // *** Start programmer edit section *** (Берлога.ЛесРасположения Get end)
 
                 // *** End programmer edit section *** (Берлога.ЛесРасположения Get end)
@@ -187,7 +187,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Медведь.
         /// </summary>
         // *** Start programmer edit section *** (Берлога.Медведь CustomAttributes)
 
@@ -196,14 +196,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "Медведь"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь Медведь
+        public virtual NewPlatform.ClickHouseDataService.Tests.Медведь Медведь
         {
             get
             {
                 // *** Start programmer edit section *** (Берлога.Медведь Get start)
 
                 // *** End programmer edit section *** (Берлога.Медведь Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь result = this.fМедведь;
+                NewPlatform.ClickHouseDataService.Tests.Медведь result = this.fМедведь;
                 // *** Start programmer edit section *** (Берлога.Медведь Get end)
 
                 // *** End programmer edit section *** (Берлога.Медведь Get end)
@@ -234,7 +234,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("LoadTestView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Берлога));
+                    return ICSSoft.STORMNET.Information.GetView("LoadTestView", typeof(NewPlatform.ClickHouseDataService.Tests.Берлога));
                 }
             }
             
@@ -245,7 +245,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("БерлогаE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Берлога));
+                    return ICSSoft.STORMNET.Information.GetView("БерлогаE", typeof(NewPlatform.ClickHouseDataService.Tests.Берлога));
                 }
             }
         }
@@ -260,9 +260,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfБерлога : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfБерлога members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfБерлога members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfБерлога members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfБерлога members)
 
         
         /// <summary>
@@ -274,20 +274,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type Берлога.
         /// </summary>
-        public DetailArrayOfБерлога(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь fМедведь) : 
+        public DetailArrayOfБерлога(NewPlatform.ClickHouseDataService.Tests.Медведь fМедведь) : 
                 base(typeof(Берлога), ((ICSSoft.STORMNET.DataObject)(fМедведь)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Берлога this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.Берлога this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Берлога)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.Берлога)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Берлога dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.Берлога dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

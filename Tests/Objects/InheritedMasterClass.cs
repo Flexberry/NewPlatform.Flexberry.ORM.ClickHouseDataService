@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -29,7 +29,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     [ClassStorage("MasterClass")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
-    public class InheritedMasterClass : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterClass
+    public class InheritedMasterClass : NewPlatform.ClickHouseDataService.Tests.MasterClass
     {
         
         // *** Start programmer edit section *** (InheritedMasterClass CustomMembers)

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -35,7 +35,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private int fValue;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.МастерМ fМастер;
+        private NewPlatform.ClickHouseDataService.Tests.МастерМ fМастер;
         
         // *** Start programmer edit section *** (TestClassA CustomMembers)
 
@@ -113,18 +113,18 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (TestClassA.Мастер CustomAttributes)
         [PropertyStorage("Мастер")]
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.МастерМ",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.НаследникМ1",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.НаследникМ2"})]
+                "NewPlatform.ClickHouseDataService.Tests.МастерМ",
+                "NewPlatform.ClickHouseDataService.Tests.НаследникМ1",
+                "NewPlatform.ClickHouseDataService.Tests.НаследникМ2"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.МастерМ Мастер
+        public virtual NewPlatform.ClickHouseDataService.Tests.МастерМ Мастер
         {
             get
             {
                 // *** Start programmer edit section *** (TestClassA.Мастер Get start)
 
                 // *** End programmer edit section *** (TestClassA.Мастер Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.МастерМ result = this.fМастер;
+                NewPlatform.ClickHouseDataService.Tests.МастерМ result = this.fМастер;
                 // *** Start programmer edit section *** (TestClassA.Мастер Get end)
 
                 // *** End programmer edit section *** (TestClassA.Мастер Get end)

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -41,7 +41,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private double fСуммаВыплаты;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит fКредит1;
+        private NewPlatform.ClickHouseDataService.Tests.Кредит fКредит1;
         
         // *** Start programmer edit section *** (Выплаты CustomMembers)
 
@@ -111,7 +111,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Кредит.
         /// </summary>
         // *** Start programmer edit section *** (Выплаты.Кредит1 CustomAttributes)
 
@@ -120,14 +120,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "Кредит1"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит Кредит1
+        public virtual NewPlatform.ClickHouseDataService.Tests.Кредит Кредит1
         {
             get
             {
                 // *** Start programmer edit section *** (Выплаты.Кредит1 Get start)
 
                 // *** End programmer edit section *** (Выплаты.Кредит1 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит result = this.fКредит1;
+                NewPlatform.ClickHouseDataService.Tests.Кредит result = this.fКредит1;
                 // *** Start programmer edit section *** (Выплаты.Кредит1 Get end)
 
                 // *** End programmer edit section *** (Выплаты.Кредит1 Get end)
@@ -158,7 +158,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ВыплатыViewE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Выплаты));
+                    return ICSSoft.STORMNET.Information.GetView("ВыплатыViewE", typeof(NewPlatform.ClickHouseDataService.Tests.Выплаты));
                 }
             }
             
@@ -169,7 +169,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ВыплатыViewL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Выплаты));
+                    return ICSSoft.STORMNET.Information.GetView("ВыплатыViewL", typeof(NewPlatform.ClickHouseDataService.Tests.Выплаты));
                 }
             }
         }
@@ -184,9 +184,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfВыплаты : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfВыплаты members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfВыплаты members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfВыплаты members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfВыплаты members)
 
         
         /// <summary>
@@ -198,20 +198,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type Выплаты.
         /// </summary>
-        public DetailArrayOfВыплаты(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кредит fКредит) : 
+        public DetailArrayOfВыплаты(NewPlatform.ClickHouseDataService.Tests.Кредит fКредит) : 
                 base(typeof(Выплаты), ((ICSSoft.STORMNET.DataObject)(fКредит)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Выплаты this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.Выплаты this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Выплаты)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.Выплаты)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Выплаты dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.Выплаты dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

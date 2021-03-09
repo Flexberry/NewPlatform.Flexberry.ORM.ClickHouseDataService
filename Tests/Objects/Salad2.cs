@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -43,9 +43,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fSaladName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 fIngridient2;
+        private NewPlatform.ClickHouseDataService.Tests.Plant2 fIngridient2;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 fIngridient1;
+        private NewPlatform.ClickHouseDataService.Tests.Plant2 fIngridient1;
         
         // *** Start programmer edit section *** (Salad2 CustomMembers)
 
@@ -92,17 +92,17 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Salad2.Ingridient2 CustomAttributes)
         [PropertyStorage("Ingridient2")]
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2"})]
+                "NewPlatform.ClickHouseDataService.Tests.Cabbage2",
+                "NewPlatform.ClickHouseDataService.Tests.Plant2"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 Ingridient2
+        public virtual NewPlatform.ClickHouseDataService.Tests.Plant2 Ingridient2
         {
             get
             {
                 // *** Start programmer edit section *** (Salad2.Ingridient2 Get start)
 
                 // *** End programmer edit section *** (Salad2.Ingridient2 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 result = this.fIngridient2;
+                NewPlatform.ClickHouseDataService.Tests.Plant2 result = this.fIngridient2;
                 // *** Start programmer edit section *** (Salad2.Ingridient2 Get end)
 
                 // *** End programmer edit section *** (Salad2.Ingridient2 Get end)
@@ -128,16 +128,16 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Salad2.Ingridient1 CustomAttributes)
         [PropertyStorage("Ingridient1")]
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 Ingridient1
+                "NewPlatform.ClickHouseDataService.Tests.Cabbage2",
+                "NewPlatform.ClickHouseDataService.Tests.Plant2"})]
+        public virtual NewPlatform.ClickHouseDataService.Tests.Plant2 Ingridient1
         {
             get
             {
                 // *** Start programmer edit section *** (Salad2.Ingridient1 Get start)
 
                 // *** End programmer edit section *** (Salad2.Ingridient1 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 result = this.fIngridient1;
+                NewPlatform.ClickHouseDataService.Tests.Plant2 result = this.fIngridient1;
                 // *** Start programmer edit section *** (Salad2.Ingridient1 Get end)
 
                 // *** End programmer edit section *** (Salad2.Ingridient1 Get end)
@@ -168,7 +168,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Salad2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Salad2));
+                    return ICSSoft.STORMNET.Information.GetView("Salad2E", typeof(NewPlatform.ClickHouseDataService.Tests.Salad2));
                 }
             }
             
@@ -179,7 +179,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Salad2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Salad2));
+                    return ICSSoft.STORMNET.Information.GetView("Salad2L", typeof(NewPlatform.ClickHouseDataService.Tests.Salad2));
                 }
             }
         }

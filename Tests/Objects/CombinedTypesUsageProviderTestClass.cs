@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -29,12 +29,12 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     [ClassStorage("CombinedTypesUsageProviderTest")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
-    public class CombinedTypesUsageProviderTestClass : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeNameUsageProviderTestClass
+    public class CombinedTypesUsageProviderTestClass : NewPlatform.ClickHouseDataService.Tests.TypeNameUsageProviderTestClass
     {
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DataObjectForTest fDataObjectForTest;
+        private NewPlatform.ClickHouseDataService.Tests.DataObjectForTest fDataObjectForTest;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeUsageProviderTestClass fTypeUsageProviderTestClass;
+        private NewPlatform.ClickHouseDataService.Tests.TypeUsageProviderTestClass fTypeUsageProviderTestClass;
         
         // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass CustomMembers)
 
@@ -47,14 +47,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass.DataObjectForTest CustomAttributes)
 
         // *** End programmer edit section *** (CombinedTypesUsageProviderTestClass.DataObjectForTest CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DataObjectForTest DataObjectForTest
+        public virtual NewPlatform.ClickHouseDataService.Tests.DataObjectForTest DataObjectForTest
         {
             get
             {
                 // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass.DataObjectForTest Get start)
 
                 // *** End programmer edit section *** (CombinedTypesUsageProviderTestClass.DataObjectForTest Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DataObjectForTest result = this.fDataObjectForTest;
+                NewPlatform.ClickHouseDataService.Tests.DataObjectForTest result = this.fDataObjectForTest;
                 // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass.DataObjectForTest Get end)
 
                 // *** End programmer edit section *** (CombinedTypesUsageProviderTestClass.DataObjectForTest Get end)
@@ -73,7 +73,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeUsageProviderTestClass.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.TypeUsageProviderTestClass.
         /// </summary>
         // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass.TypeUsageProviderTestClass CustomAttributes)
 
@@ -82,14 +82,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "TypeUsageProviderTestClass"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeUsageProviderTestClass TypeUsageProviderTestClass
+        public virtual NewPlatform.ClickHouseDataService.Tests.TypeUsageProviderTestClass TypeUsageProviderTestClass
         {
             get
             {
                 // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass.TypeUsageProviderTestClass Get start)
 
                 // *** End programmer edit section *** (CombinedTypesUsageProviderTestClass.TypeUsageProviderTestClass Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeUsageProviderTestClass result = this.fTypeUsageProviderTestClass;
+                NewPlatform.ClickHouseDataService.Tests.TypeUsageProviderTestClass result = this.fTypeUsageProviderTestClass;
                 // *** Start programmer edit section *** (CombinedTypesUsageProviderTestClass.TypeUsageProviderTestClass Get end)
 
                 // *** End programmer edit section *** (CombinedTypesUsageProviderTestClass.TypeUsageProviderTestClass Get end)
@@ -117,9 +117,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfCombinedTypesUsageProviderTestClass : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass members)
 
         
         /// <summary>
@@ -131,20 +131,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type CombinedTypesUsageProviderTestClass.
         /// </summary>
-        public DetailArrayOfCombinedTypesUsageProviderTestClass(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.TypeUsageProviderTestClass fTypeUsageProviderTestClass) : 
+        public DetailArrayOfCombinedTypesUsageProviderTestClass(NewPlatform.ClickHouseDataService.Tests.TypeUsageProviderTestClass fTypeUsageProviderTestClass) : 
                 base(typeof(CombinedTypesUsageProviderTestClass), ((ICSSoft.STORMNET.DataObject)(fTypeUsageProviderTestClass)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.CombinedTypesUsageProviderTestClass this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.CombinedTypesUsageProviderTestClass this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.CombinedTypesUsageProviderTestClass)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.CombinedTypesUsageProviderTestClass)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.CombinedTypesUsageProviderTestClass dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.CombinedTypesUsageProviderTestClass dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

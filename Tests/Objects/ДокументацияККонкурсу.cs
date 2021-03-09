@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -36,7 +36,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.UserDataTypes.WebFile fФайл;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс fКонкурс;
+        private NewPlatform.ClickHouseDataService.Tests.Конкурс fКонкурс;
         
         // *** Start programmer edit section *** (ДокументацияККонкурсу CustomMembers)
 
@@ -75,21 +75,21 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Конкурс.
         /// </summary>
         // *** Start programmer edit section *** (ДокументацияККонкурсу.Конкурс CustomAttributes)
 
         // *** End programmer edit section *** (ДокументацияККонкурсу.Конкурс CustomAttributes)
         [Agregator()]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс Конкурс
+        public virtual NewPlatform.ClickHouseDataService.Tests.Конкурс Конкурс
         {
             get
             {
                 // *** Start programmer edit section *** (ДокументацияККонкурсу.Конкурс Get start)
 
                 // *** End programmer edit section *** (ДокументацияККонкурсу.Конкурс Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс result = this.fКонкурс;
+                NewPlatform.ClickHouseDataService.Tests.Конкурс result = this.fКонкурс;
                 // *** Start programmer edit section *** (ДокументацияККонкурсу.Конкурс Get end)
 
                 // *** End programmer edit section *** (ДокументацияККонкурсу.Конкурс Get end)
@@ -120,7 +120,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ДокументацияККонкурсуE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ДокументацияККонкурсу));
+                    return ICSSoft.STORMNET.Information.GetView("ДокументацияККонкурсуE", typeof(NewPlatform.ClickHouseDataService.Tests.ДокументацияККонкурсу));
                 }
             }
         }
@@ -135,9 +135,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfДокументацияККонкурсу : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу members)
 
         
         /// <summary>
@@ -149,20 +149,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type ДокументацияККонкурсу.
         /// </summary>
-        public DetailArrayOfДокументацияККонкурсу(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс fКонкурс) : 
+        public DetailArrayOfДокументацияККонкурсу(NewPlatform.ClickHouseDataService.Tests.Конкурс fКонкурс) : 
                 base(typeof(ДокументацияККонкурсу), ((ICSSoft.STORMNET.DataObject)(fКонкурс)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ДокументацияККонкурсу this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.ДокументацияККонкурсу this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ДокументацияККонкурсу)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.ДокументацияККонкурсу)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ДокументацияККонкурсу dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.ДокументацияККонкурсу dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

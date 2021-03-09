@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -55,9 +55,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.KeyGen.KeyGuid fКлюч;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода fИерархия;
+        private NewPlatform.ClickHouseDataService.Tests.Порода fИерархия;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипПороды fТипПороды;
+        private NewPlatform.ClickHouseDataService.Tests.ТипПороды fТипПороды;
         
         // *** Start programmer edit section *** (Порода CustomMembers)
 
@@ -136,14 +136,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Порода.Иерархия CustomAttributes)
         [PropertyStorage(new string[] {
                 "Иерархия"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода Иерархия
+        public virtual NewPlatform.ClickHouseDataService.Tests.Порода Иерархия
         {
             get
             {
                 // *** Start programmer edit section *** (Порода.Иерархия Get start)
 
                 // *** End programmer edit section *** (Порода.Иерархия Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода result = this.fИерархия;
+                NewPlatform.ClickHouseDataService.Tests.Порода result = this.fИерархия;
                 // *** Start programmer edit section *** (Порода.Иерархия Get end)
 
                 // *** End programmer edit section *** (Порода.Иерархия Get end)
@@ -169,14 +169,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Порода.ТипПороды CustomAttributes)
         [PropertyStorage(new string[] {
                 "ТипПороды"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипПороды ТипПороды
+        public virtual NewPlatform.ClickHouseDataService.Tests.ТипПороды ТипПороды
         {
             get
             {
                 // *** Start programmer edit section *** (Порода.ТипПороды Get start)
 
                 // *** End programmer edit section *** (Порода.ТипПороды Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипПороды result = this.fТипПороды;
+                NewPlatform.ClickHouseDataService.Tests.ТипПороды result = this.fТипПороды;
                 // *** Start programmer edit section *** (Порода.ТипПороды Get end)
 
                 // *** End programmer edit section *** (Порода.ТипПороды Get end)
@@ -207,7 +207,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_ПородаE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода));
+                    return ICSSoft.STORMNET.Information.GetView("k_ПородаE", typeof(NewPlatform.ClickHouseDataService.Tests.Порода));
                 }
             }
             
@@ -218,7 +218,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_ПородаL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода));
+                    return ICSSoft.STORMNET.Information.GetView("k_ПородаL", typeof(NewPlatform.ClickHouseDataService.Tests.Порода));
                 }
             }
             
@@ -229,7 +229,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ПородаE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода));
+                    return ICSSoft.STORMNET.Information.GetView("ПородаE", typeof(NewPlatform.ClickHouseDataService.Tests.Порода));
                 }
             }
             
@@ -240,7 +240,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ПородаL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода));
+                    return ICSSoft.STORMNET.Information.GetView("ПородаL", typeof(NewPlatform.ClickHouseDataService.Tests.Порода));
                 }
             }
             
@@ -251,7 +251,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ПородаwwwwL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода));
+                    return ICSSoft.STORMNET.Information.GetView("ПородаwwwwL", typeof(NewPlatform.ClickHouseDataService.Tests.Порода));
                 }
             }
         }

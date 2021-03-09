@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -94,7 +94,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.UserDataTypes.NullableDateTime fДатаРождения;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипКошки fТип;
+        private NewPlatform.ClickHouseDataService.Tests.ТипКошки fТип;
         
         private string fПородаСтрокой;
         
@@ -106,9 +106,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.KeyGen.KeyGuid fКлюч;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода fПорода;
+        private NewPlatform.ClickHouseDataService.Tests.Порода fПорода;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЛапа fЛапа;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЛапа fЛапа;
         
         // *** Start programmer edit section *** (Кошка CustomMembers)
 
@@ -186,14 +186,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Кошка.Тип CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипКошки Тип
+        public virtual NewPlatform.ClickHouseDataService.Tests.ТипКошки Тип
         {
             get
             {
                 // *** Start programmer edit section *** (Кошка.Тип Get start)
 
                 // *** End programmer edit section *** (Кошка.Тип Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипКошки result = this.fТип;
+                NewPlatform.ClickHouseDataService.Tests.ТипКошки result = this.fТип;
                 // *** Start programmer edit section *** (Кошка.Тип Get end)
 
                 // *** End programmer edit section *** (Кошка.Тип Get end)
@@ -404,14 +404,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "Порода"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода Порода
+        public virtual NewPlatform.ClickHouseDataService.Tests.Порода Порода
         {
             get
             {
                 // *** Start programmer edit section *** (Кошка.Порода Get start)
 
                 // *** End programmer edit section *** (Кошка.Порода Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Порода result = this.fПорода;
+                NewPlatform.ClickHouseDataService.Tests.Порода result = this.fПорода;
                 // *** Start programmer edit section *** (Кошка.Порода Get end)
 
                 // *** End programmer edit section *** (Кошка.Порода Get end)
@@ -435,7 +435,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Кошка.Лапа CustomAttributes)
 
         // *** End programmer edit section *** (Кошка.Лапа CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЛапа Лапа
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЛапа Лапа
         {
             get
             {
@@ -444,9 +444,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Кошка.Лапа Get start)
                 if ((this.fЛапа == null))
                 {
-                    this.fЛапа = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЛапа(this);
+                    this.fЛапа = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЛапа(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЛапа result = this.fЛапа;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЛапа result = this.fЛапа;
                 // *** Start programmer edit section *** (Кошка.Лапа Get end)
 
                 // *** End programmer edit section *** (Кошка.Лапа Get end)
@@ -477,7 +477,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_КошкаE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("k_КошкаE", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
             
@@ -488,7 +488,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_КошкаL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("k_КошкаL", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
             
@@ -499,7 +499,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КИЛ_КошкаE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("КИЛ_КошкаE", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
             
@@ -510,7 +510,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КИЛ_КошкаL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("КИЛ_КошкаL", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
             
@@ -521,7 +521,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КошкаE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("КошкаE", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
             
@@ -532,7 +532,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КошкаGuid", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("КошкаGuid", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
             
@@ -543,7 +543,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КошкаL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Кошка));
+                    return ICSSoft.STORMNET.Information.GetView("КошкаL", typeof(NewPlatform.ClickHouseDataService.Tests.Кошка));
                 }
             }
         }

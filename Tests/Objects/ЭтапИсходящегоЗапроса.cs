@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -32,11 +32,11 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class ЭтапИсходящегоЗапроса : ICSSoft.STORMNET.DataObject
     {
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса fСтатус;
+        private NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса fСтатус;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КонфигурацияЗапроса fКонфигурация;
+        private NewPlatform.ClickHouseDataService.Tests.КонфигурацияЗапроса fКонфигурация;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИсходящийЗапрос fЗапросы;
+        private NewPlatform.ClickHouseDataService.Tests.ИсходящийЗапрос fЗапросы;
         
         // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса CustomMembers)
 
@@ -49,14 +49,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Статус CustomAttributes)
 
         // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Статус CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса Статус
+        public virtual NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса Статус
         {
             get
             {
                 // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Статус Get start)
 
                 // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Статус Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса result = this.fСтатус;
+                NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса result = this.fСтатус;
                 // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Статус Get end)
 
                 // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Статус Get end)
@@ -83,14 +83,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "Конфигурация"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КонфигурацияЗапроса Конфигурация
+        public virtual NewPlatform.ClickHouseDataService.Tests.КонфигурацияЗапроса Конфигурация
         {
             get
             {
                 // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Конфигурация Get start)
 
                 // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Конфигурация Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.КонфигурацияЗапроса result = this.fКонфигурация;
+                NewPlatform.ClickHouseDataService.Tests.КонфигурацияЗапроса result = this.fКонфигурация;
                 // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Конфигурация Get end)
 
                 // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Конфигурация Get end)
@@ -109,7 +109,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИсходящийЗапрос.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.ИсходящийЗапрос.
         /// </summary>
         // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Запросы CustomAttributes)
 
@@ -118,14 +118,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "Запросы"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИсходящийЗапрос Запросы
+        public virtual NewPlatform.ClickHouseDataService.Tests.ИсходящийЗапрос Запросы
         {
             get
             {
                 // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Запросы Get start)
 
                 // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Запросы Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИсходящийЗапрос result = this.fЗапросы;
+                NewPlatform.ClickHouseDataService.Tests.ИсходящийЗапрос result = this.fЗапросы;
                 // *** Start programmer edit section *** (ЭтапИсходящегоЗапроса.Запросы Get end)
 
                 // *** End programmer edit section *** (ЭтапИсходящегоЗапроса.Запросы Get end)
@@ -153,9 +153,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfЭтапИсходящегоЗапроса : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса members)
 
         
         /// <summary>
@@ -167,20 +167,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type ЭтапИсходящегоЗапроса.
         /// </summary>
-        public DetailArrayOfЭтапИсходящегоЗапроса(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИсходящийЗапрос fИсходящийЗапрос) : 
+        public DetailArrayOfЭтапИсходящегоЗапроса(NewPlatform.ClickHouseDataService.Tests.ИсходящийЗапрос fИсходящийЗапрос) : 
                 base(typeof(ЭтапИсходящегоЗапроса), ((ICSSoft.STORMNET.DataObject)(fИсходящийЗапрос)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЭтапИсходящегоЗапроса this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.ЭтапИсходящегоЗапроса this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЭтапИсходящегоЗапроса)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.ЭтапИсходящегоЗапроса)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ЭтапИсходящегоЗапроса dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.ЭтапИсходящегоЗапроса dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

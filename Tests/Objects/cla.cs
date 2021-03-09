@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -33,7 +33,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string finfo;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.clb fparent;
+        private NewPlatform.ClickHouseDataService.Tests.clb fparent;
         
         // *** Start programmer edit section *** (cla CustomMembers)
 
@@ -80,14 +80,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (cla.parent CustomAttributes)
         [PropertyStorage(new string[] {
                 "parent"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.clb parent
+        public virtual NewPlatform.ClickHouseDataService.Tests.clb parent
         {
             get
             {
                 // *** Start programmer edit section *** (cla.parent Get start)
 
                 // *** End programmer edit section *** (cla.parent Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.clb result = this.fparent;
+                NewPlatform.ClickHouseDataService.Tests.clb result = this.fparent;
                 // *** Start programmer edit section *** (cla.parent Get end)
 
                 // *** End programmer edit section *** (cla.parent Get end)

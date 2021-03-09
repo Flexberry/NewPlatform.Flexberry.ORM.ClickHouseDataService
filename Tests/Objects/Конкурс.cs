@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -56,13 +56,13 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.UserDataTypes.NullableDateTime fОкончаниеОценки = ICSSoft.STORMNET.UserDataTypes.NullableDateTime.Now;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Состояние fСостоятие;
+        private NewPlatform.ClickHouseDataService.Tests.Состояние fСостоятие;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь fОрганизатор;
+        private NewPlatform.ClickHouseDataService.Tests.Пользователь fОрганизатор;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки fКритерииОценки;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки fКритерииОценки;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу fДокументы;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу fДокументы;
         
         // *** Start programmer edit section *** (Конкурс CustomMembers)
 
@@ -263,14 +263,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Конкурс.Состоятие CustomAttributes)
 
         // *** End programmer edit section *** (Конкурс.Состоятие CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Состояние Состоятие
+        public virtual NewPlatform.ClickHouseDataService.Tests.Состояние Состоятие
         {
             get
             {
                 // *** Start programmer edit section *** (Конкурс.Состоятие Get start)
 
                 // *** End programmer edit section *** (Конкурс.Состоятие Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Состояние result = this.fСостоятие;
+                NewPlatform.ClickHouseDataService.Tests.Состояние result = this.fСостоятие;
                 // *** Start programmer edit section *** (Конкурс.Состоятие Get end)
 
                 // *** End programmer edit section *** (Конкурс.Состоятие Get end)
@@ -295,14 +295,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Конкурс.Организатор CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь Организатор
+        public virtual NewPlatform.ClickHouseDataService.Tests.Пользователь Организатор
         {
             get
             {
                 // *** Start programmer edit section *** (Конкурс.Организатор Get start)
 
                 // *** End programmer edit section *** (Конкурс.Организатор Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь result = this.fОрганизатор;
+                NewPlatform.ClickHouseDataService.Tests.Пользователь result = this.fОрганизатор;
                 // *** Start programmer edit section *** (Конкурс.Организатор Get end)
 
                 // *** End programmer edit section *** (Конкурс.Организатор Get end)
@@ -326,7 +326,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Конкурс.КритерииОценки CustomAttributes)
 
         // *** End programmer edit section *** (Конкурс.КритерииОценки CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки КритерииОценки
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки КритерииОценки
         {
             get
             {
@@ -335,9 +335,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Конкурс.КритерииОценки Get start)
                 if ((this.fКритерииОценки == null))
                 {
-                    this.fКритерииОценки = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки(this);
+                    this.fКритерииОценки = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки result = this.fКритерииОценки;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfКритерийОценки result = this.fКритерииОценки;
                 // *** Start programmer edit section *** (Конкурс.КритерииОценки Get end)
 
                 // *** End programmer edit section *** (Конкурс.КритерииОценки Get end)
@@ -361,7 +361,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Конкурс.Документы CustomAttributes)
 
         // *** End programmer edit section *** (Конкурс.Документы CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу Документы
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу Документы
         {
             get
             {
@@ -370,9 +370,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Конкурс.Документы Get start)
                 if ((this.fДокументы == null))
                 {
-                    this.fДокументы = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу(this);
+                    this.fДокументы = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу result = this.fДокументы;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfДокументацияККонкурсу result = this.fДокументы;
                 // *** Start programmer edit section *** (Конкурс.Документы Get end)
 
                 // *** End programmer edit section *** (Конкурс.Документы Get end)
@@ -403,7 +403,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("КонкурсE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс));
+                    return ICSSoft.STORMNET.Information.GetView("КонкурсE", typeof(NewPlatform.ClickHouseDataService.Tests.Конкурс));
                 }
             }
         }

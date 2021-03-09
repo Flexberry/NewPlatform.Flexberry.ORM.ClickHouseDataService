@@ -1,16 +1,28 @@
-﻿namespace NewPlatform.Flexberry.LogService.Tests
+﻿namespace NewPlatform.ClickHouseDataService.Tests
 {
     using Xunit;
 
-    public class LogServiceTest
+    /// <summary>
+    /// Test for <see cref="ClickHouseDataService"/>.
+    /// </summary>
+    public class ClickHouseDataServiceTest : BaseIntegratedTest
     {
         /// <summary>
-        /// Test for <see cref="ICSSoft.STORMNET.LogService.LogError"/> method.
+        /// Initializes a new instance of the <see cref="ClickHouseDataServiceTest"/> class.
+        /// </summary>
+        /// <param name="databasePrefix">Test database name prefix.</param>
+        public ClickHouseDataServiceTest(string databasePrefix)
+            : base(databasePrefix)
+        {
+        }
+
+        /// <summary>
+        /// Test for data insertion.
         /// </summary>
         [Fact]
-        void LogErrorTest()
+        void InsertDataTest()
         {
-            ICSSoft.STORMNET.LogService.LogError("Bums");
+            // TODO: implement this method.
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -33,9 +33,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DataObjectForTest fDataObjectForTest;
+        private NewPlatform.ClickHouseDataService.Tests.DataObjectForTest fDataObjectForTest;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass fCombinedTypesUsageProviderTestClass;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass fCombinedTypesUsageProviderTestClass;
         
         // *** Start programmer edit section *** (TypeUsageProviderTestClass CustomMembers)
 
@@ -104,14 +104,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (TypeUsageProviderTestClass.DataObjectForTest CustomAttributes)
 
         // *** End programmer edit section *** (TypeUsageProviderTestClass.DataObjectForTest CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DataObjectForTest DataObjectForTest
+        public virtual NewPlatform.ClickHouseDataService.Tests.DataObjectForTest DataObjectForTest
         {
             get
             {
                 // *** Start programmer edit section *** (TypeUsageProviderTestClass.DataObjectForTest Get start)
 
                 // *** End programmer edit section *** (TypeUsageProviderTestClass.DataObjectForTest Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DataObjectForTest result = this.fDataObjectForTest;
+                NewPlatform.ClickHouseDataService.Tests.DataObjectForTest result = this.fDataObjectForTest;
                 // *** Start programmer edit section *** (TypeUsageProviderTestClass.DataObjectForTest Get end)
 
                 // *** End programmer edit section *** (TypeUsageProviderTestClass.DataObjectForTest Get end)
@@ -135,7 +135,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (TypeUsageProviderTestClass.CombinedTypesUsageProviderTestClass CustomAttributes)
 
         // *** End programmer edit section *** (TypeUsageProviderTestClass.CombinedTypesUsageProviderTestClass CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass CombinedTypesUsageProviderTestClass
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass CombinedTypesUsageProviderTestClass
         {
             get
             {
@@ -144,9 +144,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (TypeUsageProviderTestClass.CombinedTypesUsageProviderTestClass Get start)
                 if ((this.fCombinedTypesUsageProviderTestClass == null))
                 {
-                    this.fCombinedTypesUsageProviderTestClass = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass(this);
+                    this.fCombinedTypesUsageProviderTestClass = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass result = this.fCombinedTypesUsageProviderTestClass;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfCombinedTypesUsageProviderTestClass result = this.fCombinedTypesUsageProviderTestClass;
                 // *** Start programmer edit section *** (TypeUsageProviderTestClass.CombinedTypesUsageProviderTestClass Get end)
 
                 // *** End programmer edit section *** (TypeUsageProviderTestClass.CombinedTypesUsageProviderTestClass Get end)

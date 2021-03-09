@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -42,7 +42,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fFieldB;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.SomeMasterClass fSomeMasterClass;
+        private NewPlatform.ClickHouseDataService.Tests.SomeMasterClass fSomeMasterClass;
         
         // *** Start programmer edit section *** (SomeDetailClass CustomMembers)
 
@@ -90,14 +90,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "ClassA"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.SomeMasterClass SomeMasterClass
+        public virtual NewPlatform.ClickHouseDataService.Tests.SomeMasterClass SomeMasterClass
         {
             get
             {
                 // *** Start programmer edit section *** (SomeDetailClass.SomeMasterClass Get start)
 
                 // *** End programmer edit section *** (SomeDetailClass.SomeMasterClass Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.SomeMasterClass result = this.fSomeMasterClass;
+                NewPlatform.ClickHouseDataService.Tests.SomeMasterClass result = this.fSomeMasterClass;
                 // *** Start programmer edit section *** (SomeDetailClass.SomeMasterClass Get end)
 
                 // *** End programmer edit section *** (SomeDetailClass.SomeMasterClass Get end)
@@ -128,7 +128,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ClassBE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.SomeDetailClass));
+                    return ICSSoft.STORMNET.Information.GetView("ClassBE", typeof(NewPlatform.ClickHouseDataService.Tests.SomeDetailClass));
                 }
             }
             
@@ -139,7 +139,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ClassBL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.SomeDetailClass));
+                    return ICSSoft.STORMNET.Information.GetView("ClassBL", typeof(NewPlatform.ClickHouseDataService.Tests.SomeDetailClass));
                 }
             }
         }

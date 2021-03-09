@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -116,9 +116,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (ComputedMaster.MasterComputedField1 CustomAttributes)
         [ICSSoft.STORMNET.NotStored()]
         [StrLen(255)]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.MSSQLDataService), "@MasterField1@ + \\\'  \\\' + @MasterField2@")]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.OracleDataService), "@MasterField1@ || \\\'  \\\' || @MasterField2@")]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.PostgresDataService), "@MasterField1@ || \\\' \\\' || @MasterField1@")]
+        [DataServiceExpression(typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService), "@MasterField1@ + \\\'  \\\' + @MasterField2@")]
         public virtual string MasterComputedField1
         {
             get
@@ -149,7 +147,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ComputedMasterL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ComputedMaster));
+                    return ICSSoft.STORMNET.Information.GetView("ComputedMasterL", typeof(NewPlatform.ClickHouseDataService.Tests.ComputedMaster));
                 }
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -223,7 +223,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("DeleteAuditView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditClassWithSettings));
+                    return ICSSoft.STORMNET.Information.GetView("DeleteAuditView", typeof(NewPlatform.ClickHouseDataService.Tests.AuditClassWithSettings));
                 }
             }
             
@@ -234,7 +234,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("InsertAuditView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditClassWithSettings));
+                    return ICSSoft.STORMNET.Information.GetView("InsertAuditView", typeof(NewPlatform.ClickHouseDataService.Tests.AuditClassWithSettings));
                 }
             }
             
@@ -245,7 +245,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("SelectAuditView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditClassWithSettings));
+                    return ICSSoft.STORMNET.Information.GetView("SelectAuditView", typeof(NewPlatform.ClickHouseDataService.Tests.AuditClassWithSettings));
                 }
             }
             
@@ -256,7 +256,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("UpdateAuditView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AuditClassWithSettings));
+                    return ICSSoft.STORMNET.Information.GetView("UpdateAuditView", typeof(NewPlatform.ClickHouseDataService.Tests.AuditClassWithSettings));
                 }
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -49,15 +49,15 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private double fСуммаБаллов;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь fАвтор;
+        private NewPlatform.ClickHouseDataService.Tests.Пользователь fАвтор;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс fКонкурс;
+        private NewPlatform.ClickHouseDataService.Tests.Конкурс fКонкурс;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта fОценкиЭкспертов;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта fОценкиЭкспертов;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи fФайлы;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи fФайлы;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия fЗначенияКритериев;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия fЗначенияКритериев;
         
         // *** Start programmer edit section *** (Идея CustomMembers)
 
@@ -166,14 +166,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Идея.Автор CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь Автор
+        public virtual NewPlatform.ClickHouseDataService.Tests.Пользователь Автор
         {
             get
             {
                 // *** Start programmer edit section *** (Идея.Автор Get start)
 
                 // *** End programmer edit section *** (Идея.Автор Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь result = this.fАвтор;
+                NewPlatform.ClickHouseDataService.Tests.Пользователь result = this.fАвтор;
                 // *** Start programmer edit section *** (Идея.Автор Get end)
 
                 // *** End programmer edit section *** (Идея.Автор Get end)
@@ -198,14 +198,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Идея.Конкурс CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс Конкурс
+        public virtual NewPlatform.ClickHouseDataService.Tests.Конкурс Конкурс
         {
             get
             {
                 // *** Start programmer edit section *** (Идея.Конкурс Get start)
 
                 // *** End programmer edit section *** (Идея.Конкурс Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Конкурс result = this.fКонкурс;
+                NewPlatform.ClickHouseDataService.Tests.Конкурс result = this.fКонкурс;
                 // *** Start programmer edit section *** (Идея.Конкурс Get end)
 
                 // *** End programmer edit section *** (Идея.Конкурс Get end)
@@ -229,7 +229,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Идея.ОценкиЭкспертов CustomAttributes)
 
         // *** End programmer edit section *** (Идея.ОценкиЭкспертов CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта ОценкиЭкспертов
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта ОценкиЭкспертов
         {
             get
             {
@@ -238,9 +238,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Идея.ОценкиЭкспертов Get start)
                 if ((this.fОценкиЭкспертов == null))
                 {
-                    this.fОценкиЭкспертов = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта(this);
+                    this.fОценкиЭкспертов = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта result = this.fОценкиЭкспертов;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfОценкаЭксперта result = this.fОценкиЭкспертов;
                 // *** Start programmer edit section *** (Идея.ОценкиЭкспертов Get end)
 
                 // *** End programmer edit section *** (Идея.ОценкиЭкспертов Get end)
@@ -264,7 +264,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Идея.Файлы CustomAttributes)
 
         // *** End programmer edit section *** (Идея.Файлы CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи Файлы
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи Файлы
         {
             get
             {
@@ -273,9 +273,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Идея.Файлы Get start)
                 if ((this.fФайлы == null))
                 {
-                    this.fФайлы = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи(this);
+                    this.fФайлы = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи result = this.fФайлы;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи result = this.fФайлы;
                 // *** Start programmer edit section *** (Идея.Файлы Get end)
 
                 // *** End programmer edit section *** (Идея.Файлы Get end)
@@ -299,7 +299,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (Идея.ЗначенияКритериев CustomAttributes)
 
         // *** End programmer edit section *** (Идея.ЗначенияКритериев CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия ЗначенияКритериев
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия ЗначенияКритериев
         {
             get
             {
@@ -308,9 +308,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (Идея.ЗначенияКритериев Get start)
                 if ((this.fЗначенияКритериев == null))
                 {
-                    this.fЗначенияКритериев = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия(this);
+                    this.fЗначенияКритериев = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия result = this.fЗначенияКритериев;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЗначениеКритерия result = this.fЗначенияКритериев;
                 // *** Start programmer edit section *** (Идея.ЗначенияКритериев Get end)
 
                 // *** End programmer edit section *** (Идея.ЗначенияКритериев Get end)
@@ -341,7 +341,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ИдеяE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея));
+                    return ICSSoft.STORMNET.Information.GetView("ИдеяE", typeof(NewPlatform.ClickHouseDataService.Tests.Идея));
                 }
             }
         }

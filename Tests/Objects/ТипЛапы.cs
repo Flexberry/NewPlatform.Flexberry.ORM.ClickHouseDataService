@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -60,7 +60,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (ТипЛапы.Название CustomAttributes)
         [StrLen(255)]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.MSSQLDataService), "/*Operation:ПросмотрАтрибутов;DeniedAccessValue:Просмотр запрещен*/")]
+        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.SQLDataService), "/*Operation:ПросмотрАтрибутов;DeniedAccessValue:Просмотр запрещен*/")]
         public virtual string Название
         {
             get
@@ -130,7 +130,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_ТипЛапыE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипЛапы));
+                    return ICSSoft.STORMNET.Information.GetView("k_ТипЛапыE", typeof(NewPlatform.ClickHouseDataService.Tests.ТипЛапы));
                 }
             }
             
@@ -141,7 +141,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("k_ТипЛапыL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипЛапы));
+                    return ICSSoft.STORMNET.Information.GetView("k_ТипЛапыL", typeof(NewPlatform.ClickHouseDataService.Tests.ТипЛапы));
                 }
             }
             
@@ -152,7 +152,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ТипЛапыE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипЛапы));
+                    return ICSSoft.STORMNET.Information.GetView("ТипЛапыE", typeof(NewPlatform.ClickHouseDataService.Tests.ТипЛапы));
                 }
             }
             
@@ -163,7 +163,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ТипЛапыL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ТипЛапы));
+                    return ICSSoft.STORMNET.Information.GetView("ТипЛапыL", typeof(NewPlatform.ClickHouseDataService.Tests.ТипЛапы));
                 }
             }
         }

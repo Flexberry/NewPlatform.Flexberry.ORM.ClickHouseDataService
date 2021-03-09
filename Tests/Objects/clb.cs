@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -31,9 +31,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class clb : ICSSoft.STORMNET.DataObject
     {
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.cla fref1;
+        private NewPlatform.ClickHouseDataService.Tests.cla fref1;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.cla fref2;
+        private NewPlatform.ClickHouseDataService.Tests.cla fref2;
         
         // *** Start programmer edit section *** (clb CustomMembers)
 
@@ -48,14 +48,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (clb.ref1 CustomAttributes)
         [PropertyStorage(new string[] {
                 "ref1"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.cla ref1
+        public virtual NewPlatform.ClickHouseDataService.Tests.cla ref1
         {
             get
             {
                 // *** Start programmer edit section *** (clb.ref1 Get start)
 
                 // *** End programmer edit section *** (clb.ref1 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.cla result = this.fref1;
+                NewPlatform.ClickHouseDataService.Tests.cla result = this.fref1;
                 // *** Start programmer edit section *** (clb.ref1 Get end)
 
                 // *** End programmer edit section *** (clb.ref1 Get end)
@@ -81,14 +81,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (clb.ref2 CustomAttributes)
         [PropertyStorage(new string[] {
                 "ref2"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.cla ref2
+        public virtual NewPlatform.ClickHouseDataService.Tests.cla ref2
         {
             get
             {
                 // *** Start programmer edit section *** (clb.ref2 Get start)
 
                 // *** End programmer edit section *** (clb.ref2 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.cla result = this.fref2;
+                NewPlatform.ClickHouseDataService.Tests.cla result = this.fref2;
                 // *** Start programmer edit section *** (clb.ref2 Get end)
 
                 // *** End programmer edit section *** (clb.ref2 Get end)

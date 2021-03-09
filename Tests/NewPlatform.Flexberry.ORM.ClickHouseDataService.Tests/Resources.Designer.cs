@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.IntegratedTests {
+namespace NewPlatform.ClickHouseDataService.Tests {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace NewPlatform.Flexberry.ORM.IntegratedTests {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NewPlatform.Flexberry.ORM.IntegratedTests.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NewPlatform.ClickHouseDataService.Tests.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,168 +65,44 @@ namespace NewPlatform.Flexberry.ORM.IntegratedTests {
         ///
         ///
         ///
-        ///CREATE TABLE [InformationTestClass] (
+        ///CREATE TABLE &quot;Place2&quot; (
         ///
-        ///	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+        /// &quot;primaryKey&quot; UUID,
         ///
-        ///	 [PublicStringProperty] VARCHAR(255)  NULL,
+        /// &quot;PlaceName&quot; String,
         ///
-        ///	 [StringPropertyForInfTestClass] VARCHAR(255)  NULL,
+        /// &quot;TomorrowTeritory_m0&quot; UUID,
         ///
-        ///	 [IntPropertyForInfTestClass] INT  NULL,
+        /// &quot;TomorrowTeritory_m1&quot; UUID,
         ///
-        ///	 [BoolPropertyForInfTestClass] BIT  NULL,
+        /// &quot;TodayTerritory_m0&quot; UUID,
         ///
-        ///	 PRIMARY KEY ([primaryKey]))
+        /// &quot;TodayTerritory_m1&quot; UUID
         ///
-        ///
-        ///CREATE TABLE [ТипЛапы] (
-        ///
-        ///	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
-        ///
-        ///	 [Название] VARCHAR(255)  NULL,
-        ///
-        ///	 [Актуально] BIT  NULL,
-        ///
-        ///	 PRIMARY KEY ([primaryKey]))
+        ///) ENGINE = MergeTree() ORDER BY (&quot;primaryKey&quot;);
         ///
         ///
-        ///CREATE TABLE  [rest of string was truncated]&quot;;.
+        ///CREATE TABLE &quot;SomeMasterClass&quot; (
+        ///
+        /// &quot;primaryKey&quot; UUID,
+        ///
+        /// &quot;FieldA&quot; String
+        ///
+        ///) ENGINE = MergeTree() ORDER BY (&quot;primaryKey&quot;);
+        ///
+        ///
+        ///CREATE TABLE &quot;МастерМ&quot; (
+        ///
+        /// &quot;primaryKey&quot; UUID
+        ///
+        ///) ENGINE = MergeTree() ORDER BY (&quot;primaryKey&quot;);
+        ///
+        ///
+        ///CREATE TABLE &quot;FullT [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string MssqlScript {
+        internal static string ClickHouseDirectGenerator_create {
             get {
-                return ResourceManager.GetString("MssqlScript", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 
-        ///
-        ///
-        ///
-        ///CREATE TABLE &quot;InformationTestClass&quot;
-        ///(
-        ///
-        ///	&quot;primaryKey&quot; RAW(16) NOT NULL,
-        ///
-        ///	&quot;PublicStringProperty&quot; NVARCHAR2(255) NULL,
-        ///
-        ///	&quot;StringPropertyForInfTestClass&quot; NVARCHAR2(255) NULL,
-        ///
-        ///	&quot;IntPropertyForInfTestClass&quot; NUMBER(10) NULL,
-        ///
-        ///	&quot;BoolPropertyForInfTestClass&quot; NUMBER(1) NULL,
-        ///
-        ///	 PRIMARY KEY (&quot;primaryKey&quot;)
-        ///) ;
-        ///
-        ///
-        ///CREATE TABLE &quot;ТипЛапы&quot;
-        ///(
-        ///
-        ///	&quot;primaryKey&quot; RAW(16) NOT NULL,
-        ///
-        ///	&quot;Название&quot; NVARCHAR2(255) NULL,
-        ///
-        ///	&quot;Актуально&quot; NUMBER(1) NULL,
-        ///
-        ///	 PRIMARY KEY (&quot;primaryKey&quot;)
-        ///) ;
-        ///
-        ///
-        ///CREATE TABLE [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string OracleScript {
-            get {
-                return ResourceManager.GetString("OracleScript", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 
-        ///
-        ///
-        ///
-        ///CREATE TABLE МастерКлассДлинноеИмя (
-        ///
-        /// primaryKey UUID NOT NULL,
-        ///
-        /// АтрибутМастерКласса01 VARCHAR(255) NULL,
-        ///
-        /// АтрибутМастерКласса02 VARCHAR(255) NULL,
-        ///
-        /// MasterAttr1 TIMESTAMP(3) NULL,
-        ///
-        /// MasterAttr2 BOOLEAN NULL,
-        ///
-        /// MasterRoot UUID NOT NULL,
-        ///
-        /// PRIMARY KEY (primaryKey));
-        ///
-        ///
-        ///CREATE TABLE Class_ulong (
-        ///
-        /// primaryKey UUID NOT NULL,
-        ///
-        /// Attr BIGINT NULL,
-        ///
-        /// PRIMARY KEY (primaryKey));
-        ///
-        ///
-        ///CREATE TABLE ДочернийКлассДлинноеИмя (
-        ///
-        /// primaryKey UUID NOT NULL,
-        ///
-        /// Attr21 TEXT NULL,
-        ///
-        /// Attr20 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PostgresDataServiceTestScript {
-            get {
-                return ResourceManager.GetString("PostgresDataServiceTestScript", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 
-        ///
-        ///
-        ///
-        ///CREATE TABLE InformationTestClass (
-        ///
-        /// primaryKey UUID NOT NULL,
-        ///
-        /// PublicStringProperty VARCHAR(255) NULL,
-        ///
-        /// StringPropertyForInfTestClass VARCHAR(255) NULL,
-        ///
-        /// IntPropertyForInfTestClass INT NULL,
-        ///
-        /// BoolPropertyForInfTestClass BOOLEAN NULL,
-        ///
-        /// PRIMARY KEY (primaryKey));
-        ///
-        ///
-        ///CREATE TABLE ТипЛапы (
-        ///
-        /// primaryKey UUID NOT NULL,
-        ///
-        /// Название VARCHAR(255) NULL,
-        ///
-        /// Актуально BOOLEAN NULL,
-        ///
-        /// PRIMARY KEY (primaryKey));
-        ///
-        ///
-        ///CREATE TABLE Идея (
-        ///
-        /// primaryKey UUID NOT NULL,
-        ///
-        /// Заголовок VARCH [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PostgresScript {
-            get {
-                return ResourceManager.GetString("PostgresScript", resourceCulture);
+                return ResourceManager.GetString("ClickHouseDirectGenerator.create", resourceCulture);
             }
         }
     }

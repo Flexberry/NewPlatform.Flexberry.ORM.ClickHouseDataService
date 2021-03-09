@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -52,7 +52,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.UserDataTypes.NullableDateTime fДатаПоследнегоОсмотра;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Страна fСтрана;
+        private NewPlatform.ClickHouseDataService.Tests.Страна fСтрана;
         
         // *** Start programmer edit section *** (Лес CustomMembers)
 
@@ -193,14 +193,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Лес.Страна CustomAttributes)
         [PropertyStorage(new string[] {
                 "Страна"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Страна Страна
+        public virtual NewPlatform.ClickHouseDataService.Tests.Страна Страна
         {
             get
             {
                 // *** Start programmer edit section *** (Лес.Страна Get start)
 
                 // *** End programmer edit section *** (Лес.Страна Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Страна result = this.fСтрана;
+                NewPlatform.ClickHouseDataService.Tests.Страна result = this.fСтрана;
                 // *** Start programmer edit section *** (Лес.Страна Get end)
 
                 // *** End programmer edit section *** (Лес.Страна Get end)
@@ -231,7 +231,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ЛесE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес));
+                    return ICSSoft.STORMNET.Information.GetView("ЛесE", typeof(NewPlatform.ClickHouseDataService.Tests.Лес));
                 }
             }
             
@@ -242,7 +242,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ЛесL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Лес));
+                    return ICSSoft.STORMNET.Information.GetView("ЛесL", typeof(NewPlatform.ClickHouseDataService.Tests.Лес));
                 }
             }
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -53,13 +53,13 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fStringMasterProperty;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass3 fInformationTestClass3;
+        private NewPlatform.ClickHouseDataService.Tests.InformationTestClass3 fInformationTestClass3;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass2 fInformationTestClass2;
+        private NewPlatform.ClickHouseDataService.Tests.InformationTestClass2 fInformationTestClass2;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass fInformationTestClass;
+        private NewPlatform.ClickHouseDataService.Tests.InformationTestClass fInformationTestClass;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfDetailClass fDetailClass;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfDetailClass fDetailClass;
         
         // *** Start programmer edit section *** (MasterClass CustomMembers)
 
@@ -128,14 +128,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (MasterClass.InformationTestClass3 CustomAttributes)
 
         // *** End programmer edit section *** (MasterClass.InformationTestClass3 CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass3 InformationTestClass3
+        public virtual NewPlatform.ClickHouseDataService.Tests.InformationTestClass3 InformationTestClass3
         {
             get
             {
                 // *** Start programmer edit section *** (MasterClass.InformationTestClass3 Get start)
 
                 // *** End programmer edit section *** (MasterClass.InformationTestClass3 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass3 result = this.fInformationTestClass3;
+                NewPlatform.ClickHouseDataService.Tests.InformationTestClass3 result = this.fInformationTestClass3;
                 // *** Start programmer edit section *** (MasterClass.InformationTestClass3 Get end)
 
                 // *** End programmer edit section *** (MasterClass.InformationTestClass3 Get end)
@@ -161,14 +161,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (MasterClass.InformationTestClass2 CustomAttributes)
         [PropertyStorage(new string[] {
                 "InformationTestClass2"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass2 InformationTestClass2
+        public virtual NewPlatform.ClickHouseDataService.Tests.InformationTestClass2 InformationTestClass2
         {
             get
             {
                 // *** Start programmer edit section *** (MasterClass.InformationTestClass2 Get start)
 
                 // *** End programmer edit section *** (MasterClass.InformationTestClass2 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass2 result = this.fInformationTestClass2;
+                NewPlatform.ClickHouseDataService.Tests.InformationTestClass2 result = this.fInformationTestClass2;
                 // *** Start programmer edit section *** (MasterClass.InformationTestClass2 Get end)
 
                 // *** End programmer edit section *** (MasterClass.InformationTestClass2 Get end)
@@ -194,16 +194,16 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (MasterClass.InformationTestClass CustomAttributes)
         [PropertyStorage("InformationTestClass")]
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClassChild"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass InformationTestClass
+                "NewPlatform.ClickHouseDataService.Tests.InformationTestClass",
+                "NewPlatform.ClickHouseDataService.Tests.InformationTestClassChild"})]
+        public virtual NewPlatform.ClickHouseDataService.Tests.InformationTestClass InformationTestClass
         {
             get
             {
                 // *** Start programmer edit section *** (MasterClass.InformationTestClass Get start)
 
                 // *** End programmer edit section *** (MasterClass.InformationTestClass Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass result = this.fInformationTestClass;
+                NewPlatform.ClickHouseDataService.Tests.InformationTestClass result = this.fInformationTestClass;
                 // *** Start programmer edit section *** (MasterClass.InformationTestClass Get end)
 
                 // *** End programmer edit section *** (MasterClass.InformationTestClass Get end)
@@ -227,7 +227,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (MasterClass.DetailClass CustomAttributes)
 
         // *** End programmer edit section *** (MasterClass.DetailClass CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfDetailClass DetailClass
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfDetailClass DetailClass
         {
             get
             {
@@ -236,9 +236,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (MasterClass.DetailClass Get start)
                 if ((this.fDetailClass == null))
                 {
-                    this.fDetailClass = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfDetailClass(this);
+                    this.fDetailClass = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfDetailClass(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfDetailClass result = this.fDetailClass;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfDetailClass result = this.fDetailClass;
                 // *** Start programmer edit section *** (MasterClass.DetailClass Get end)
 
                 // *** End programmer edit section *** (MasterClass.DetailClass Get end)
@@ -269,7 +269,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("MasterClassE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterClass));
+                    return ICSSoft.STORMNET.Information.GetView("MasterClassE", typeof(NewPlatform.ClickHouseDataService.Tests.MasterClass));
                 }
             }
             
@@ -280,7 +280,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("MasterClassL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterClass));
+                    return ICSSoft.STORMNET.Information.GetView("MasterClassL", typeof(NewPlatform.ClickHouseDataService.Tests.MasterClass));
                 }
             }
             
@@ -291,7 +291,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Test_MasterClassE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterClass));
+                    return ICSSoft.STORMNET.Information.GetView("Test_MasterClassE", typeof(NewPlatform.ClickHouseDataService.Tests.MasterClass));
                 }
             }
             
@@ -302,7 +302,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Test_MasterClassL", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterClass));
+                    return ICSSoft.STORMNET.Information.GetView("Test_MasterClassL", typeof(NewPlatform.ClickHouseDataService.Tests.MasterClass));
                 }
             }
         }

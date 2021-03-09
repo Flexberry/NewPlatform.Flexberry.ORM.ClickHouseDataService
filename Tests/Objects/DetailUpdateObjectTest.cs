@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -27,8 +27,8 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     // *** Start programmer edit section *** (DetailUpdateObjectTest CustomAttributes)
 
     // *** End programmer edit section *** (DetailUpdateObjectTest CustomAttributes)
-    [BusinessServer("NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.UpdateObjectTestBS, Flexber" +
-        "ry.ORM.ClickHouseDataService.Tests.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
+    [BusinessServer("NewPlatform.ClickHouseDataService.Tests.UpdateObjectTestBS, ClickHouseDataService" +
+        ".Tests.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("DetailUpdateObjectTestE", new string[] {
@@ -46,9 +46,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fDetailName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterUpdateObjectTest fMaster;
+        private NewPlatform.ClickHouseDataService.Tests.MasterUpdateObjectTest fMaster;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AggregatorUpdateObjectTest fAggregatorUpdateObjectTest;
+        private NewPlatform.ClickHouseDataService.Tests.AggregatorUpdateObjectTest fAggregatorUpdateObjectTest;
         
         // *** Start programmer edit section *** (DetailUpdateObjectTest CustomMembers)
 
@@ -95,14 +95,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (DetailUpdateObjectTest.Master CustomAttributes)
         [PropertyStorage(new string[] {
                 "Master"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterUpdateObjectTest Master
+        public virtual NewPlatform.ClickHouseDataService.Tests.MasterUpdateObjectTest Master
         {
             get
             {
                 // *** Start programmer edit section *** (DetailUpdateObjectTest.Master Get start)
 
                 // *** End programmer edit section *** (DetailUpdateObjectTest.Master Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.MasterUpdateObjectTest result = this.fMaster;
+                NewPlatform.ClickHouseDataService.Tests.MasterUpdateObjectTest result = this.fMaster;
                 // *** Start programmer edit section *** (DetailUpdateObjectTest.Master Get end)
 
                 // *** End programmer edit section *** (DetailUpdateObjectTest.Master Get end)
@@ -121,7 +121,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AggregatorUpdateObjectTest.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.AggregatorUpdateObjectTest.
         /// </summary>
         // *** Start programmer edit section *** (DetailUpdateObjectTest.AggregatorUpdateObjectTest CustomAttributes)
 
@@ -130,14 +130,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [NotNull()]
         [PropertyStorage(new string[] {
                 "AggregatorUpdateObjectTest"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AggregatorUpdateObjectTest AggregatorUpdateObjectTest
+        public virtual NewPlatform.ClickHouseDataService.Tests.AggregatorUpdateObjectTest AggregatorUpdateObjectTest
         {
             get
             {
                 // *** Start programmer edit section *** (DetailUpdateObjectTest.AggregatorUpdateObjectTest Get start)
 
                 // *** End programmer edit section *** (DetailUpdateObjectTest.AggregatorUpdateObjectTest Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AggregatorUpdateObjectTest result = this.fAggregatorUpdateObjectTest;
+                NewPlatform.ClickHouseDataService.Tests.AggregatorUpdateObjectTest result = this.fAggregatorUpdateObjectTest;
                 // *** Start programmer edit section *** (DetailUpdateObjectTest.AggregatorUpdateObjectTest Get end)
 
                 // *** End programmer edit section *** (DetailUpdateObjectTest.AggregatorUpdateObjectTest Get end)
@@ -168,7 +168,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("DetailUpdateObjectTestE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailUpdateObjectTest));
+                    return ICSSoft.STORMNET.Information.GetView("DetailUpdateObjectTestE", typeof(NewPlatform.ClickHouseDataService.Tests.DetailUpdateObjectTest));
                 }
             }
         }
@@ -183,9 +183,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfDetailUpdateObjectTest : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfDetailUpdateObjectTest members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfDetailUpdateObjectTest members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfDetailUpdateObjectTest members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfDetailUpdateObjectTest members)
 
         
         /// <summary>
@@ -197,20 +197,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type DetailUpdateObjectTest.
         /// </summary>
-        public DetailArrayOfDetailUpdateObjectTest(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.AggregatorUpdateObjectTest fAggregatorUpdateObjectTest) : 
+        public DetailArrayOfDetailUpdateObjectTest(NewPlatform.ClickHouseDataService.Tests.AggregatorUpdateObjectTest fAggregatorUpdateObjectTest) : 
                 base(typeof(DetailUpdateObjectTest), ((ICSSoft.STORMNET.DataObject)(fAggregatorUpdateObjectTest)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailUpdateObjectTest this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.DetailUpdateObjectTest this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailUpdateObjectTest)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.DetailUpdateObjectTest)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailUpdateObjectTest dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.DetailUpdateObjectTest dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

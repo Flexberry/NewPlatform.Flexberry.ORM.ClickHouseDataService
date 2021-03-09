@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -36,9 +36,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private ICSSoft.STORMNET.UserDataTypes.WebFile fФайл;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь fВладелец;
+        private NewPlatform.ClickHouseDataService.Tests.Пользователь fВладелец;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея fИдея;
+        private NewPlatform.ClickHouseDataService.Tests.Идея fИдея;
         
         // *** Start programmer edit section *** (ФайлИдеи CustomMembers)
 
@@ -83,14 +83,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (ФайлИдеи.Владелец CustomAttributes)
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь Владелец
+        public virtual NewPlatform.ClickHouseDataService.Tests.Пользователь Владелец
         {
             get
             {
                 // *** Start programmer edit section *** (ФайлИдеи.Владелец Get start)
 
                 // *** End programmer edit section *** (ФайлИдеи.Владелец Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Пользователь result = this.fВладелец;
+                NewPlatform.ClickHouseDataService.Tests.Пользователь result = this.fВладелец;
                 // *** Start programmer edit section *** (ФайлИдеи.Владелец Get end)
 
                 // *** End programmer edit section *** (ФайлИдеи.Владелец Get end)
@@ -109,21 +109,21 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Идея.
         /// </summary>
         // *** Start programmer edit section *** (ФайлИдеи.Идея CustomAttributes)
 
         // *** End programmer edit section *** (ФайлИдеи.Идея CustomAttributes)
         [Agregator()]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея Идея
+        public virtual NewPlatform.ClickHouseDataService.Tests.Идея Идея
         {
             get
             {
                 // *** Start programmer edit section *** (ФайлИдеи.Идея Get start)
 
                 // *** End programmer edit section *** (ФайлИдеи.Идея Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея result = this.fИдея;
+                NewPlatform.ClickHouseDataService.Tests.Идея result = this.fИдея;
                 // *** Start programmer edit section *** (ФайлИдеи.Идея Get end)
 
                 // *** End programmer edit section *** (ФайлИдеи.Идея Get end)
@@ -154,7 +154,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ФайлE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ФайлИдеи));
+                    return ICSSoft.STORMNET.Information.GetView("ФайлE", typeof(NewPlatform.ClickHouseDataService.Tests.ФайлИдеи));
                 }
             }
         }
@@ -169,9 +169,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfФайлИдеи : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfФайлИдеи members)
 
         
         /// <summary>
@@ -183,20 +183,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type ФайлИдеи.
         /// </summary>
-        public DetailArrayOfФайлИдеи(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Идея fИдея) : 
+        public DetailArrayOfФайлИдеи(NewPlatform.ClickHouseDataService.Tests.Идея fИдея) : 
                 base(typeof(ФайлИдеи), ((ICSSoft.STORMNET.DataObject)(fИдея)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ФайлИдеи this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.ФайлИдеи this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ФайлИдеи)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.ФайлИдеи)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ФайлИдеи dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.ФайлИдеи dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

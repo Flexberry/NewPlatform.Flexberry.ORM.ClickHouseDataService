@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -33,7 +33,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fStringPropertyForInformationTestClass6;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ClassWithCaptions fExampleOfClassWithCaptions;
+        private NewPlatform.ClickHouseDataService.Tests.ClassWithCaptions fExampleOfClassWithCaptions;
         
         // *** Start programmer edit section *** (InformationTestClass6 CustomMembers)
 
@@ -82,14 +82,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "ExampleOfClassWithCaptions"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ClassWithCaptions ExampleOfClassWithCaptions
+        public virtual NewPlatform.ClickHouseDataService.Tests.ClassWithCaptions ExampleOfClassWithCaptions
         {
             get
             {
                 // *** Start programmer edit section *** (InformationTestClass6.ExampleOfClassWithCaptions Get start)
 
                 // *** End programmer edit section *** (InformationTestClass6.ExampleOfClassWithCaptions Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ClassWithCaptions result = this.fExampleOfClassWithCaptions;
+                NewPlatform.ClickHouseDataService.Tests.ClassWithCaptions result = this.fExampleOfClassWithCaptions;
                 // *** Start programmer edit section *** (InformationTestClass6.ExampleOfClassWithCaptions Get end)
 
                 // *** End programmer edit section *** (InformationTestClass6.ExampleOfClassWithCaptions Get end)

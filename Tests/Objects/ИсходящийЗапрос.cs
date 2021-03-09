@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -38,11 +38,11 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private bool fПервоеДлинноеПолеДляПроверки;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса fВтороеДлинноеПолеДляПроверки;
+        private NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса fВтороеДлинноеПолеДляПроверки;
         
         private int fПятоеДлинноеПолеДляПроверки;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса fЭтапы;
+        private NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса fЭтапы;
         
         // *** Start programmer edit section *** (ИсходящийЗапрос CustomMembers)
 
@@ -86,14 +86,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (ИсходящийЗапрос.ВтороеДлинноеПолеДляПроверки CustomAttributes)
 
         // *** End programmer edit section *** (ИсходящийЗапрос.ВтороеДлинноеПолеДляПроверки CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса ВтороеДлинноеПолеДляПроверки
+        public virtual NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса ВтороеДлинноеПолеДляПроверки
         {
             get
             {
                 // *** Start programmer edit section *** (ИсходящийЗапрос.ВтороеДлинноеПолеДляПроверки Get start)
 
                 // *** End programmer edit section *** (ИсходящийЗапрос.ВтороеДлинноеПолеДляПроверки Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.СтатусЗапроса result = this.fВтороеДлинноеПолеДляПроверки;
+                NewPlatform.ClickHouseDataService.Tests.СтатусЗапроса result = this.fВтороеДлинноеПолеДляПроверки;
                 // *** Start programmer edit section *** (ИсходящийЗапрос.ВтороеДлинноеПолеДляПроверки Get end)
 
                 // *** End programmer edit section *** (ИсходящийЗапрос.ВтороеДлинноеПолеДляПроверки Get end)
@@ -148,7 +148,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (ИсходящийЗапрос.Этапы CustomAttributes)
 
         // *** End programmer edit section *** (ИсходящийЗапрос.Этапы CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса Этапы
+        public virtual NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса Этапы
         {
             get
             {
@@ -157,9 +157,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
                 // *** End programmer edit section *** (ИсходящийЗапрос.Этапы Get start)
                 if ((this.fЭтапы == null))
                 {
-                    this.fЭтапы = new NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса(this);
+                    this.fЭтапы = new NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса(this);
                 }
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса result = this.fЭтапы;
+                NewPlatform.ClickHouseDataService.Tests.DetailArrayOfЭтапИсходящегоЗапроса result = this.fЭтапы;
                 // *** Start programmer edit section *** (ИсходящийЗапрос.Этапы Get end)
 
                 // *** End programmer edit section *** (ИсходящийЗапрос.Этапы Get end)
@@ -190,7 +190,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("ИсходящийЗапросView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.ИсходящийЗапрос));
+                    return ICSSoft.STORMNET.Information.GetView("ИсходящийЗапросView", typeof(NewPlatform.ClickHouseDataService.Tests.ИсходящийЗапрос));
                 }
             }
         }

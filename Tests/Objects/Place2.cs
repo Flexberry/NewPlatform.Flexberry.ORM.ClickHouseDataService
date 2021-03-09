@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -43,9 +43,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fPlaceName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 fTomorrowTeritory;
+        private NewPlatform.ClickHouseDataService.Tests.Territory2 fTomorrowTeritory;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 fTodayTerritory;
+        private NewPlatform.ClickHouseDataService.Tests.Territory2 fTodayTerritory;
         
         // *** Start programmer edit section *** (Place2 CustomMembers)
 
@@ -91,17 +91,17 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Place2.TomorrowTeritory CustomAttributes)
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2"})]
+                "NewPlatform.ClickHouseDataService.Tests.Country2",
+                "NewPlatform.ClickHouseDataService.Tests.Territory2"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 TomorrowTeritory
+        public virtual NewPlatform.ClickHouseDataService.Tests.Territory2 TomorrowTeritory
         {
             get
             {
                 // *** Start programmer edit section *** (Place2.TomorrowTeritory Get start)
 
                 // *** End programmer edit section *** (Place2.TomorrowTeritory Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 result = this.fTomorrowTeritory;
+                NewPlatform.ClickHouseDataService.Tests.Territory2 result = this.fTomorrowTeritory;
                 // *** Start programmer edit section *** (Place2.TomorrowTeritory Get end)
 
                 // *** End programmer edit section *** (Place2.TomorrowTeritory Get end)
@@ -126,16 +126,16 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Place2.TodayTerritory CustomAttributes)
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 TodayTerritory
+                "NewPlatform.ClickHouseDataService.Tests.Country2",
+                "NewPlatform.ClickHouseDataService.Tests.Territory2"})]
+        public virtual NewPlatform.ClickHouseDataService.Tests.Territory2 TodayTerritory
         {
             get
             {
                 // *** Start programmer edit section *** (Place2.TodayTerritory Get start)
 
                 // *** End programmer edit section *** (Place2.TodayTerritory Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 result = this.fTodayTerritory;
+                NewPlatform.ClickHouseDataService.Tests.Territory2 result = this.fTodayTerritory;
                 // *** Start programmer edit section *** (Place2.TodayTerritory Get end)
 
                 // *** End programmer edit section *** (Place2.TodayTerritory Get end)
@@ -166,7 +166,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Place2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Place2));
+                    return ICSSoft.STORMNET.Information.GetView("Place2E", typeof(NewPlatform.ClickHouseDataService.Tests.Place2));
                 }
             }
             
@@ -177,7 +177,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Place2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Place2));
+                    return ICSSoft.STORMNET.Information.GetView("Place2L", typeof(NewPlatform.ClickHouseDataService.Tests.Place2));
                 }
             }
         }

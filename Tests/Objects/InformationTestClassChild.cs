@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -28,7 +28,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     // *** End programmer edit section *** (InformationTestClassChild CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
-    public class InformationTestClassChild : NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass
+    public class InformationTestClassChild : NewPlatform.ClickHouseDataService.Tests.InformationTestClass
     {
         
         // *** Start programmer edit section *** (InformationTestClassChild CustomMembers)
@@ -43,7 +43,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (InformationTestClassChild.PublicStringProperty CustomAttributes)
         [StrLen(255)]
-        [DataServiceExpression(typeof(ICSSoft.STORMNET.Business.MSSQLDataService), "TestDataServiceExpressionChild")]
+        [DataServiceExpression(typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService), "TestDataServiceExpressionChild")]
         public override string PublicStringProperty
         {
             get

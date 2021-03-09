@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -40,7 +40,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fDishName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 fMainIngridient;
+        private NewPlatform.ClickHouseDataService.Tests.Plant2 fMainIngridient;
         
         // *** Start programmer edit section *** (Dish2 CustomMembers)
 
@@ -87,16 +87,16 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (Dish2.MainIngridient CustomAttributes)
         [PropertyStorage("MainIngridient")]
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 MainIngridient
+                "NewPlatform.ClickHouseDataService.Tests.Cabbage2",
+                "NewPlatform.ClickHouseDataService.Tests.Plant2"})]
+        public virtual NewPlatform.ClickHouseDataService.Tests.Plant2 MainIngridient
         {
             get
             {
                 // *** Start programmer edit section *** (Dish2.MainIngridient Get start)
 
                 // *** End programmer edit section *** (Dish2.MainIngridient Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Plant2 result = this.fMainIngridient;
+                NewPlatform.ClickHouseDataService.Tests.Plant2 result = this.fMainIngridient;
                 // *** Start programmer edit section *** (Dish2.MainIngridient Get end)
 
                 // *** End programmer edit section *** (Dish2.MainIngridient Get end)
@@ -127,7 +127,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Dish2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Dish2));
+                    return ICSSoft.STORMNET.Information.GetView("Dish2E", typeof(NewPlatform.ClickHouseDataService.Tests.Dish2));
                 }
             }
             
@@ -138,7 +138,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Dish2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Dish2));
+                    return ICSSoft.STORMNET.Information.GetView("Dish2L", typeof(NewPlatform.ClickHouseDataService.Tests.Dish2));
                 }
             }
         }

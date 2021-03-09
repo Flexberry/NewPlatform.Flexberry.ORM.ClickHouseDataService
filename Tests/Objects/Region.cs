@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -35,7 +35,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fRegionName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 fCountry2;
+        private NewPlatform.ClickHouseDataService.Tests.Country2 fCountry2;
         
         // *** Start programmer edit section *** (Region CustomMembers)
 
@@ -75,21 +75,21 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         }
         
         /// <summary>
-        /// мастеровая ссылка на шапку NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2.
+        /// мастеровая ссылка на шапку NewPlatform.ClickHouseDataService.Tests.Country2.
         /// </summary>
         // *** Start programmer edit section *** (Region.Country2 CustomAttributes)
 
         // *** End programmer edit section *** (Region.Country2 CustomAttributes)
         [Agregator()]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 Country2
+        public virtual NewPlatform.ClickHouseDataService.Tests.Country2 Country2
         {
             get
             {
                 // *** Start programmer edit section *** (Region.Country2 Get start)
 
                 // *** End programmer edit section *** (Region.Country2 Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 result = this.fCountry2;
+                NewPlatform.ClickHouseDataService.Tests.Country2 result = this.fCountry2;
                 // *** Start programmer edit section *** (Region.Country2 Get end)
 
                 // *** End programmer edit section *** (Region.Country2 Get end)
@@ -120,7 +120,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("RegionE", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Region));
+                    return ICSSoft.STORMNET.Information.GetView("RegionE", typeof(NewPlatform.ClickHouseDataService.Tests.Region));
                 }
             }
         }
@@ -135,9 +135,9 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
     public class DetailArrayOfRegion : ICSSoft.STORMNET.DetailArray
     {
         
-        // *** Start programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfRegion members)
+        // *** Start programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfRegion members)
 
-        // *** End programmer edit section *** (NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.DetailArrayOfRegion members)
+        // *** End programmer edit section *** (NewPlatform.ClickHouseDataService.Tests.DetailArrayOfRegion members)
 
         
         /// <summary>
@@ -149,20 +149,20 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         /// <summary>
         /// Adds object with type Region.
         /// </summary>
-        public DetailArrayOfRegion(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2 fCountry2) : 
+        public DetailArrayOfRegion(NewPlatform.ClickHouseDataService.Tests.Country2 fCountry2) : 
                 base(typeof(Region), ((ICSSoft.STORMNET.DataObject)(fCountry2)))
         {
         }
         
-        public NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Region this[int index]
+        public NewPlatform.ClickHouseDataService.Tests.Region this[int index]
         {
             get
             {
-                return ((NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Region)(this.ItemByIndex(index)));
+                return ((NewPlatform.ClickHouseDataService.Tests.Region)(this.ItemByIndex(index)));
             }
         }
         
-        public virtual void Add(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Region dataobject)
+        public virtual void Add(NewPlatform.ClickHouseDataService.Tests.Region dataobject)
         {
             this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }

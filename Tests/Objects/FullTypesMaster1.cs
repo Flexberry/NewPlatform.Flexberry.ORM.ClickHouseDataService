@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -89,7 +89,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private System.Nullable<System.Guid> fPoleNullGuid;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum fPoleEnum;
+        private NewPlatform.ClickHouseDataService.Tests.PoleEnum fPoleEnum;
         
         private char fPoleChar;
         
@@ -665,14 +665,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (FullTypesMaster1.PoleEnum CustomAttributes)
 
         // *** End programmer edit section *** (FullTypesMaster1.PoleEnum CustomAttributes)
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum PoleEnum
+        public virtual NewPlatform.ClickHouseDataService.Tests.PoleEnum PoleEnum
         {
             get
             {
                 // *** Start programmer edit section *** (FullTypesMaster1.PoleEnum Get start)
 
                 // *** End programmer edit section *** (FullTypesMaster1.PoleEnum Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.PoleEnum result = this.fPoleEnum;
+                NewPlatform.ClickHouseDataService.Tests.PoleEnum result = this.fPoleEnum;
                 // *** Start programmer edit section *** (FullTypesMaster1.PoleEnum Get end)
 
                 // *** End programmer edit section *** (FullTypesMaster1.PoleEnum Get end)
@@ -765,7 +765,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("FullMasterView", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.FullTypesMaster1));
+                    return ICSSoft.STORMNET.Information.GetView("FullMasterView", typeof(NewPlatform.ClickHouseDataService.Tests.FullTypesMaster1));
                 }
             }
         }

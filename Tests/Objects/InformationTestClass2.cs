@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -33,7 +33,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fStringPropertyForInformationTestClass2;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass fInformationTestClass;
+        private NewPlatform.ClickHouseDataService.Tests.InformationTestClass fInformationTestClass;
         
         // *** Start programmer edit section *** (InformationTestClass2 CustomMembers)
 
@@ -81,17 +81,17 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** End programmer edit section *** (InformationTestClass2.InformationTestClass CustomAttributes)
         [PropertyStorage("InformationTestClass")]
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClassChild"})]
+                "NewPlatform.ClickHouseDataService.Tests.InformationTestClass",
+                "NewPlatform.ClickHouseDataService.Tests.InformationTestClassChild"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass InformationTestClass
+        public virtual NewPlatform.ClickHouseDataService.Tests.InformationTestClass InformationTestClass
         {
             get
             {
                 // *** Start programmer edit section *** (InformationTestClass2.InformationTestClass Get start)
 
                 // *** End programmer edit section *** (InformationTestClass2.InformationTestClass Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.InformationTestClass result = this.fInformationTestClass;
+                NewPlatform.ClickHouseDataService.Tests.InformationTestClass result = this.fInformationTestClass;
                 // *** Start programmer edit section *** (InformationTestClass2.InformationTestClass Get end)
 
                 // *** End programmer edit section *** (InformationTestClass2.InformationTestClass Get end)

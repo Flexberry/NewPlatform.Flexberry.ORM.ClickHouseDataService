@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -37,7 +37,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         // *** Start programmer edit section *** (OnUpdateМедведь CustomAttributes)
 
         // *** End programmer edit section *** (OnUpdateМедведь CustomAttributes)
-        public virtual ICSSoft.STORMNET.DataObject[] OnUpdateМедведь(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Медведь UpdatedObject)
+        public virtual ICSSoft.STORMNET.DataObject[] OnUpdateМедведь(NewPlatform.ClickHouseDataService.Tests.Медведь UpdatedObject)
         {
             // *** Start programmer edit section *** (OnUpdateМедведь)
 

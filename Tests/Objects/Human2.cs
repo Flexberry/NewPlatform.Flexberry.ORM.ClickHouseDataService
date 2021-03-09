@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -40,7 +40,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fHumanName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 fTodayHome;
+        private NewPlatform.ClickHouseDataService.Tests.Territory2 fTodayHome;
         
         // *** Start programmer edit section *** (Human2 CustomMembers)
 
@@ -86,16 +86,16 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
 
         // *** End programmer edit section *** (Human2.TodayHome CustomAttributes)
         [TypeUsage(new string[] {
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Country2",
-                "NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2"})]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 TodayHome
+                "NewPlatform.ClickHouseDataService.Tests.Country2",
+                "NewPlatform.ClickHouseDataService.Tests.Territory2"})]
+        public virtual NewPlatform.ClickHouseDataService.Tests.Territory2 TodayHome
         {
             get
             {
                 // *** Start programmer edit section *** (Human2.TodayHome Get start)
 
                 // *** End programmer edit section *** (Human2.TodayHome Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Territory2 result = this.fTodayHome;
+                NewPlatform.ClickHouseDataService.Tests.Territory2 result = this.fTodayHome;
                 // *** Start programmer edit section *** (Human2.TodayHome Get end)
 
                 // *** End programmer edit section *** (Human2.TodayHome Get end)
@@ -126,7 +126,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Human2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Human2));
+                    return ICSSoft.STORMNET.Information.GetView("Human2E", typeof(NewPlatform.ClickHouseDataService.Tests.Human2));
                 }
             }
             
@@ -137,7 +137,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Human2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Human2));
+                    return ICSSoft.STORMNET.Information.GetView("Human2L", typeof(NewPlatform.ClickHouseDataService.Tests.Human2));
                 }
             }
         }

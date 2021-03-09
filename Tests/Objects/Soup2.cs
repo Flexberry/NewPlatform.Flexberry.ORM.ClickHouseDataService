@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
+namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
     using System.Xml;
@@ -40,7 +40,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         
         private string fSoupName;
         
-        private NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2 fCabbageType;
+        private NewPlatform.ClickHouseDataService.Tests.Cabbage2 fCabbageType;
         
         // *** Start programmer edit section *** (Soup2 CustomMembers)
 
@@ -88,14 +88,14 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
         [PropertyStorage(new string[] {
                 "CabbageType"})]
         [NotNull()]
-        public virtual NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2 CabbageType
+        public virtual NewPlatform.ClickHouseDataService.Tests.Cabbage2 CabbageType
         {
             get
             {
                 // *** Start programmer edit section *** (Soup2.CabbageType Get start)
 
                 // *** End programmer edit section *** (Soup2.CabbageType Get start)
-                NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Cabbage2 result = this.fCabbageType;
+                NewPlatform.ClickHouseDataService.Tests.Cabbage2 result = this.fCabbageType;
                 // *** Start programmer edit section *** (Soup2.CabbageType Get end)
 
                 // *** End programmer edit section *** (Soup2.CabbageType Get end)
@@ -126,7 +126,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Soup2E", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Soup2));
+                    return ICSSoft.STORMNET.Information.GetView("Soup2E", typeof(NewPlatform.ClickHouseDataService.Tests.Soup2));
                 }
             }
             
@@ -137,7 +137,7 @@ namespace NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("Soup2L", typeof(NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.Soup2));
+                    return ICSSoft.STORMNET.Information.GetView("Soup2L", typeof(NewPlatform.ClickHouseDataService.Tests.Soup2));
                 }
             }
         }
