@@ -179,8 +179,6 @@ namespace NewPlatform.ClickHouseDataService.Tests
                                 connection.Open();
                                 using (var command = connection.CreateCommand())
                                 {
-                                    command.CommandText = $"SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = \'{_databaseName}\' AND pid <> pg_backend_pid();";
-                                    command.ExecuteNonQuery();
                                     command.CommandText = $"DROP DATABASE \"{_databaseName}\";";
                                     command.ExecuteNonQuery();
                                 }

@@ -30,7 +30,7 @@
             foreach (IDataService dataService in DataServices)
             {
                 // Arrange.
-                string value = "property-va\"lue";
+                string value = "pro\\perty-value";
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
