@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Open Source", "Open Source"
 		.gitignore = .gitignore
 		.github\workflows\build.yml = .github\workflows\build.yml
 		CHANGELOG.md = CHANGELOG.md
+		docker-compose.yml = docker-compose.yml
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
@@ -54,7 +55,7 @@ Global
 		{4072A484-4E3B-4032-9518-420D9407C9BF} = {D724E087-1054-4D39-B927-C1533E482C34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A6315904-5D95-4F3A-B470-6E5A99405502}
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+		SolutionGuid = {A6315904-5D95-4F3A-B470-6E5A99405502}
 	EndGlobalSection
 EndGlobal

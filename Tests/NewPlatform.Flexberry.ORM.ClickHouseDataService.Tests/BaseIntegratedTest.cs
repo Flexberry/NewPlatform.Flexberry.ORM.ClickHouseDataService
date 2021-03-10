@@ -66,7 +66,9 @@ namespace NewPlatform.ClickHouseDataService.Tests
         {
             // ADO.NET doesn't close the connection with pooling. We have to disable it explicitly.
             // http://stackoverflow.com/questions/9033356/connection-still-idle-after-close
-            connectionStringClickHouse = $"{poolingFalseConst}{ConfigurationManager.ConnectionStrings["ConnectionStringClickHouse"]}";
+            connectionStringClickHouse = ConfigurationManager.ConnectionStrings["ConnectionStringClickHouse"]?.ConnectionString;
+
+            Assert.NotNull(connectionStringClickHouse);
         }
 
         /// <summary>
@@ -108,10 +110,10 @@ namespace NewPlatform.ClickHouseDataService.Tests
 
                 watchdogEmptyTest = true;
 
-                using (var conn = new ClickHouseConnection(connectionStringClickHouse))
+                using (var conn = new ClickHouseConnection($"{connectionStringClickHouse}"))
                 {
                     conn.Open();
-                    using (var cmd = new ClickHouseCommand(conn, string.Format("CREATE DATABASE \"{0}\" ENCODING = 'UTF8' CONNECTION LIMIT = -1;", _databaseName)))
+                    using (var cmd = new ClickHouseCommand(conn, $"CREATE DATABASE \"{_databaseName}\""))
                     {
                         cmd.ExecuteNonQuery();
                     }
@@ -120,12 +122,23 @@ namespace NewPlatform.ClickHouseDataService.Tests
                 using (var conn = new ClickHouseConnection($"{connectionStringClickHouse};Database={_databaseName}"))
                 {
                     conn.Open();
-                    using (var cmd = new ClickHouseCommand(conn, ClickHouseSqlScript))
+
+                    string[] createTableCommands = ClickHouseSqlScript.Split(';');
+
+                    foreach (string createTableCommand in createTableCommands)
                     {
-                        cmd.ExecuteNonQuery();
+                        if (string.IsNullOrWhiteSpace(createTableCommand))
+                        {
+                            continue;
+                        }
+
+                        using (var cmd = new ClickHouseCommand(conn, createTableCommand))
+                        {
+                            cmd.ExecuteNonQuery();
+                        }
                     }
 
-                    _dataServices.Add(CreatePostgresDataService($"{connectionStringClickHouse};Database={_databaseName}"));
+                    _dataServices.Add(CreateClickHouseDataService($"{connectionStringClickHouse};Database={_databaseName}"));
                 }
             }
 
@@ -137,7 +150,7 @@ namespace NewPlatform.ClickHouseDataService.Tests
         /// </summary>
         /// <param name="connectionString">The connection string.</param>
         /// <returns>The <see cref="PostgresDataService"/> instance.</returns>
-        protected virtual ClickHouseDataService CreatePostgresDataService(string connectionString)
+        protected virtual ClickHouseDataService CreateClickHouseDataService(string connectionString)
         {
             return new ClickHouseDataService { CustomizationString = connectionString };
         }

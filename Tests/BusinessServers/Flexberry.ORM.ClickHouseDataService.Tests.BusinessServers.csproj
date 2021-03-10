@@ -10,6 +10,7 @@
     <AssemblyOriginatorKeyFile>Flexberry.ORM.ClickHouseDataService.Tests.BusinessServers.snk</AssemblyOriginatorKeyFile>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Flexberry.ORM.ClickHouseDataService.Tests.BusinessServers.xml</DocumentationFile>
     <CodeAnalysisRuleSet>..\Flexberry.ruleset</CodeAnalysisRuleSet>
+    <AssemblyName>ClickHouseDataService.Tests.BusinessServers</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">

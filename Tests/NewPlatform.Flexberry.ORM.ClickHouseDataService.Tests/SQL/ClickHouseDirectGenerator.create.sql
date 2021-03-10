@@ -1,4 +1,4 @@
-
+п»ї
 
 
 
@@ -28,7 +28,7 @@ CREATE TABLE "SomeMasterClass" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "МастерМ" (
+CREATE TABLE "РњР°СЃС‚РµСЂРњ" (
 
  "primaryKey" UUID
 
@@ -51,35 +51,35 @@ CREATE TABLE "FullTypesMaster1" (
 
  "PoleDouble" Float64,
 
- "PoleDecimal" Decimal128(29),
+ "PoleDecimal" Decimal128(27),
 
  "PoleBool" UInt8,
 
  "PoleNullableInt" Nullable(Int32),
 
- "PoleNullableDecimal" Nullable(Decimal128(29)),
+ "PoleNullableDecimal" Nullable(Decimal128(27)),
 
  "PoleNullableDateTime" Nullable(DateTime),
 
- "PoleNullInt" NullInt,
+ "PoleNullInt" Nullable(Int32),
 
- "PoleNullDateTime" NullDateTime,
+ "PoleNullDateTime" Nullable(DateTime),
 
- "PoleNullFloat" NullFloat,
+ "PoleNullFloat" Nullable(Float32),
 
- "PoleNullDouble" NullDouble,
+ "PoleNullDouble" Nullable(Float64),
 
- "PoleNullDecimal" NullDecimal,
+ "PoleNullDecimal" Nullable(Decimal128(27)),
 
  "PoleGuid" UUID,
 
- "PoleNullGuid" NullGuid,
+ "PoleNullGuid" Nullable(UUID),
 
  "PoleEnum" String,
 
  "PoleChar" UInt16,
 
- "PoleNullChar" NullChar
+ "PoleNullChar" Nullable(UInt16)
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -97,25 +97,25 @@ CREATE TABLE "CombinedTypesUsageProviderTest" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Конкурс" (
+CREATE TABLE "РљРѕРЅРєСѓСЂСЃ" (
 
  "primaryKey" UUID,
 
- "Название" String,
+ "РќР°Р·РІР°РЅРёРµ" String,
 
- "Описание" String,
+ "РћРїРёСЃР°РЅРёРµ" String,
 
- "ДатаНачала" Nullable(DateTime),
+ "Р”Р°С‚Р°РќР°С‡Р°Р»Р°" Nullable(DateTime),
 
- "ДатаОкончания" Nullable(DateTime),
+ "Р”Р°С‚Р°РћРєРѕРЅС‡Р°РЅРёСЏ" Nullable(DateTime),
 
- "НачалоОценки" Nullable(DateTime),
+ "РќР°С‡Р°Р»РѕРћС†РµРЅРєРё" Nullable(DateTime),
 
- "ОкончаниеОценки" Nullable(DateTime),
+ "РћРєРѕРЅС‡Р°РЅРёРµРћС†РµРЅРєРё" Nullable(DateTime),
 
- "Состоятие" String,
+ "РЎРѕСЃС‚РѕСЏС‚РёРµ" String,
 
- "Организатор_m0" UUID
+ "РћСЂРіР°РЅРёР·Р°С‚РѕСЂ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -140,35 +140,35 @@ CREATE TABLE "StoredClass" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ХозДоговор" (
+CREATE TABLE "РҐРѕР·Р”РѕРіРѕРІРѕСЂ" (
 
  "primaryKey" UUID,
 
- "НомХозДоговора" Int32
+ "РќРѕРјРҐРѕР·Р”РѕРіРѕРІРѕСЂР°" Int32
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Страна" (
+CREATE TABLE "РЎС‚СЂР°РЅР°" (
 
  "primaryKey" UUID,
 
- "Название" String
+ "РќР°Р·РІР°РЅРёРµ" String
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Пользователь" (
+CREATE TABLE "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ" (
 
  "primaryKey" UUID,
 
- "Логин" String,
+ "Р›РѕРіРёРЅ" String,
 
- "ФИО" String,
+ "Р¤РРћ" String,
 
  "EMail" String,
 
- "ДатаРегистрации" Nullable(DateTime)
+ "Р”Р°С‚Р°Р РµРіРёСЃС‚СЂР°С†РёРё" Nullable(DateTime)
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -182,7 +182,7 @@ CREATE TABLE "TypeNameUsageProviderTestClass" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "НаследникМ1" (
+CREATE TABLE "РќР°СЃР»РµРґРЅРёРєРњ1" (
 
  "primaryKey" UUID
 
@@ -211,19 +211,19 @@ CREATE TABLE "InformationTestClass6" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Берлога" (
+CREATE TABLE "Р‘РµСЂР»РѕРіР°" (
 
  "primaryKey" UUID,
 
- "Наименование" String,
+ "РќР°РёРјРµРЅРѕРІР°РЅРёРµ" String,
 
- "Комфортность" Int32,
+ "РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊ" Int32,
 
- "Заброшена" UInt8,
+ "Р—Р°Р±СЂРѕС€РµРЅР°" UInt8,
 
- "ЛесРасположения" UUID,
+ "Р›РµСЃР Р°СЃРїРѕР»РѕР¶РµРЅРёСЏ" UUID,
 
- "Медведь" UUID
+ "РњРµРґРІРµРґСЊ" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -241,19 +241,19 @@ CREATE TABLE "Dish2" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "КритерийОценки" (
+CREATE TABLE "РљСЂРёС‚РµСЂРёР№РћС†РµРЅРєРё" (
 
  "primaryKey" UUID,
 
- "ПорядковыйНомер" Int32,
+ "РџРѕСЂСЏРґРєРѕРІС‹Р№РќРѕРјРµСЂ" Int32,
 
- "Описание" String,
+ "РћРїРёСЃР°РЅРёРµ" String,
 
- "Вес" Float64,
+ "Р’РµСЃ" Float64,
 
- "Обязательный" UInt8,
+ "РћР±СЏР·Р°С‚РµР»СЊРЅС‹Р№" UInt8,
 
- "Конкурс_m0" UUID
+ "РљРѕРЅРєСѓСЂСЃ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -273,11 +273,11 @@ CREATE TABLE "AuditAgregatorObject" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ИнспПоКредиту" (
+CREATE TABLE "РРЅСЃРїРџРѕРљСЂРµРґРёС‚Сѓ" (
 
  "primaryKey" UUID,
 
- "ФИО" String
+ "Р¤РРћ" String
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -307,35 +307,35 @@ CREATE TABLE "FullTypesDetail1" (
 
  "PoleDouble" Float64,
 
- "PoleDecimal" Decimal128(29),
+ "PoleDecimal" Decimal128(27),
 
  "PoleBool" UInt8,
 
  "PoleNullableInt" Nullable(Int32),
 
- "PoleNullableDecimal" Nullable(Decimal128(29)),
+ "PoleNullableDecimal" Nullable(Decimal128(27)),
 
  "PoleNullableDateTime" Nullable(DateTime),
 
- "PoleNullInt" NullInt,
+ "PoleNullInt" Nullable(Int32),
 
- "PoleNullDateTime" NullDateTime,
+ "PoleNullDateTime" Nullable(DateTime),
 
- "PoleNullFloat" NullFloat,
+ "PoleNullFloat" Nullable(Float32),
 
- "PoleNullDouble" NullDouble,
+ "PoleNullDouble" Nullable(Float64),
 
- "PoleNullDecimal" NullDecimal,
+ "PoleNullDecimal" Nullable(Decimal128(27)),
 
  "PoleGuid" UUID,
 
- "PoleNullGuid" NullGuid,
+ "PoleNullGuid" Nullable(UUID),
 
  "PoleEnum" String,
 
  "PoleChar" UInt16,
 
- "PoleNullChar" NullChar,
+ "PoleNullChar" Nullable(UInt16),
 
  "FullTypesMainAgregator_m0" UUID
 
@@ -366,39 +366,39 @@ CREATE TABLE "Region" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Перелом" (
+CREATE TABLE "РџРµСЂРµР»РѕРј" (
 
  "primaryKey" UUID,
 
- "Дата" DateTime,
+ "Р”Р°С‚Р°" DateTime,
 
- "Тип" String,
+ "РўРёРї" String,
 
- "Лапа_m0" UUID
+ "Р›Р°РїР°_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ЗначениеКритер" (
+CREATE TABLE "Р—РЅР°С‡РµРЅРёРµРљСЂРёС‚РµСЂ" (
 
  "primaryKey" UUID,
 
- "Значение" String,
+ "Р—РЅР°С‡РµРЅРёРµ" String,
 
- "СредОценкаЭксп" Float64,
+ "РЎСЂРµРґРћС†РµРЅРєР°Р­РєСЃРї" Float64,
 
- "Критерий_m0" UUID,
+ "РљСЂРёС‚РµСЂРёР№_m0" UUID,
 
- "Идея_m0" UUID
+ "РРґРµСЏ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ИсточникФинанс" (
+CREATE TABLE "РСЃС‚РѕС‡РЅРёРєР¤РёРЅР°РЅСЃ" (
 
  "primaryKey" UUID,
 
- "НомИсточникаФин" Int32
+ "РќРѕРјРСЃС‚РѕС‡РЅРёРєР°Р¤РёРЅ" Int32
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -414,15 +414,15 @@ CREATE TABLE "TypeUsageProviderTestClassChil" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ФайлИдеи" (
+CREATE TABLE "Р¤Р°Р№Р»РРґРµРё" (
 
  "primaryKey" UUID,
 
- "Файл" String,
+ "Р¤Р°Р№Р»" String,
 
- "Владелец_m0" UUID,
+ "Р’Р»Р°РґРµР»РµС†_m0" UUID,
 
- "Идея_m0" UUID
+ "РРґРµСЏ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -446,11 +446,11 @@ CREATE TABLE "TestClassA" (
 
  "Value" Int32,
 
- "Мастер_m0" UUID,
+ "РњР°СЃС‚РµСЂ_m0" UUID,
 
- "Мастер_m1" UUID,
+ "РњР°СЃС‚РµСЂ_m1" UUID,
 
- "Мастер_m2" UUID
+ "РњР°СЃС‚РµСЂ_m2" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -468,19 +468,19 @@ CREATE TABLE "CabbageSalad" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ОценкаЭксперта" (
+CREATE TABLE "РћС†РµРЅРєР°Р­РєСЃРїРµСЂС‚Р°" (
 
  "primaryKey" UUID,
 
- "ЗначениеОценки" Float64,
+ "Р—РЅР°С‡РµРЅРёРµРћС†РµРЅРєРё" Float64,
 
- "Комментарий" String,
+ "РљРѕРјРјРµРЅС‚Р°СЂРёР№" String,
 
- "Эксперт_m0" UUID,
+ "Р­РєСЃРїРµСЂС‚_m0" UUID,
 
- "ЗначениеКритер" UUID,
+ "Р—РЅР°С‡РµРЅРёРµРљСЂРёС‚РµСЂ" UUID,
 
- "Идея_m0" UUID
+ "РРґРµСЏ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -496,21 +496,21 @@ CREATE TABLE "Adress2" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Кредит" (
+CREATE TABLE "РљСЂРµРґРёС‚" (
 
  "primaryKey" UUID,
 
- "ДатаВыдачи" DateTime,
+ "Р”Р°С‚Р°Р’С‹РґР°С‡Рё" DateTime,
 
- "СуммаКредита" Float64,
+ "РЎСѓРјРјР°РљСЂРµРґРёС‚Р°" Float64,
 
- "СрокКредита" Int32,
+ "РЎСЂРѕРєРљСЂРµРґРёС‚Р°" Int32,
 
- "ВидКредита" String,
+ "Р’РёРґРљСЂРµРґРёС‚Р°" String,
 
- "Клиент" UUID,
+ "РљР»РёРµРЅС‚" UUID,
 
- "ИнспекторПоКред" UUID
+ "РРЅСЃРїРµРєС‚РѕСЂРџРѕРљСЂРµРґ" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -567,38 +567,45 @@ CREATE TABLE "clb" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Кошка" (
+CREATE TABLE "РљРѕС€РєР°" (
 
  "primaryKey" UUID,
 
- "Кличка" String,
+ "РљР»РёС‡РєР°" String,
 
- "ДатаРождения" Nullable(DateTime),
+ "Р”Р°С‚Р°Р РѕР¶РґРµРЅРёСЏ" Nullable(DateTime),
 
- "Тип" String,
+ "РўРёРї" String,
 
- "ПородаСтрокой" String,
+ "РџРѕСЂРѕРґР°РЎС‚СЂРѕРєРѕР№" String,
 
- "Агрессивная" UInt8,
+ "РђРіСЂРµСЃСЃРёРІРЅР°СЏ" UInt8,
 
- "КолвоУсовСлева" Nullable(Int32),
+ "РљРѕР»РІРѕРЈСЃРѕРІРЎР»РµРІР°" Nullable(Int32),
 
- "КолвоУсовСправа" Nullable(Int32),
+ "РљРѕР»РІРѕРЈСЃРѕРІРЎРїСЂР°РІР°" Nullable(Int32),
 
- "Ключ" KeyGuid,
+ "РљР»СЋС‡" UUID,
 
- "Порода" UUID
+ "РџРѕСЂРѕРґР°" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ТипПороды" (
+CREATE TABLE "РўРёРїРџРѕСЂРѕРґС‹" (
 
  "primaryKey" UUID,
 
- "Название" String,
+ "РќР°Р·РІР°РЅРёРµ" String,
 
- "ДатаРегистрации" DateTime
+ "Р”Р°С‚Р°Р РµРіРёСЃС‚СЂР°С†РёРё" DateTime
+
+) ENGINE = MergeTree() ORDER BY ("primaryKey");
+
+
+CREATE TABLE "РќР°СЃР»РµРґРЅРёРєРњ2" (
+
+ "primaryKey" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -631,26 +638,26 @@ CREATE TABLE "AuditClassWithSettings" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Блоха" (
+CREATE TABLE "Р‘Р»РѕС…Р°" (
 
  "primaryKey" UUID,
 
- "Кличка" String,
+ "РљР»РёС‡РєР°" String,
 
- "МедведьОбитания" UUID
+ "РњРµРґРІРµРґСЊРћР±РёС‚Р°РЅРёСЏ" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Котенок" (
+CREATE TABLE "РљРѕС‚РµРЅРѕРє" (
 
  "primaryKey" UUID,
 
- "КличкаКотенка" String,
+ "РљР»РёС‡РєР°РљРѕС‚РµРЅРєР°" String,
 
- "Глупость" Int32,
+ "Р“Р»СѓРїРѕСЃС‚СЊ" Int32,
 
- "Кошка" UUID
+ "РљРѕС€РєР°" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -663,7 +670,7 @@ CREATE TABLE "DataObjectForTest" (
 
  "Height" Int32,
 
- "BirthDate" SystemNullableDateTime,
+ "BirthDate" Nullable(DateTime),
 
  "Gender" UInt8
 
@@ -696,19 +703,19 @@ CREATE TABLE "MasterClass" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Идея" (
+CREATE TABLE "РРґРµСЏ" (
 
  "primaryKey" UUID,
 
- "Заголовок" String,
+ "Р—Р°РіРѕР»РѕРІРѕРє" String,
 
- "Описание" String,
+ "РћРїРёСЃР°РЅРёРµ" String,
 
- "СуммаБаллов" Float64,
+ "РЎСѓРјРјР°Р‘Р°Р»Р»РѕРІ" Float64,
 
- "Автор_m0" UUID,
+ "РђРІС‚РѕСЂ_m0" UUID,
 
- "Конкурс_m0" UUID
+ "РљРѕРЅРєСѓСЂСЃ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -724,37 +731,37 @@ CREATE TABLE "InformationTestClass4" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Лапа" (
+CREATE TABLE "Р›Р°РїР°" (
 
  "primaryKey" UUID,
 
- "Цвет" String,
+ "Р¦РІРµС‚" String,
 
- "Размер" Int32,
+ "Р Р°Р·РјРµСЂ" Int32,
 
- "ДатаРождения" Nullable(DateTime),
+ "Р”Р°С‚Р°Р РѕР¶РґРµРЅРёСЏ" Nullable(DateTime),
 
- "БылиЛиПереломы" UInt8,
+ "Р‘С‹Р»РёР›РёРџРµСЂРµР»РѕРјС‹" UInt8,
 
- "Сторона" String,
+ "РЎС‚РѕСЂРѕРЅР°" String,
 
- "Номер" Int32,
+ "РќРѕРјРµСЂ" Int32,
 
- "РазмерDouble" Float64,
+ "Р Р°Р·РјРµСЂDouble" Float64,
 
- "РазмерFloat" Float32,
+ "Р Р°Р·РјРµСЂFloat" Float32,
 
- "РазмерNullableInt" SystemNullableInt,
+ "Р Р°Р·РјРµСЂNullableInt" Nullable(Int32),
 
- "РазмерDecimal" Decimal128(29),
+ "Р Р°Р·РјРµСЂDecimal" Decimal128(27),
 
- "РазмерNullableDecimal" SystemNullableDecimal,
+ "Р Р°Р·РјРµСЂNullableDecimal" Nullable(Decimal128(27)),
 
- "РазмерNullableChar" SystemNullableChar,
+ "Р Р°Р·РјРµСЂNullableChar" Nullable(UInt16),
 
- "ТипЛапы_m0" UUID,
+ "РўРёРїР›Р°РїС‹_m0" UUID,
 
- "Кошка_m0" UUID
+ "РљРѕС€РєР°_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -794,22 +801,22 @@ CREATE TABLE "SimpleDataObject" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ТипЛапы" (
+CREATE TABLE "РўРёРїР›Р°РїС‹" (
 
  "primaryKey" UUID,
 
- "Название" String,
+ "РќР°Р·РІР°РЅРёРµ" String,
 
- "Актуально" UInt8
+ "РђРєС‚СѓР°Р»СЊРЅРѕ" UInt8
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Личность" (
+CREATE TABLE "Р›РёС‡РЅРѕСЃС‚СЊ" (
 
  "primaryKey" UUID,
 
- "ФИО" String
+ "Р¤РРћ" String
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -851,43 +858,43 @@ CREATE TABLE "cla" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Лес" (
+CREATE TABLE "Р›РµСЃ" (
 
  "primaryKey" UUID,
 
- "Название" String,
+ "РќР°Р·РІР°РЅРёРµ" String,
 
- "Площадь" Int32,
+ "РџР»РѕС‰Р°РґСЊ" Int32,
 
- "Заповедник" UInt8,
+ "Р—Р°РїРѕРІРµРґРЅРёРє" UInt8,
 
- "ДатаПослОсмотр" Nullable(DateTime),
+ "Р”Р°С‚Р°РџРѕСЃР»РћСЃРјРѕС‚СЂ" Nullable(DateTime),
 
- "Страна" UUID
+ "РЎС‚СЂР°РЅР°" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Клиент" (
+CREATE TABLE "РљР»РёРµРЅС‚" (
 
  "primaryKey" UUID,
 
- "ФИО" String,
+ "Р¤РРћ" String,
 
- "Прописка" String
+ "РџСЂРѕРїРёСЃРєР°" String
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ИФХозДоговора" (
+CREATE TABLE "РР¤РҐРѕР·Р”РѕРіРѕРІРѕСЂР°" (
 
  "primaryKey" UUID,
 
- "НомерИФХозДогов" Int32,
+ "РќРѕРјРµСЂРР¤РҐРѕР·Р”РѕРіРѕРІ" Int32,
 
- "ИсточникФинан" UUID,
+ "РСЃС‚РѕС‡РЅРёРєР¤РёРЅР°РЅ" UUID,
 
- "ХозДоговор_m0" UUID
+ "РҐРѕР·Р”РѕРіРѕРІРѕСЂ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -933,9 +940,9 @@ CREATE TABLE "DataObjectWithKeyGuid" (
 
  "primaryKey" UUID,
 
- "LinkToMaster1" KeyGuid,
+ "LinkToMaster1" UUID,
 
- "LinkToMaster2" KeyGuid
+ "LinkToMaster2" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -954,52 +961,52 @@ CREATE TABLE "FullTypesMainAgregator" (
 
  "PoleDouble" Float64,
 
- "PoleDecimal" Decimal128(29),
+ "PoleDecimal" Decimal128(27),
 
  "PoleBool" UInt8,
 
  "PoleNullableInt" Nullable(Int32),
 
- "PoleNullableDecimal" Nullable(Decimal128(29)),
+ "PoleNullableDecimal" Nullable(Decimal128(27)),
 
  "PoleNullableDateTime" Nullable(DateTime),
 
- "PoleNullInt" NullInt,
+ "PoleNullInt" Nullable(Int32),
 
- "PoleNullDateTime" NullDateTime,
+ "PoleNullDateTime" Nullable(DateTime),
 
- "PoleNullFloat" NullFloat,
+ "PoleNullFloat" Nullable(Float32),
 
- "PoleNullDouble" NullDouble,
+ "PoleNullDouble" Nullable(Float64),
 
- "PoleNullDecimal" NullDecimal,
+ "PoleNullDecimal" Nullable(Decimal128(27)),
 
  "PoleGuid" UUID,
 
- "PoleNullGuid" NullGuid,
+ "PoleNullGuid" Nullable(UUID),
 
  "PoleEnum" String,
 
  "PoleChar" UInt16,
 
- "PoleNullChar" NullChar,
+ "PoleNullChar" Nullable(UInt16),
 
  "FullTypesMaster1_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Порода" (
+CREATE TABLE "РџРѕСЂРѕРґР°" (
 
  "primaryKey" UUID,
 
- "Название" String,
+ "РќР°Р·РІР°РЅРёРµ" String,
 
- "Ключ" KeyGuid,
+ "РљР»СЋС‡" UUID,
 
- "Иерархия" UUID,
+ "РРµСЂР°СЂС…РёСЏ" UUID,
 
- "ТипПороды" UUID
+ "РўРёРїРџРѕСЂРѕРґС‹" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -1015,17 +1022,17 @@ CREATE TABLE "ComputedMaster" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "УчастникХозДог" (
+CREATE TABLE "РЈС‡Р°СЃС‚РЅРёРєРҐРѕР·Р”РѕРі" (
 
  "primaryKey" UUID,
 
- "НомУчастнХозДог" Int32,
+ "РќРѕРјРЈС‡Р°СЃС‚РЅРҐРѕР·Р”РѕРі" Int32,
 
- "Статус" String,
+ "РЎС‚Р°С‚СѓСЃ" String,
 
- "Личность_m0" UUID,
+ "Р›РёС‡РЅРѕСЃС‚СЊ_m0" UUID,
 
- "ХозДоговор_m0" UUID
+ "РҐРѕР·Р”РѕРіРѕРІРѕСЂ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -1065,15 +1072,15 @@ CREATE TABLE "InformationTestClass" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Выплаты" (
+CREATE TABLE "Р’С‹РїР»Р°С‚С‹" (
 
  "primaryKey" UUID,
 
- "ДатаВыплаты" DateTime,
+ "Р”Р°С‚Р°Р’С‹РїР»Р°С‚С‹" DateTime,
 
- "СуммаВыплаты" Float64,
+ "РЎСѓРјРјР°Р’С‹РїР»Р°С‚С‹" Float64,
 
- "Кредит1" UUID
+ "РљСЂРµРґРёС‚1" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -1093,13 +1100,13 @@ CREATE TABLE "AuditClassWithDisabledAudit" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "ДокККонкурсу" (
+CREATE TABLE "Р”РѕРєРљРљРѕРЅРєСѓСЂСЃСѓ" (
 
  "primaryKey" UUID,
 
- "Файл" String,
+ "Р¤Р°Р№Р»" String,
 
- "Конкурс_m0" UUID
+ "РљРѕРЅРєСѓСЂСЃ_m0" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -1127,35 +1134,35 @@ CREATE TABLE "FullTypesDetail2" (
 
  "PoleDouble" Float64,
 
- "PoleDecimal" Decimal128(29),
+ "PoleDecimal" Decimal128(27),
 
  "PoleBool" UInt8,
 
  "PoleNullableInt" Nullable(Int32),
 
- "PoleNullableDecimal" Nullable(Decimal128(29)),
+ "PoleNullableDecimal" Nullable(Decimal128(27)),
 
  "PoleNullableDateTime" Nullable(DateTime),
 
- "PoleNullInt" NullInt,
+ "PoleNullInt" Nullable(Int32),
 
- "PoleNullDateTime" NullDateTime,
+ "PoleNullDateTime" Nullable(DateTime),
 
- "PoleNullFloat" NullFloat,
+ "PoleNullFloat" Nullable(Float32),
 
- "PoleNullDouble" NullDouble,
+ "PoleNullDouble" Nullable(Float64),
 
- "PoleNullDecimal" NullDecimal,
+ "PoleNullDecimal" Nullable(Decimal128(27)),
 
  "PoleGuid" UUID,
 
- "PoleNullGuid" NullGuid,
+ "PoleNullGuid" Nullable(UUID),
 
  "PoleEnum" String,
 
  "PoleChar" UInt16,
 
- "PoleNullChar" NullChar,
+ "PoleNullChar" Nullable(UInt16),
 
  "FullTypesMainAgregator" UUID
 
@@ -1182,13 +1189,6 @@ CREATE TABLE "Salad2" (
  "Ingridient1_m0" UUID,
 
  "Ingridient1_m1" UUID
-
-) ENGINE = MergeTree() ORDER BY ("primaryKey");
-
-
-CREATE TABLE "НаследникМ2" (
-
- "primaryKey" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
@@ -1230,27 +1230,27 @@ CREATE TABLE "MasterUpdateObjectTest" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
-CREATE TABLE "Медведь" (
+CREATE TABLE "РњРµРґРІРµРґСЊ" (
 
  "primaryKey" UUID,
 
- "ПорядковыйНомер" Int32,
+ "РџРѕСЂСЏРґРєРѕРІС‹Р№РќРѕРјРµСЂ" Int32,
 
- "Вес" Int32,
+ "Р’РµСЃ" Int32,
 
- "ЦветГлаз" String,
+ "Р¦РІРµС‚Р“Р»Р°Р·" String,
 
- "Пол" String,
+ "РџРѕР»" String,
 
- "ДатаРождения" Nullable(DateTime),
+ "Р”Р°С‚Р°Р РѕР¶РґРµРЅРёСЏ" Nullable(DateTime),
 
- "Папа" UUID,
+ "РџР°РїР°" UUID,
 
- "ЛесОбитания" UUID,
+ "Р›РµСЃРћР±РёС‚Р°РЅРёСЏ" UUID,
 
- "Друг_m0" UUID,
+ "Р”СЂСѓРі_m0" UUID,
 
- "Мама" UUID
+ "РњР°РјР°" UUID
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
