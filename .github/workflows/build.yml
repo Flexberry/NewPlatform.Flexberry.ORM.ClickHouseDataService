@@ -19,6 +19,16 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    # Service containers to run with `runner-job`
+    services:
+      # Label used to access the service container
+      clickhouse:
+        # Docker Hub image
+        image: flexberry/clickhouse-official
+        ports:
+          # Maps tcp port 9000 on service container to the host
+          - 19000:9000
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,4 +39,10 @@ jobs:
         
       - name: Compile code
         run:  msbuild /p:Configuration=Debug "NewPlatform.Flexberry.ORM.ClickHouseDataService.sln" 
+
+      - name: Install xunit.runner.console
+        run: nuget install xunit.runner.console -Version 2.4.1 -OutputDirectory testrunner
+
+      - name: Test code
+        run:  mono ./testrunner/xunit.runner.console.2.4.1/tools/net461/xunit.console.exe ./Tests/NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests/bin/Debug/net461/NewPlatform.Flexberry.ORM.ClickHouseDataService.Tests.dll
         
