@@ -46,5 +46,16 @@
         {
             return new FakeDbTransaction();
         }
+
+        /// <inheritdoc/>
+        public override void Dispose()
+        {
+            if (Connection?.State == ConnectionState.Open)
+            {
+                Connection.Close();
+            }
+
+            base.Dispose();
+        }
     }
 }

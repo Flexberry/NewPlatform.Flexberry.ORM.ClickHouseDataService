@@ -21,6 +21,10 @@
         /// <inheritdoc/>
         public void Dispose()
         {
+            if (Connection?.State == ConnectionState.Open)
+            {
+                Connection.Close();
+            }
         }
 
         /// <inheritdoc/>
