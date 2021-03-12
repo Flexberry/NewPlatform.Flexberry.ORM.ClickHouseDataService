@@ -54,6 +54,11 @@
                 // Arrange.
                 string value = "[{\"field\":\"Field11\"}]";
 
+                (dataService as SQLDataService).OnCreateCommand += (object sender, CreateCommandEventArgs e) =>
+                {
+                    string command = e.Command.CommandText;
+                };
+
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
                 // Act.
