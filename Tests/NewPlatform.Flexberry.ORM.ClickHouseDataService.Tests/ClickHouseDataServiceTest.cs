@@ -2,7 +2,6 @@
 {
     using System;
     using System.Diagnostics;
-    using System.Linq;
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
     using Xunit;
@@ -22,15 +21,15 @@
         }
 
         /// <summary>
-        /// Test for data insertion.
+        /// Test for data with slash insertion.
         /// </summary>
         [Fact]
-        public void InsertDataTest()
+        public void InsertSlashDataTest()
         {
             foreach (IDataService dataService in DataServices)
             {
                 // Arrange.
-                string value = "pro\\perty-value";
+                string value = "ууцуц\\\\уцуцу";
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
@@ -45,6 +44,53 @@
         }
 
         /// <summary>
+        /// Test for data with quotes insertion.
+        /// </summary>
+        [Fact]
+        public void InsertQuotesDataTest()
+        {
+            foreach (IDataService dataService in DataServices)
+            {
+                // Arrange.
+                string value = "[{\"field\":\"Field11\"}]";
+
+                StoredClass storedClass = new StoredClass() { StoredProperty = value };
+
+                // Act.
+                dataService.UpdateObject(storedClass);
+
+                // Assert.
+                dataService.LoadObject(storedClass);
+
+                Assert.Equal(value, storedClass.StoredProperty);
+            }
+        }
+
+        /// <summary>
+        /// Test for data with quotes insertion.
+        /// </summary>
+        [Fact]
+        public void InsertHierarchicalDataTest()
+        {
+            foreach (IDataService dataService in DataServices)
+            {
+                // Arrange.
+                string value = "Bobik";
+
+                Dog dog = new Dog() { Name = value };
+
+                // Act.
+                dataService.UpdateObject(dog);
+
+                // Assert.
+                dataService.LoadObject(dog);
+
+                Assert.Equal(value, dog.Name);
+            }
+        }
+
+
+        /// <summary>
         /// Test for data insertion.
         /// </summary>
         [Fact]
@@ -57,7 +103,7 @@
                 Random random = new Random();
                 Stopwatch stopwatch = new Stopwatch();
 
-                int count = 1000;
+                int count = 10000;
 
                 stopwatch.Start();
 

@@ -1169,6 +1169,21 @@ CREATE TABLE "FullTypesDetail2" (
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
 
+CREATE TABLE "Dog" (
+
+ "primaryKey" UUID,
+
+ "Name" String,
+
+ "Birthday" DateTime,
+
+ "Angry" UInt8,
+
+ "MainDog" UUID
+
+) ENGINE = MergeTree() ORDER BY ("primaryKey");
+
+
 CREATE TABLE "ForKeyStorageTest" (
 
  "StorageForKey" String
