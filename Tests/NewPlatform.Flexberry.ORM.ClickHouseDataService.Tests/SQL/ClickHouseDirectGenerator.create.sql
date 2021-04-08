@@ -139,6 +139,7 @@ CREATE TABLE "StoredClass" (
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
+CREATE TABLE "StoredClassBuffer" AS "StoredClass" ENGINE = Buffer(currentDatabase(), "StoredClass", 16, 0.1, 2, 10, 10000, 100000, 1000000);
 
 CREATE TABLE "ХозДоговор" (
 
@@ -1179,10 +1180,11 @@ CREATE TABLE "Dog" (
 
  "Angry" UInt8,
 
- "MainDog" UUID
+ "MainDog" Nullable(UUID)
 
 ) ENGINE = MergeTree() ORDER BY ("primaryKey");
 
+CREATE TABLE "DogBuffer" AS "Dog" ENGINE = Buffer(currentDatabase(), "Dog", 16, 0.1, 2, 10, 10000, 100000, 1000000);
 
 CREATE TABLE "ForKeyStorageTest" (
 

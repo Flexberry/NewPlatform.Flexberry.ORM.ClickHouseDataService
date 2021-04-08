@@ -2,6 +2,7 @@
 {
     using System;
     using System.Diagnostics;
+    using System.Threading;
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
     using Xunit;
@@ -122,9 +123,14 @@
 
                 stopwatch.Stop();
 
-                Console.WriteLine(stopwatch.ElapsedMilliseconds);
+                Console.WriteLine($"It take {stopwatch.ElapsedMilliseconds}ms for write {count} object to storage.");
 
                 // Assert.
+
+                // Wait for buffer sync.
+                Thread.Sleep(1000);
+
+                // Check data count.
                 View view = new View() { DefineClassType = typeof(StoredClass), Name = "v" };
                 view.AddProperty(nameof(StoredClass.StoredProperty));
                 LoadingCustomizationStruct lcs = LoadingCustomizationStruct.GetSimpleStruct(typeof(StoredClass), view);
