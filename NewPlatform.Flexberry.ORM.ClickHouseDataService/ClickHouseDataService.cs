@@ -299,6 +299,28 @@
             }
         }
 
+        /// <inheritdoc/>
+        protected override void CustomizeCommand(IDbCommand cmd)
+        {
+            if (cmd == null)
+            {
+                throw new ArgumentNullException(nameof(cmd));
+            }
+
+            string sql = cmd.CommandText;
+            const string insertIntoConst = "insert into \"";
+
+            if (sql.StartsWith(insertIntoConst, StringComparison.InvariantCultureIgnoreCase))
+            {
+                int insertIntoConstLength = insertIntoConst.Length;
+                int tableNameEndIndex = sql.IndexOf("\"", insertIntoConstLength, StringComparison.InvariantCultureIgnoreCase);
+                string tableName = sql.Substring(insertIntoConst.Length, tableNameEndIndex - insertIntoConstLength);
+                cmd.CommandText = sql.Substring(0, insertIntoConstLength) + tableName + "Buffer" + sql.Substring(tableNameEndIndex);
+            }
+
+            base.CustomizeCommand(cmd);
+        }
+
         /// <summary>
         /// Провести аудит операции для одного объекта.
         /// </summary>
