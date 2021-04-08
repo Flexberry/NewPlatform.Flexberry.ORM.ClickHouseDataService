@@ -27,7 +27,7 @@ jobs:
         image: flexberry/clickhouse-official
         ports:
           # Maps tcp port 9000 on service container to the host
-          - 19000:9000
+          - 9000:9000
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
