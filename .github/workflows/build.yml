@@ -26,8 +26,9 @@ jobs:
         # Docker Hub image
         image: flexberry/clickhouse-official
         ports:
-          # Maps tcp port 9000 on service container to the host
-          - 9000:9000
+          # Maps tcp port 9000 and 8123 on service container to the host
+          - 18123:8123
+          - 19000:9000
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
