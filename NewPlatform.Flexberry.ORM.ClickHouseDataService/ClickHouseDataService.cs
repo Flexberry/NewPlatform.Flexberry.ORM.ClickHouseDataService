@@ -91,7 +91,7 @@
                     return "NULL";
                 }
 
-                return "'" + value.ToString().Replace("'", "''").Replace("\\", "\\\\") + "'";
+                return "'" + value.ToString().Replace("'", "''") + "'";
             }
 
             if (value is char)
