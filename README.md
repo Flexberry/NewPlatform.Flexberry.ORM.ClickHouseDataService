@@ -1,7 +1,5 @@
 # Flexberry ORM ClickHouseDataService
 
-[![Travis master branch](https://img.shields.io/travis/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService/master.svg?label=master%20build%20)](https://travis-ci.org/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService)
-[![Travis develop branch](https://img.shields.io/travis/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService/develop.svg?label=develop%20build)](https://travis-ci.org/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService/branches)
-
+[![CI](https://github.com/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService/actions/workflows/build.yml/badge.svg)](https://github.com/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService/actions/workflows/build.yml)
 
 Yandex ClickHouse support by Flexberry ORM.
