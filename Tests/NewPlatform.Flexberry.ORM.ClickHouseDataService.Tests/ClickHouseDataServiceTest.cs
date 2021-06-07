@@ -30,7 +30,7 @@
             foreach (IDataService dataService in DataServices)
             {
                 // Arrange.
-                string value = "ууцуц\\\\уцуцу";
+                string value = "ууцуц\\уцуцу";
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
@@ -39,8 +39,8 @@
 
                 // Assert.
 
-                // Wait for buffer sync.
-                Thread.Sleep(1000);
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
 
                 dataService.LoadObject(storedClass);
 
@@ -71,8 +71,8 @@
 
                 // Assert.
 
-                // Wait for buffer sync.
-                Thread.Sleep(1000);
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
 
                 dataService.LoadObject(storedClass);
 
@@ -98,8 +98,8 @@
 
                 // Assert.
 
-                // Wait for buffer sync.
-                Thread.Sleep(1000);
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
 
                 dataService.LoadObject(dog);
 
@@ -139,8 +139,8 @@
 
                 // Assert.
 
-                // Wait for buffer sync.
-                Thread.Sleep(1000);
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
 
                 // Check data count.
                 View view = new View() { DefineClassType = typeof(StoredClass), Name = "v" };
