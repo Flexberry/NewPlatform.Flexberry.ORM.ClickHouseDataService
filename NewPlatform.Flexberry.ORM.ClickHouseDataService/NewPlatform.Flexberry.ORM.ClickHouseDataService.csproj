@@ -7,7 +7,7 @@
     <Copyright>Copyright New Platform Ltd 2021</Copyright>
     <Company>New Platform Ltd</Company>
     <PackageTags>Flexberry ORM BigData ClickHouse</PackageTags>
-    <VersionPrefix>5.0.0-alpha01</VersionPrefix>
+    <VersionPrefix>6.0.0-alpha04</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <Product>Flexberry PLATFORM</Product>
     <PackageId>NewPlatform.Flexberry.ORM.ClickHouseDataService</PackageId>
@@ -39,8 +39,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="5.0.0" />
-    <PackageReference Include="NewPlatform.Flexberry.ClickHouse.Ado" Version="1.1.17-alpha01" />
+    <PackageReference Include="NewPlatform.Flexberry.ORM" Version="6.0.1-beta01" />
+    <PackageReference Include="NewPlatform.Flexberry.ClickHouse.Ado" Version="1.3.1-alpha08" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -49,6 +49,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
