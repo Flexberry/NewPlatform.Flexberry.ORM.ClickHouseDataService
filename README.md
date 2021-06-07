@@ -2,9 +2,9 @@
 
 Yandex ClickHouse support by Flexberry ORM.
 
-## Запуск тестов
+## Р—Р°РїСѓСЃРє С‚РµСЃС‚РѕРІ
 
-Перед запуском тестов нужно запустить Docker-контейнер с ClickHouse:
+РџРµСЂРµРґ Р·Р°РїСѓСЃРєРѕРј С‚РµСЃС‚РѕРІ РЅСѓР¶РЅРѕ Р·Р°РїСѓСЃС‚РёС‚СЊ Docker-РєРѕРЅС‚РµР№РЅРµСЂ СЃ ClickHouse:
 
 ```sh
 docker-compose up -d
