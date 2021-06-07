@@ -38,6 +38,10 @@
                 dataService.UpdateObject(storedClass);
 
                 // Assert.
+
+                // Wait for buffer sync.
+                Thread.Sleep(1000);
+
                 dataService.LoadObject(storedClass);
 
                 Assert.Equal(value, storedClass.StoredProperty);
@@ -66,6 +70,10 @@
                 dataService.UpdateObject(storedClass);
 
                 // Assert.
+
+                // Wait for buffer sync.
+                Thread.Sleep(1000);
+
                 dataService.LoadObject(storedClass);
 
                 Assert.Equal(value, storedClass.StoredProperty);
@@ -89,6 +97,10 @@
                 dataService.UpdateObject(dog);
 
                 // Assert.
+
+                // Wait for buffer sync.
+                Thread.Sleep(1000);
+
                 dataService.LoadObject(dog);
 
                 Assert.Equal(value, dog.Name);
@@ -140,6 +152,5 @@
                 Assert.Equal(count, actualCount);
             }
         }
-
     }
 }
