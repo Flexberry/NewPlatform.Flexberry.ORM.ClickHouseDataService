@@ -17,11 +17,11 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService</RepositoryUrl>
     <PackageReleaseNotes>See https://github.com/Flexberry/NewPlatform.Flexberry.ORM.ClickHouseDataService/blob/master/CHANGELOG.md </PackageReleaseNotes>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net45</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <Configurations>Debug;Release</Configurations>
     <LangVersion>latest</LangVersion>
     <RootNamespace>NewPlatform.Flexberry.ORM</RootNamespace>
