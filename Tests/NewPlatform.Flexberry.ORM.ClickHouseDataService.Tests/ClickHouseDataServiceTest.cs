@@ -49,6 +49,33 @@
         }
 
         /// <summary>
+        /// Test for data with two single quotes insertion.
+        /// </summary>
+        [Fact]
+        public void InsertTwoSingleQuotesTest()
+        {
+            foreach (IDataService dataService in DataServices)
+            {
+                // Arrange.
+                string value = "ууцуц''уцуцу";
+
+                StoredClass storedClass = new StoredClass() { StoredProperty = value };
+
+                // Act.
+                dataService.UpdateObject(storedClass);
+
+                // Assert.
+
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
+
+                dataService.LoadObject(storedClass);
+
+                Assert.Equal(value, storedClass.StoredProperty);
+            }
+        }
+
+        /// <summary>
         /// Test for data with quotes insertion.
         /// </summary>
         [Fact]
