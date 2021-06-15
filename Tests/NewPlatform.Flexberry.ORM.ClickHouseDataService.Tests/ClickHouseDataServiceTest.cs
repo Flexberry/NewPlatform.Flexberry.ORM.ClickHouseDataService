@@ -49,15 +49,15 @@
         }
 
         /// <summary>
-        /// Test for data with two single quotes insertion.
+        /// Test for data with single quotes insertion.
         /// </summary>
         [Fact]
-        public void InsertTwoSingleQuotesTest()
+        public void InsertSingleQuotesTest()
         {
             foreach (IDataService dataService in DataServices)
             {
                 // Arrange.
-                string value = "ууцуц''уцуцу";
+                string value = "ууцуц'уцуцу";
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
