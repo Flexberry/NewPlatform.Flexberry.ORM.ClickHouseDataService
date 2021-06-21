@@ -1,6 +1,7 @@
 ﻿namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Threading;
     using ICSSoft.STORMNET;
@@ -149,17 +150,20 @@
                 Random random = new Random();
                 Stopwatch stopwatch = new Stopwatch();
 
-                int count = 10000;
+                int count = 100000;
 
                 stopwatch.Start();
+                List<StoredClass> storedClasses = new List<StoredClass>();
 
                 for (int i = 0; i < count; i++)
                 {
                     StoredClass storedClass = new StoredClass() { StoredProperty = value + i + "_" + random.Next(count / 2) };
-
-                    // Act.
-                    dataService.UpdateObject(storedClass);
+                    storedClasses.Add(storedClass);
                 }
+
+                // Act.
+                DataObject[] objs = storedClasses.ToArray();
+                dataService.UpdateObjects(ref objs);
 
                 stopwatch.Stop();
 

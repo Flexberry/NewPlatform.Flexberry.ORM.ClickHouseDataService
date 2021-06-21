@@ -12,6 +12,7 @@
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET.Business.Audit.HelpStructures;
+    using ICSSoft.STORMNET.KeyGen;
     using STORMDO = ICSSoft.STORMNET;
 
     /// <summary>
@@ -316,6 +317,7 @@
                 int tableNameEndIndex = sql.IndexOf("\"", insertIntoConstLength, StringComparison.InvariantCultureIgnoreCase);
                 string tableName = sql.Substring(insertIntoConst.Length, tableNameEndIndex - insertIntoConstLength);
                 cmd.CommandText = sql.Substring(0, insertIntoConstLength) + tableName + "Buffer" + sql.Substring(tableNameEndIndex);
+                cmd.CommandText = cmd.CommandText.Replace("__PrimaryKey", "primaryKey");
             }
 
             base.CustomizeCommand(cmd);
@@ -363,6 +365,227 @@
                 int endRow = customizationStruct.RowNumber.EndRow - 1;
                 resQuery = селектСамогоВерхнегоУр + nl + "FROM (" + nl + resQuery + ") rn" + nl + "where \"RowNumber\" between " + startRow.ToString() + " and " + endRow.ToString() + nl +
                     orderByExpr;
+            }
+        }
+
+        /// <summary>
+        /// Переопределенный метод записи объектов в БД. Все записи отправляются в бд в одном инсерте.
+        /// </summary>
+        /// <param name="objects">Объекты для обновления.</param>
+        /// <param name="dataObjectCache">Кеш объектов.</param>
+        /// <param name="alwaysThrowException">Если произошла ошибка в базе данных, не пытаться выполнять других запросов, сразу взводить ошибку и откатывать транзакцию.</param>
+        /// <param name="dbTransactionWrapper">Экземпляр <see cref="DbTransactionWrapper" />.</param>
+        public override void UpdateObjectsByExtConn(ref DataObject[] objects, DataObjectCache dataObjectCache, bool alwaysThrowException, DbTransactionWrapper dbTransactionWrapper)
+        {
+            object id = BusinessTaskMonitor.BeginTask("Update objects");
+
+            var processingObjects = new ArrayList();
+
+            string nl = Environment.NewLine;
+            string nlk = ",";
+
+            var processingObjectsKeys = new Dictionary<TypeKeyPair, bool>(new TypeKeyPairEqualityComparer());
+            foreach (DataObject dobj in objects)
+            {
+                if (!ContainsKeyINProcessing(processingObjectsKeys, dobj))
+                {
+                    if (dobj.GetStatus(false) == ObjectStatus.Created)
+                    {
+                        KeyGenerator.GenerateUnique(dobj, this);
+                    }
+
+                    processingObjects.Add(dobj);
+                    AddToProcessingObjectsKeys(processingObjectsKeys, dobj);
+                }
+            }
+
+            Dictionary<string, List<object[]>> insertsWithBulk = new Dictionary<string, List<object[]>>();
+
+            for (int i = 0; i < processingObjects.Count; i++)
+            {
+                var processingObject = (DataObject)processingObjects[i];
+
+                STORMDO.ObjectStatus curObjectStatus = processingObject.GetStatus();
+                Type typeOfProcessingObject = processingObject.GetType();
+                BusinessServer[] bss = BusinessServerProvider.GetBusinessServer(typeOfProcessingObject, curObjectStatus, this);
+                if (bss != null && bss.Length > 0)
+                {
+                    foreach (BusinessServer bs in bss)
+                    {
+                        ProcessBusinessServer(processingObject, typeOfProcessingObject, bs, processingObjects, processingObjectsKeys, ref curObjectStatus);
+                    }
+                }
+
+                if (AuditService.IsTypeAuditable(processingObject.GetType()))
+                {
+                    AuditService.AddCreateAuditInformation(processingObject);
+                }
+
+                string[] cols = Information.GetPropertyNamesForInsert(typeOfProcessingObject);
+                string mainTableName = STORMDO.Information.GetClassStorageName(typeOfProcessingObject);
+
+                string query = "INSERT INTO " + PutIdentifierIntoBrackets(mainTableName) + nl;
+                string columns = cols[0];
+
+                object[] values = new object[cols.Length];
+
+                for (int j = 1; j < cols.Length; j++)
+                {
+                    columns += nlk + cols[j];
+                    values[j] = Information.GetPropValueByName(processingObject, cols[j]);
+
+                    if (values[j] == null)
+                    {
+                        continue;
+                    }
+
+                    Type valueType = values[j].GetType();
+
+                    if (valueType.IsEnum)
+                    {
+                        string s = STORMDO.EnumCaption.GetCaptionFor(values[j]);
+                        values[j] = s == null || s == string.Empty ? "NULL" : s;
+                    }
+                    else if (valueType == typeof(STORMDO.KeyGen.KeyGuid))
+                    {
+                        values[j] = (values[j] as STORMDO.KeyGen.KeyGuid).Guid;
+                    }
+                    else if (valueType.IsSubclassOf(typeof(DataObject)))
+                    {
+                        values[j] = new Guid(((DataObject)values[j]).__PrimaryKey.ToString());
+                    }
+                }
+
+                query += " ( " + nl + columns + nl + " ) " + nl + " VALUES @bulk;";
+
+                if (insertsWithBulk.ContainsKey(query))
+                {
+                    insertsWithBulk[query].Add(values);
+                }
+                else
+                {
+                    List<object[]> newValuesList = new List<object[]> { values };
+                    insertsWithBulk.Add(query, newValuesList);
+                }
+            }
+
+            ExecuteBulkInsert(insertsWithBulk, alwaysThrowException, dbTransactionWrapper, id);
+        }
+
+        /// <summary>
+        /// Формирует и выполняет команду вставки записей в одном инсерте.
+        /// </summary>
+        /// <param name="insertsWithBulk">Объекты для вставки.</param>
+        /// <param name="alwaysThrowException">Если произошла ошибка в базе данных, не пытаться выполнять других запросов, сразу взводить ошибку и откатывать транзакцию.</param>
+        /// <param name="dbTransactionWrapper">Экземпляр <see cref="DbTransactionWrapper" />.</param>
+        /// <param name="id">Идентификатор выполняемой задачи.</param>
+        private void ExecuteBulkInsert(Dictionary<string, List<object[]>> insertsWithBulk, bool alwaysThrowException, DbTransactionWrapper dbTransactionWrapper, object id)
+        {
+            foreach (KeyValuePair<string, List<object[]>> insertBulk in insertsWithBulk)
+            {
+                IDbCommand command = dbTransactionWrapper.CreateCommand();
+                string commandText = insertBulk.Key;
+                command.CommandText = commandText;
+                command.Parameters.Clear();
+                command.Parameters.Add(
+                    new ClickHouseParameter
+                    {
+                        DbType = DbType.Object,
+                        ParameterName = "bulk",
+                        Value = insertBulk.Value.ToArray(),
+                    }
+                );
+
+                CustomizeCommand(command);
+                object subTask = BusinessTaskMonitor.BeginSubTask(commandText, id);
+                Exception ex = null;
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception exc)
+                {
+                    ex = new ExecutingQueryException(commandText, string.Empty, exc);
+                    if (alwaysThrowException)
+                    {
+                        BusinessTaskMonitor.EndSubTask(subTask);
+                        throw ex;
+                    }
+                }
+
+                BusinessTaskMonitor.EndSubTask(subTask);
+            }
+        }
+
+        /// <summary>
+        /// Проверка на наличие объекта в коллекции обрабатываемых объектов.
+        /// </summary>
+        /// <param name="processedDictionary">
+        /// Словарь обрабатываемых объектов.
+        /// </param>
+        /// <param name="dob">
+        /// Объект данных.
+        /// </param>
+        /// <returns>
+        /// Если объект содержится в коллекции, то <c>true</c>.
+        /// </returns>
+        private bool ContainsKeyINProcessing(Dictionary<TypeKeyPair, bool> processedDictionary, DataObject dob)
+        {
+            TypeKeyPair typeKeyPair = new TypeKeyPair(dob.GetType(), dob.__PrimaryKey);
+            return processedDictionary.ContainsKey(typeKeyPair);
+        }
+
+        /// <summary>
+        /// Добавление в словаре обрабатываемых объектов.
+        /// </summary>
+        /// <param name="processedDictionary">Словарь обрабатываемых объектов.</param>
+        /// <param name="dob">Объект данных.</param>
+        private void AddToProcessingObjectsKeys(Dictionary<TypeKeyPair, bool> processedDictionary, DataObject dob)
+        {
+            TypeKeyPair typeKeyPair = new TypeKeyPair(dob.GetType(), dob.__PrimaryKey);
+            processedDictionary.Add(typeKeyPair, true);
+        }
+
+        private void ProcessBusinessServer(DataObject processingObject, Type typeOfProcessingObject, BusinessServer bs, ArrayList processingObjects, Dictionary<TypeKeyPair, bool> processingObjectsKeys, ref ObjectStatus curObjectStatus)
+        {
+            try
+            {
+                bs.ObjectsToUpdate = processingObjects;
+                object prevPrimaryKey = processingObject.__PrimaryKey;
+                DataObject[] subobjects = bs.OnUpdateDataobject(processingObject);
+                curObjectStatus = processingObject.GetStatus(true);
+                if (!processingObject.__PrimaryKey.Equals(prevPrimaryKey))
+                {
+                    TypeKeyPair typeKeyPair = new TypeKeyPair(typeOfProcessingObject, prevPrimaryKey);
+                    processingObjectsKeys.Remove(typeKeyPair);
+                    if (curObjectStatus == ObjectStatus.Created)
+                    {
+                        KeyGenerator.GenerateUnique(processingObject, this);
+                    }
+
+                    AddToProcessingObjectsKeys(processingObjectsKeys, processingObject);
+                }
+
+                foreach (DataObject subobject in subobjects)
+                {
+                    var subobjectStatus = subobject.GetStatus(true);
+                    if (!ContainsKeyINProcessing(processingObjectsKeys, subobject))
+                    {
+                        if (subobjectStatus == ObjectStatus.Created)
+                        {
+                            KeyGenerator.GenerateUnique(subobject, this);
+                        }
+
+                        processingObjects.Add(subobject);
+                        AddToProcessingObjectsKeys(processingObjectsKeys, subobject);
+                    }
+                }
+            }
+            finally
+            {
+                // Высвобождаем обрабатываемые объекты.
+                bs.ObjectsToUpdate = null;
             }
         }
     }
