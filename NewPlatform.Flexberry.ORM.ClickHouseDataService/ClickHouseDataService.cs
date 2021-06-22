@@ -454,6 +454,10 @@
                     {
                         value = new Guid(((DataObject)value).__PrimaryKey.ToString());
                     }
+                    else if (valueType == typeof(bool))
+                    {
+                        value = (byte)((bool)value ? 1 : 0);
+                    }
 
                     values[j] = value;
                 }
