@@ -422,9 +422,10 @@
                 string mainTableName = STORMDO.Information.GetClassStorageName(typeOfProcessingObject);
 
                 string query = "INSERT INTO " + PutIdentifierIntoBrackets(mainTableName) + nl;
-                string columns = cols[0];
 
                 object[] values = new object[cols.Length];
+                string columns = cols[0];
+                values[0] = Information.GetPropValueByName(processingObject, cols[0]);
 
                 for (int j = 1; j < cols.Length; j++)
                 {

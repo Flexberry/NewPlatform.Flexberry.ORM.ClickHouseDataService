@@ -59,7 +59,6 @@
             {
                 // Arrange.
                 string value = "ууцуц'уцуцу";
-                string expectedValue = value.Replace("'", "''");
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
@@ -73,7 +72,7 @@
 
                 dataService.LoadObject(storedClass);
 
-                Assert.Equal(expectedValue, storedClass.StoredProperty);
+                Assert.Equal(value, storedClass.StoredProperty);
             }
         }
 
