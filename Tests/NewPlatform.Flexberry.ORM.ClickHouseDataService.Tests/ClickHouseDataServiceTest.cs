@@ -58,7 +58,7 @@
             foreach (IDataService dataService in DataServices)
             {
                 // Arrange.
-                string value = "ууцуц'уцуцу";
+                string value = "ууцуц\'уцуцу";
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
