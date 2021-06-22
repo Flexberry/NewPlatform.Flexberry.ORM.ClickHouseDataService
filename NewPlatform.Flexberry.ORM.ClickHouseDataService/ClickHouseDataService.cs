@@ -317,7 +317,6 @@
                 int tableNameEndIndex = sql.IndexOf("\"", insertIntoConstLength, StringComparison.InvariantCultureIgnoreCase);
                 string tableName = sql.Substring(insertIntoConst.Length, tableNameEndIndex - insertIntoConstLength);
                 cmd.CommandText = sql.Substring(0, insertIntoConstLength) + tableName + "Buffer" + sql.Substring(tableNameEndIndex);
-                cmd.CommandText = cmd.CommandText.Replace("__PrimaryKey", "primaryKey");
             }
 
             base.CustomizeCommand(cmd);
@@ -456,6 +455,8 @@
                     }
                 }
 
+                string primaryKeyName = Information.GetPrimaryKeyStorageName(typeOfProcessingObject);
+                query = query.Replace("__PrimaryKey", primaryKeyName);
                 query += " ( " + nl + columns + nl + " ) " + nl + " VALUES @bulk;";
 
                 if (insertsWithBulk.ContainsKey(query))
