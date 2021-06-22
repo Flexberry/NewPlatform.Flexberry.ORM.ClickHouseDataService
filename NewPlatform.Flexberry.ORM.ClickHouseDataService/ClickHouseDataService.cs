@@ -456,7 +456,7 @@
                 }
 
                 string primaryKeyName = Information.GetPrimaryKeyStorageName(typeOfProcessingObject);
-                query = query.Replace("__PrimaryKey", primaryKeyName);
+                columns = columns.Replace("__PrimaryKey", primaryKeyName);
                 query += " ( " + nl + columns + nl + " ) " + nl + " VALUES @bulk;";
 
                 if (insertsWithBulk.ContainsKey(query))
