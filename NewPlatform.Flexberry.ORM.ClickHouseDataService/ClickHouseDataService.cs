@@ -372,12 +372,10 @@
         /// </summary>
         /// <param name="objects">Объекты для обновления.</param>
         /// <param name="dataObjectCache">Кеш объектов.</param>
-        /// <param name="alwaysThrowException">Если произошла ошибка в базе данных, не пытаться выполнять других запросов, сразу взводить ошибку и откатывать транзакцию.</param>
+        /// <param name="alwaysThrowException">Если произошла ошибка в базе данных, не пытаться выполнять других запросов, сразу взводить ошибку.</param>
         /// <param name="dbTransactionWrapper">Экземпляр <see cref="DbTransactionWrapper" />.</param>
         public override void UpdateObjectsByExtConn(ref DataObject[] objects, DataObjectCache dataObjectCache, bool alwaysThrowException, DbTransactionWrapper dbTransactionWrapper)
         {
-            object id = BusinessTaskMonitor.BeginTask("Update objects");
-
             var processingObjects = new ArrayList();
 
             string nl = Environment.NewLine;
@@ -415,7 +413,7 @@
                     }
                 }
 
-                if (AuditService.IsTypeAuditable(processingObject.GetType()))
+                if (AuditService.IsTypeAuditable(typeOfProcessingObject))
                 {
                     AuditService.AddCreateAuditInformation(processingObject);
                 }
@@ -430,34 +428,38 @@
 
                 for (int j = 1; j < cols.Length; j++)
                 {
-                    columns += nlk + cols[j];
-                    values[j] = Information.GetPropValueByName(processingObject, cols[j]);
+                    object value = values[j];
 
-                    if (values[j] == null)
+                    columns += nlk + cols[j];
+                    value = Information.GetPropValueByName(processingObject, cols[j]);
+
+                    if (value == null)
                     {
                         continue;
                     }
 
-                    Type valueType = values[j].GetType();
+                    Type valueType = value.GetType();
 
                     if (valueType.IsEnum)
                     {
-                        string s = STORMDO.EnumCaption.GetCaptionFor(values[j]);
-                        values[j] = s == null || s == string.Empty ? "NULL" : s;
+                        string s = STORMDO.EnumCaption.GetCaptionFor(value);
+                        value = s == null || s == string.Empty ? "NULL" : s;
                     }
                     else if (valueType == typeof(STORMDO.KeyGen.KeyGuid))
                     {
-                        values[j] = (values[j] as STORMDO.KeyGen.KeyGuid).Guid;
+                        value = (value as STORMDO.KeyGen.KeyGuid).Guid;
                     }
                     else if (valueType.IsSubclassOf(typeof(DataObject)))
                     {
-                        values[j] = new Guid(((DataObject)values[j]).__PrimaryKey.ToString());
+                        value = new Guid(((DataObject)value).__PrimaryKey.ToString());
                     }
+
+                    values[j] = value;
                 }
 
                 string primaryKeyName = Information.GetPrimaryKeyStorageName(typeOfProcessingObject);
                 columns = columns.Replace("__PrimaryKey", primaryKeyName);
-                query += " ( " + nl + columns + nl + " ) " + nl + " VALUES @bulk;";
+                query += $" ( {nl}{columns}{nl} ) {nl} VALUES @bulk;";
 
                 if (insertsWithBulk.ContainsKey(query))
                 {
@@ -470,17 +472,16 @@
                 }
             }
 
-            ExecuteBulkInsert(insertsWithBulk, alwaysThrowException, dbTransactionWrapper, id);
+            ExecuteBulkInsert(insertsWithBulk, alwaysThrowException, dbTransactionWrapper);
         }
 
         /// <summary>
         /// Формирует и выполняет команду вставки записей в одном инсерте.
         /// </summary>
         /// <param name="insertsWithBulk">Объекты для вставки.</param>
-        /// <param name="alwaysThrowException">Если произошла ошибка в базе данных, не пытаться выполнять других запросов, сразу взводить ошибку и откатывать транзакцию.</param>
+        /// <param name="alwaysThrowException">Если произошла ошибка в базе данных, не пытаться выполнять других запросов, сразу взводить ошибку.</param>
         /// <param name="dbTransactionWrapper">Экземпляр <see cref="DbTransactionWrapper" />.</param>
-        /// <param name="id">Идентификатор выполняемой задачи.</param>
-        private void ExecuteBulkInsert(Dictionary<string, List<object[]>> insertsWithBulk, bool alwaysThrowException, DbTransactionWrapper dbTransactionWrapper, object id)
+        private void ExecuteBulkInsert(Dictionary<string, List<object[]>> insertsWithBulk, bool alwaysThrowException, DbTransactionWrapper dbTransactionWrapper)
         {
             foreach (KeyValuePair<string, List<object[]>> insertBulk in insertsWithBulk)
             {
@@ -498,7 +499,6 @@
                 );
 
                 CustomizeCommand(command);
-                object subTask = BusinessTaskMonitor.BeginSubTask(commandText, id);
                 Exception ex = null;
 
                 try
@@ -510,12 +510,9 @@
                     ex = new ExecutingQueryException(commandText, string.Empty, exc);
                     if (alwaysThrowException)
                     {
-                        BusinessTaskMonitor.EndSubTask(subTask);
                         throw ex;
                     }
                 }
-
-                BusinessTaskMonitor.EndSubTask(subTask);
             }
         }
 
@@ -548,6 +545,15 @@
             processedDictionary.Add(typeKeyPair, true);
         }
 
+        /// <summary>
+        /// Обработка объекта бизнес-сервером.
+        /// </summary>
+        /// <param name="processingObject">Обрабатываемый объект.</param>
+        /// <param name="typeOfProcessingObject">Тип обрабатываемого объекта.</param>
+        /// <param name="bs">Экземпляр бизнес-сервера.</param>
+        /// <param name="processingObjects">Массив обрабатываемых объектов.</param>
+        /// <param name="processingObjectsKeys">Словарь ключей обрабатываемых объектов.</param>
+        /// <param name="curObjectStatus">Статус объекта.</param>
         private void ProcessBusinessServer(DataObject processingObject, Type typeOfProcessingObject, BusinessServer bs, ArrayList processingObjects, Dictionary<TypeKeyPair, bool> processingObjectsKeys, ref ObjectStatus curObjectStatus)
         {
             try
