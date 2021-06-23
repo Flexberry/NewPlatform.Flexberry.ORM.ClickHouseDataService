@@ -1,6 +1,7 @@
 ﻿namespace NewPlatform.ClickHouseDataService.Tests
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Threading;
     using ICSSoft.STORMNET;
@@ -31,6 +32,33 @@
             {
                 // Arrange.
                 string value = "ууцуц\\уцуцу";
+
+                StoredClass storedClass = new StoredClass() { StoredProperty = value };
+
+                // Act.
+                dataService.UpdateObject(storedClass);
+
+                // Assert.
+
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
+
+                dataService.LoadObject(storedClass);
+
+                Assert.Equal(value, storedClass.StoredProperty);
+            }
+        }
+
+        /// <summary>
+        /// Test for data with single quotes insertion.
+        /// </summary>
+        [Fact]
+        public void InsertSingleQuotesTest()
+        {
+            foreach (IDataService dataService in DataServices)
+            {
+                // Arrange.
+                string value = "ууцуц\'уцуцу";
 
                 StoredClass storedClass = new StoredClass() { StoredProperty = value };
 
@@ -121,17 +149,20 @@
                 Random random = new Random();
                 Stopwatch stopwatch = new Stopwatch();
 
-                int count = 10000;
+                int count = 100000;
 
                 stopwatch.Start();
+                List<StoredClass> storedClasses = new List<StoredClass>();
 
                 for (int i = 0; i < count; i++)
                 {
                     StoredClass storedClass = new StoredClass() { StoredProperty = value + i + "_" + random.Next(count / 2) };
-
-                    // Act.
-                    dataService.UpdateObject(storedClass);
+                    storedClasses.Add(storedClass);
                 }
+
+                // Act.
+                DataObject[] objs = storedClasses.ToArray();
+                dataService.UpdateObjects(ref objs);
 
                 stopwatch.Stop();
 
