@@ -146,10 +146,10 @@ namespace NewPlatform.ClickHouseDataService.Tests
         }
 
         /// <summary>
-        /// Creates the <see cref="PostgresDataService"/> instance for temp database.
+        /// Creates the <see cref="ClickHouseDataService"/> instance for temp database.
         /// </summary>
         /// <param name="connectionString">The connection string.</param>
-        /// <returns>The <see cref="PostgresDataService"/> instance.</returns>
+        /// <returns>The <see cref="ClickHouseDataService"/> instance.</returns>
         protected virtual ClickHouseDataService CreateClickHouseDataService(string connectionString)
         {
             return new ClickHouseDataService { CustomizationString = connectionString };

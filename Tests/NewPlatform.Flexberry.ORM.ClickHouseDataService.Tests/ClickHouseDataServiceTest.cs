@@ -7,19 +7,23 @@
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
     using Xunit;
+    using Xunit.Abstractions;
 
     /// <summary>
     /// Test for <see cref="ClickHouseDataService"/>.
     /// </summary>
     public class ClickHouseDataServiceTest : BaseIntegratedTest
     {
+        protected ITestOutputHelper output;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ClickHouseDataServiceTest"/> class.
         /// </summary>
-        /// <param name="databasePrefix">Test database name prefix.</param>
-        public ClickHouseDataServiceTest()
+        /// <param name="output">Unit tests debug output.</param>
+        public ClickHouseDataServiceTest(ITestOutputHelper output)
             : base("InsTest")
         {
+            this.output = output;
         }
 
         /// <summary>
@@ -135,7 +139,6 @@
             }
         }
 
-
         /// <summary>
         /// Test for data insertion.
         /// </summary>
@@ -166,7 +169,7 @@
 
                 stopwatch.Stop();
 
-                Console.WriteLine($"It take {stopwatch.ElapsedMilliseconds}ms for write {count} object to storage.");
+                output.WriteLine($"It take {stopwatch.ElapsedMilliseconds}ms for write {count} object to storage.");
 
                 // Assert.
 

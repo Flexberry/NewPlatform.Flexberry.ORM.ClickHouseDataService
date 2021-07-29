@@ -2,7 +2,7 @@
 
 namespace NewPlatform.ClickHouseDataService.Tests
 {
-#if NETCORE
+#if NETCOREAPP
     using System.Configuration;
     using System.IO;
     using System.Reflection;
@@ -22,7 +22,7 @@ namespace NewPlatform.ClickHouseDataService.Tests
         public XUnitTestRunnerInitializer(IMessageSink messageSink)
             : base(messageSink)
         {
-#if NETCORE
+#if NETCOREAPP
             string configFile = $"{Assembly.GetExecutingAssembly().Location}.config";
             string outputConfigFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None).FilePath;
             File.Copy(configFile, outputConfigFile, true);

@@ -98,7 +98,11 @@ namespace NewPlatform.ClickHouseDataService.Tests {
         ///) ENGINE = MergeTree() ORDER BY (&quot;primaryKey&quot;);
         ///
         ///
-        ///CREATE TABLE &quot;FullT [rest of string was truncated]&quot;;.
+        ///CREATE TABLE &quot;FullTypesMaster1&quot; (
+        ///
+        /// &quot;primaryKey&quot; UUID,
+        ///
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ClickHouseDirectGenerator_create {
             get {
