@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Linq;
     using System.Threading;
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
@@ -184,6 +185,92 @@
                 int actualCount = dataService.GetObjectsCount(lcs);
 
                 Assert.Equal(count, actualCount);
+            }
+        }
+
+        /// <summary>
+        /// Test for loading data for top values.
+        /// </summary>
+        [Fact]
+        public void ReturnTopTest()
+        {
+            foreach (IDataService dataService in DataServices)
+            {
+                // Arrange.
+                string value = "property-value";
+                Random random = new Random();
+
+                int count = 100;
+
+                List<StoredClass> storedClasses = new List<StoredClass>();
+
+                for (int i = 0; i < count; i++)
+                {
+                    StoredClass storedClass = new StoredClass() { StoredProperty = value + i + "_" + random.Next(count / 2) };
+                    storedClasses.Add(storedClass);
+                }
+
+                // Act.
+                DataObject[] objs = storedClasses.ToArray();
+                dataService.UpdateObjects(ref objs);
+
+                // Assert.
+
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
+
+                // Check data count.
+                View view = new View(typeof(StoredClass), View.ReadType.OnlyThatObject);
+                LoadingCustomizationStruct lcs = LoadingCustomizationStruct.GetSimpleStruct(typeof(StoredClass), view);
+                lcs.ColumnsSort = new[] { new ColumnsSortDef(nameof(StoredClass.StoredProperty), SortOrder.Asc), };
+                lcs.ReturnTop = count / 2;
+
+                List<StoredClass> dobjs = dataService.LoadObjects(lcs).Cast<StoredClass>().ToList();
+
+                Assert.Equal(lcs.ReturnTop, dobjs.Count);
+            }
+        }
+
+        /// <summary>
+        /// Test for loading data using pagination.
+        /// </summary>
+        [Fact]
+        public void PagingTest()
+        {
+            foreach (IDataService dataService in DataServices)
+            {
+                // Arrange.
+                string value = "property-value";
+                Random random = new Random();
+
+                int count = 100;
+
+                List<StoredClass> storedClasses = new List<StoredClass>();
+
+                for (int i = 0; i < count; i++)
+                {
+                    StoredClass storedClass = new StoredClass() { StoredProperty = value + i + "_" + random.Next(count / 2) };
+                    storedClasses.Add(storedClass);
+                }
+
+                // Act.
+                DataObject[] objs = storedClasses.ToArray();
+                dataService.UpdateObjects(ref objs);
+
+                // Assert.
+
+                // Wait for buffer sync. By default max time for start sync is 2 seconds.
+                Thread.Sleep(3000);
+
+                // Check data count.
+                View view = new View(typeof(StoredClass), View.ReadType.OnlyThatObject);
+                LoadingCustomizationStruct lcs = LoadingCustomizationStruct.GetSimpleStruct(typeof(StoredClass), view);
+                lcs.ColumnsSort = new[] { new ColumnsSortDef(nameof(StoredClass.StoredProperty), SortOrder.Asc), };
+                lcs.RowNumber = new RowNumberDef((count / 2) + 1, count);
+
+                List<StoredClass> dobjs = dataService.LoadObjects(lcs).Cast<StoredClass>().ToList();
+
+                Assert.Equal(lcs.RowNumber.EndRow - lcs.RowNumber.StartRow + 1, dobjs.Count);
             }
         }
     }
