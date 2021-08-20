@@ -5,15 +5,14 @@
     using System.Collections.Generic;
     using System.Data;
     using System.Globalization;
+    using System.Linq;
     using System.Text;
 
     using ClickHouse.Ado;
 
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
-    using ICSSoft.STORMNET.Business.Audit.HelpStructures;
     using ICSSoft.STORMNET.KeyGen;
-    using STORMDO = ICSSoft.STORMNET;
 
     /// <summary>
     /// Flexberry ORM DataService for ClickHouse Storage.
@@ -117,7 +116,7 @@
 
             if (valType.IsEnum)
             {
-                string s = STORMDO.EnumCaption.GetCaptionFor(value);
+                string s = EnumCaption.GetCaptionFor(value);
                 if (s == null || s == string.Empty)
                 {
                     return "NULL";
@@ -322,48 +321,30 @@
             base.CustomizeCommand(cmd);
         }
 
-        /// <summary>
-        /// Провести аудит операции для одного объекта.
-        /// </summary>
-        /// <param name="dobject"> Объект, аудит которого нужно провести. </param>
-        /// <param name="auditOperationInfoList"> Список id записей аудита. </param>
-        /// <param name="transaction">
-        /// Транзакция, через которую необходимо проводить выполнение зачиток из БД приложения аудиту
-        /// (при работе AuditService иногда необходимо дочитать объект или получить сохранённую копию,
-        /// а выполнение данного действия без транзакции может привести к взаимоблокировке).
-        /// </param>
-        private void AuditOperation(DataObject dobject, ICollection<AuditAdditionalInfo> auditOperationInfoList, IDbTransaction transaction)
-        {
-            if (dobject != null && AuditService.IsAuditEnabled)
-            {
-                AuditAdditionalInfo auditAdditionalInfo = AuditService.WriteCommonAuditOperationWithAutoFields(dobject, this, true, transaction); // Если что, то исключение будет проброшено
-                if (auditAdditionalInfo != null && auditAdditionalInfo.AuditRecordPrimaryKey != Guid.Empty)
-                {
-                    auditOperationInfoList.Add(auditAdditionalInfo);
-                }
-            }
-        }
-
-        /// <inheritdoc/>
+        /// <inheritdoc cref="SQLDataService"/>
         public override void GenerateSQLRowNumber(LoadingCustomizationStruct customizationStruct, ref string resQuery, string orderByExpr)
         {
             string nl = Environment.NewLine;
             if (customizationStruct.RowNumber != null)
             {
-                int fromInd = resQuery.IndexOf("FROM (");
-                string селектСамогоВерхнегоУр = resQuery.Substring(0, fromInd);
-
-                if (!string.IsNullOrEmpty(orderByExpr))
+                long offset = long.MaxValue;
+                long limit = 0;
+                if (customizationStruct.RowNumber.StartRow == 0)
                 {
-                    resQuery = resQuery.Replace(orderByExpr, string.Empty);
+                    customizationStruct.RowNumber.StartRow = 1;
                 }
 
-                resQuery = resQuery.Insert(fromInd, "," + nl + "rowNumberInAllBlocks() as \"RowNumber\"" + nl);
+                if (customizationStruct.RowNumber.StartRow > 0)
+                {
+                    offset = customizationStruct.RowNumber.StartRow - 1;
+                    if (customizationStruct.RowNumber.EndRow >= customizationStruct.RowNumber.StartRow)
+                    {
+                        limit = customizationStruct.RowNumber.EndRow - customizationStruct.RowNumber.StartRow + 1;
+                    }
+                }
 
-                int startRow = customizationStruct.RowNumber.StartRow - 1;
-                int endRow = customizationStruct.RowNumber.EndRow - 1;
-                resQuery = селектСамогоВерхнегоУр + nl + "FROM (" + nl + resQuery + ") rn" + nl + "where \"RowNumber\" between " + startRow.ToString() + " and " + endRow.ToString() + nl +
-                    orderByExpr;
+                // FYI: https://clickhouse.tech/docs/en/sql-reference/statements/select/limit/
+                resQuery = $"{resQuery}{nl}LIMIT {offset}, {limit}";
             }
         }
 
@@ -402,7 +383,7 @@
             {
                 var processingObject = (DataObject)processingObjects[i];
 
-                STORMDO.ObjectStatus curObjectStatus = processingObject.GetStatus();
+                ObjectStatus curObjectStatus = processingObject.GetStatus();
                 Type typeOfProcessingObject = processingObject.GetType();
                 BusinessServer[] bss = BusinessServerProvider.GetBusinessServer(typeOfProcessingObject, curObjectStatus, this);
                 if (bss != null && bss.Length > 0)
@@ -419,36 +400,26 @@
                 }
 
                 string[] cols = Information.GetPropertyNamesForInsert(typeOfProcessingObject);
-                string mainTableName = STORMDO.Information.GetClassStorageName(typeOfProcessingObject);
-
-                string query = "INSERT INTO " + PutIdentifierIntoBrackets(mainTableName) + nl;
-
-                object[] values = new object[cols.Length];
-                string columns = cols[0];
-                values[0] = Information.GetPropValueByName(processingObject, cols[0]);
-
-                for (int j = 1; j < cols.Length; j++)
+                object[] values = cols.Select(c =>
                 {
-                    object value = values[j];
-
-                    columns += nlk + cols[j];
-                    value = Information.GetPropValueByName(processingObject, cols[j]);
+                    object value = Information.GetPropValueByName(processingObject, c);
 
                     if (value == null)
                     {
-                        continue;
+                        return null;
                     }
 
+                    // Подготовим значение для bulk-вставки через параметры.
                     Type valueType = value.GetType();
 
                     if (valueType.IsEnum)
                     {
-                        string s = STORMDO.EnumCaption.GetCaptionFor(value);
-                        value = s == null || s == string.Empty ? "NULL" : s;
+                        string s = EnumCaption.GetCaptionFor(value);
+                        value = string.IsNullOrEmpty(s) ? "NULL" : s;
                     }
-                    else if (valueType == typeof(STORMDO.KeyGen.KeyGuid))
+                    else if (valueType == typeof(KeyGuid))
                     {
-                        value = (value as STORMDO.KeyGen.KeyGuid).Guid;
+                        value = (value as KeyGuid).Guid;
                     }
                     else if (valueType.IsSubclassOf(typeof(DataObject)))
                     {
@@ -459,12 +430,14 @@
                         value = (byte)((bool)value ? 1 : 0);
                     }
 
-                    values[j] = value;
-                }
+                    return value;
+                }).ToArray();
 
                 string primaryKeyName = Information.GetPrimaryKeyStorageName(typeOfProcessingObject);
-                columns = columns.Replace("__PrimaryKey", primaryKeyName);
-                query += $" ( {nl}{columns}{nl} ) {nl} VALUES @bulk;";
+                IEnumerable<string> columns = cols.Select(x => x.Replace("__PrimaryKey", primaryKeyName));
+
+                string mainTableName = Information.GetClassStorageName(typeOfProcessingObject);
+                string query = $"INSERT INTO {PutIdentifierIntoBrackets(mainTableName)}{nl} ( {nl}{string.Join(nlk, columns)}{nl} ) {nl} VALUES @bulk;";
 
                 if (insertsWithBulk.ContainsKey(query))
                 {

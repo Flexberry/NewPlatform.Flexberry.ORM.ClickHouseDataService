@@ -8,7 +8,7 @@
     <Company>New Platform Ltd</Company>
     <PackageTags>Flexberry ORM BigData ClickHouse</PackageTags>
     <VersionPrefix>6.0.0</VersionPrefix>
-    <VersionSuffix>alpha06</VersionSuffix>
+    <VersionSuffix>beta01</VersionSuffix>
     <Product>Flexberry PLATFORM</Product>
     <PackageId>NewPlatform.Flexberry.ORM.ClickHouseDataService</PackageId>
     <PackageProjectUrl>https://flexberry.net</PackageProjectUrl>
