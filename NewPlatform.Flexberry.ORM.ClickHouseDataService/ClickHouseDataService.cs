@@ -4,6 +4,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.Common;
     using System.Globalization;
     using System.Linq;
     using System.Text;
@@ -298,6 +299,9 @@
                 }
             }
         }
+
+        /// <inheritdoc />
+        public override DbProviderFactory ProviderFactory => null;
 
         /// <inheritdoc/>
         protected override void CustomizeCommand(IDbCommand cmd)
