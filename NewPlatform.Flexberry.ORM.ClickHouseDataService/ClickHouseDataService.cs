@@ -10,10 +10,12 @@
     using System.Text;
 
     using ClickHouse.Ado;
-
     using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
+    using ICSSoft.STORMNET.Business.Audit;
+    using ICSSoft.STORMNET.Business.Interfaces;
     using ICSSoft.STORMNET.KeyGen;
+    using ICSSoft.STORMNET.Security;
 
     /// <summary>
     /// Flexberry ORM DataService for ClickHouse Storage.
@@ -21,10 +23,13 @@
     public class ClickHouseDataService : SQLDataService
     {
         /// <summary>
-        /// Creates new instance of <see cref="ClickHouseDataService"/>.
+        /// Создание сервиса данных для ClickHouse с указанием настроек проверки полномочий.
         /// </summary>
-        public ClickHouseDataService()
-            : base()
+        /// <param name="securityManager">Сенеджер полномочий.</param>
+        /// <param name="auditService">Сервис аудита.</param>
+        /// <param name="businessServerProvider">The provider for <see cref="BusinessServer"/> creation.</param>
+        public ClickHouseDataService(ISecurityManager securityManager, IAuditService auditService, IBusinessServerProvider businessServerProvider)
+            : base(securityManager, auditService, businessServerProvider)
         {
         }
 
@@ -202,15 +207,8 @@
             }
             catch (Exception e)
             {
-                if (reader != null)
-                {
-                    reader.Close();
-                }
-
-                if (connection != null)
-                {
-                    connection.Close();
-                }
+                reader?.Close();
+                connection?.Close();
 
                 throw new ExecutingQueryException(query, string.Empty, e);
             }
@@ -289,14 +287,7 @@
 
             using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(GetConnection()))
             {
-                try
-                {
-                    UpdateObjectsByExtConn(ref objects, DataObjectCache, AlwaysThrowException, dbTransactionWrapper);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                UpdateObjectsByExtConn(ref objects, DataObjectCache, AlwaysThrowException, dbTransactionWrapper);
             }
         }
 
@@ -576,6 +567,11 @@
                 // Высвобождаем обрабатываемые объекты.
                 bs.ObjectsToUpdate = null;
             }
+        }
+
+        public override DbConnection GetDbConnection()
+        {
+            throw new NotImplementedException();
         }
     }
 }
