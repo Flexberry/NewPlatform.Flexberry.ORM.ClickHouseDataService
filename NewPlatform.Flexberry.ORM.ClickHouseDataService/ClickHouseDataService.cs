@@ -14,8 +14,10 @@
     using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET.Business.Audit;
     using ICSSoft.STORMNET.Business.Interfaces;
+    using ICSSoft.STORMNET.FunctionalLanguage.SQLWhere;
     using ICSSoft.STORMNET.KeyGen;
     using ICSSoft.STORMNET.Security;
+    using STORMFunction = ICSSoft.STORMNET.FunctionalLanguage.Function;
 
     /// <summary>
     /// Flexberry ORM DataService for ClickHouse Storage.
@@ -74,6 +76,155 @@
             else
             {
                 return string.Empty;
+            }
+        }
+
+        /// <inheritdoc/>
+        public override ICSSoft.STORMNET.DataObject[] LoadObjects(
+            LoadingCustomizationStruct customizationStruct,
+            ref object state, DataObjectCache dataObjectCache)
+        {
+            RunChangeCustomizationString(customizationStruct.LoadingTypes);
+            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(this))
+            {
+                return LoadObjectsByExtConn(customizationStruct, ref state, dataObjectCache, dbTransactionWrapper);
+            }
+        }
+
+        /// <inheritdoc/>
+        public override void UpdateObjectsByExtConn(
+            ref DataObject[] objects, DataObjectCache dataObjectCache, bool alwaysThrowException, IDbConnection connection, IDbTransaction transaction)
+        {
+            using EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(connection, transaction);
+            UpdateObjectsByExtConn(ref objects, dataObjectCache, alwaysThrowException, dbTransactionWrapper);
+        }
+
+        /// <inheritdoc/>
+        public override void LoadObject(
+            ICSSoft.STORMNET.View dataObjectView,
+            ICSSoft.STORMNET.DataObject dataObject, bool clearDataObject, bool checkExistingObject, DataObjectCache dataObjectCache)
+        {
+            if (dataObjectView == null)
+            {
+                throw new ArgumentNullException(nameof(dataObjectView), "Не указано представление для загрузки объекта. Обратитесь к разработчику.");
+            }
+
+            if (dataObject == null)
+            {
+                throw new ArgumentNullException(nameof(dataObject), "Не указан объект для загрузки. Обратитесь к разработчику.");
+            }
+
+            Type doType = dataObject.GetType();
+            RunChangeCustomizationString(new Type[] { doType });
+
+            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(this))
+            {
+                LoadObjectByExtConn(dataObjectView, dataObject, clearDataObject, checkExistingObject, dataObjectCache, dbTransactionWrapper.Connection, dbTransactionWrapper.Transaction);
+            }
+        }
+
+        /// <summary>
+        /// Изменить строку соединения, согласно делегату <see cref="ChangeCustomizationString"/>.
+        /// Копия private-метода из <see cref="SQLDataService"/>.
+        /// </summary>
+        /// <param name="types">Типы загружаемых объектов - по ним будет изменена строка соединения.</param>
+        private void RunChangeCustomizationString(Type[] types)
+        {
+            if (!DoNotChangeCustomizationString && ChangeCustomizationString != null)
+            {
+                string cs = ChangeCustomizationString(types);
+                CustomizationString = string.IsNullOrEmpty(cs) ? CustomizationString : cs;
+            }
+        }
+
+        /// <summary>
+        /// Загрузка объектов с использованием обёртки с коннекцией и транзакцией.
+        /// Копия private-метода из <see cref="SQLDataService"/>.
+        /// </summary>
+        /// <param name="customizationStruct">Структура, определяющая, что и как грузить.</param>
+        /// <param name="state">Состояние вычитки (для последующей дочитки).</param>
+        /// <param name="dataObjectCache">Кэш объектов для вычитки.</param>
+        /// <param name="dbTransactionWrapper">Обёртка с коннекцией и тразакцией.</param>
+        /// <returns>Загруженные данные.</returns>
+        private DataObject[] LoadObjectsByExtConn(
+            LoadingCustomizationStruct customizationStruct,
+            ref object state,
+            DataObjectCache dataObjectCache,
+            DbTransactionWrapper dbTransactionWrapper)
+        {
+            dataObjectCache.StartCaching(false);
+            try
+            {
+                // Применим полномочия на строки.
+                ApplyReadPermissions(customizationStruct, SecurityManager);
+
+                Type[] dataObjectType = customizationStruct.LoadingTypes;
+                StorageStructForView[] storageStruct;
+
+                string selectString = string.Empty;
+                selectString = GenerateSQLSelect(customizationStruct, false, out storageStruct, false);
+                // Получаем данные.
+                object[][] resValue = ReadFirstByExtConn(
+                                            selectString, ref state, customizationStruct.LoadingBufferSize, dbTransactionWrapper.Connection, dbTransactionWrapper.Transaction);
+                state = new object[] { state, dataObjectType, storageStruct, customizationStruct, CustomizationString };
+                DataObject[] res = null;
+
+                if (resValue == null)
+                {
+                    res = new DataObject[0];
+                }
+                else
+                {
+                    res = Utils.ProcessingRowsetData(
+                            resValue, dataObjectType, storageStruct, customizationStruct, this, Types, dataObjectCache, SecurityManager, dbTransactionWrapper.Connection, dbTransactionWrapper.Transaction);
+                }
+
+                return res;
+            }
+            finally
+            {
+                dataObjectCache.StopCaching();
+            }
+        }
+
+        /// <summary>
+        /// Применение полномочий на чтение строк.
+        /// Копия private-метода из <see cref="SQLDataService"/>.
+        /// </summary>
+        /// <param name="customizationStruct">Настройка выборки, которая будет изменена.</param>
+        /// <param name="securityManager">Менеджер полномочий.</param>
+        private static void ApplyReadPermissions(LoadingCustomizationStruct customizationStruct, ISecurityManager securityManager)
+        {
+            object limitObject;
+            bool canAccess;
+            var operationResult = securityManager.GetLimitForAccess(
+                customizationStruct.View.DefineClassType, tTypeAccess.Read, out limitObject, out canAccess);
+            STORMFunction limit = limitObject as STORMFunction;
+            if (operationResult == OperationResult.Успешно)
+            {
+                if (limit != null)
+                {
+                    // Применим его к lcs через И.
+                    if (customizationStruct.LimitFunction == null)
+                    {
+                        customizationStruct.LimitFunction = limit;
+                    }
+                    else
+                    {
+                        SQLWhereLanguageDef ldef = SQLWhereLanguageDef.LanguageDef;
+                        customizationStruct.LimitFunction = ldef.GetFunction(
+                            ldef.funcAND, customizationStruct.LimitFunction, limit);
+                    }
+
+                    // Убеждаемся, что все свойства из ограничения есть в представлении. Удалим добавленное из ограничения "STORMMainObjectKey".
+                    var properties = new List<string>(customizationStruct.LimitFunction.GetLimitProperties().Where(x => x != SQLWhereLanguageDef.StormMainObjectKey));
+                    customizationStruct.View.AddProperties(properties.ToArray());
+                }
+            }
+            else
+            {
+                // TODO: тут надо подумать что будем делать. Наверное надо вызывать исключение и не давать ничего. Пока просто запишем в лог и не будем показывать ошибку.
+                LogService.LogError(string.Format("SecurityManager.GetLimitForAccess: {0}", operationResult));
             }
         }
 
