@@ -85,7 +85,7 @@
             ref object state, DataObjectCache dataObjectCache)
         {
             RunChangeCustomizationString(customizationStruct.LoadingTypes);
-            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(this))
+            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(GetConnection()))
             {
                 return LoadObjectsByExtConn(customizationStruct, ref state, dataObjectCache, dbTransactionWrapper);
             }
@@ -117,7 +117,7 @@
             Type doType = dataObject.GetType();
             RunChangeCustomizationString(new Type[] { doType });
 
-            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(this))
+            using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(GetConnection()))
             {
                 LoadObjectByExtConn(dataObjectView, dataObject, clearDataObject, checkExistingObject, dataObjectCache, dbTransactionWrapper.Connection, dbTransactionWrapper.Transaction);
             }
