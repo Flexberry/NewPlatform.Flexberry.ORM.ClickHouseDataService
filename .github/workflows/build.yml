@@ -43,11 +43,6 @@ jobs:
       # The lowest version gets installed first in order to prevent
       # "a newer version is already installed" install errors.
 
-      - name: Install .NET Core 3.1
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 3.1.x
-
       # Building requires an up-to-date .NET SDK.
 
       - name: Install .NET 10.0
