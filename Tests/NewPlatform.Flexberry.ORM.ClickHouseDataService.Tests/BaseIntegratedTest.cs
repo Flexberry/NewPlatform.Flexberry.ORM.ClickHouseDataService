@@ -152,7 +152,7 @@ namespace NewPlatform.ClickHouseDataService.Tests
         /// <returns>The <see cref="ClickHouseDataService"/> instance.</returns>
         protected virtual ClickHouseDataService CreateClickHouseDataService(string connectionString)
         {
-            return new ClickHouseDataService { CustomizationString = connectionString };
+            return new ClickHouseDataService(new ICSSoft.STORMNET.Security.EmptySecurityManager(), new ICSSoft.STORMNET.Business.Audit.EmptyAuditService(), new EmptyBusinessServerProvider()) { CustomizationString = connectionString };
         }
 
         /// <summary>
