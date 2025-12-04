@@ -123,6 +123,44 @@
             }
         }
 
+        /// <inheritdoc/>
+        public override object[][] ReadFirstByExtConn(string query, ref object state, int loadingBufferSize, IDbConnection connection, IDbTransaction transaction)
+        {
+            object taskid = BusinessTaskMonitor.BeginTask("Reading data" + Environment.NewLine + query);
+            try
+            {
+                using (IDbCommand myCommand = connection.CreateCommand())
+                {
+                    myCommand.CommandText = query;
+                    myCommand.Transaction = transaction;
+                    CustomizeCommand(myCommand);
+                    // Отличие во фрагменте ниже. ClickHouse.ADO не справлялся с закрытием коннекции через using из-за закрытия коннекции в ReadNextByExtConn.
+                    IDataReader myReader = myCommand.ExecuteReader();
+                    try
+                    {
+                        myReader.NextResult();
+                        state = new object[] { connection, myReader };
+                        return ReadNextByExtConn(ref state, loadingBufferSize);
+                    }
+                    finally
+                    {
+                        if (!myReader.IsClosed) // Может быть закрыто в ReadNextByExtConn.
+                        {
+                            myReader.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new ExecutingQueryException(query, string.Empty, e);
+            }
+            finally
+            {
+                BusinessTaskMonitor.EndTask(taskid);
+            }
+        }
+
         /// <summary>
         /// Изменить строку соединения, согласно делегату <see cref="ChangeCustomizationString"/>.
         /// Копия private-метода из <see cref="SQLDataService"/>.
@@ -132,6 +170,21 @@
         {
             if (!DoNotChangeCustomizationString && ChangeCustomizationString != null)
             {
+                string cs = ChangeCustomizationString(types);
+                CustomizationString = string.IsNullOrEmpty(cs) ? CustomizationString : cs;
+            }
+        }
+
+        /// <summary>
+        /// Изменить строку соединения, согласно делегату <see cref="ChangeCustomizationString"/>.
+        /// Копия private-метода из <see cref="SQLDataService"/>.
+        /// </summary>
+        /// <param name="dataObjects">Загружаемые объекты - по списку их типов будет изменена строка соединения.</param>
+        private void RunChangeCustomizationString(DataObject[] dataObjects)
+        {
+            if (!DoNotChangeCustomizationString && ChangeCustomizationString != null)
+            {
+                var types = dataObjects.Select(x => x.GetType()).Distinct().ToArray();
                 string cs = ChangeCustomizationString(types);
                 CustomizationString = string.IsNullOrEmpty(cs) ? CustomizationString : cs;
             }
@@ -418,27 +471,22 @@
         }
 
         /// <inheritdoc/>
-        public override void UpdateObjects(ref DataObject[] objects, DataObjectCache DataObjectCache, bool AlwaysThrowException)
+        public override void UpdateObjects(ref DataObject[] objects, DataObjectCache dataObjectCache, bool alwaysThrowException)
         {
-            if (!DoNotChangeCustomizationString && ChangeCustomizationString != null)
-            {
-                var tps = new List<Type>();
-                foreach (DataObject d in objects)
-                {
-                    Type t = d.GetType();
-                    if (!tps.Contains(t))
-                    {
-                        tps.Add(t);
-                    }
-                }
-
-                string cs = ChangeCustomizationString(tps.ToArray());
-                CustomizationString = string.IsNullOrEmpty(cs) ? CustomizationString : cs;
-            }
+            RunChangeCustomizationString(objects);
 
             using (EmptyDbTransactionWrapper dbTransactionWrapper = new EmptyDbTransactionWrapper(GetConnection()))
             {
-                UpdateObjectsByExtConn(ref objects, DataObjectCache, AlwaysThrowException, dbTransactionWrapper);
+                try
+                {
+                    UpdateObjectsByExtConn(ref objects, dataObjectCache, alwaysThrowException, dbTransactionWrapper);
+                    dbTransactionWrapper.CommitTransaction();
+                }
+                catch (Exception ex)
+                {
+                    dbTransactionWrapper.RollbackTransaction();
+                    throw;
+                }
             }
         }
 

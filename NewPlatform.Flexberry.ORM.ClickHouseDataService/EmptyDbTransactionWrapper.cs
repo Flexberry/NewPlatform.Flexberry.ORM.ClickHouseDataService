@@ -57,5 +57,19 @@
 
             base.Dispose();
         }
+
+        /// <inheritdoc/>
+        public override IDbCommand CreateCommand(string sql = null)
+        {
+            //  Полная копия метода из DbTransactionWrapper, чтобы корректно отрабатывало Transaction.
+            var cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            if (sql != null)
+            {
+                cmd.CommandText = sql;
+            }
+
+            return cmd;
+        }
     }
 }
