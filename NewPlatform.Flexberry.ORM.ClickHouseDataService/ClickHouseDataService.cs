@@ -138,7 +138,7 @@
                     IDataReader myReader = myCommand.ExecuteReader();
                     try
                     {
-                        myReader.NextResult();
+                        myReader.NextResult(); // Метод отличается от оригинального этой строкой. Требуется принудительное чтение, чтобы не вернулся пустой массив.
                         state = new object[] { connection, myReader };
                         return ReadNextByExtConn(ref state, loadingBufferSize);
                     }
@@ -405,7 +405,7 @@
                 CustomizeCommand(command);
 
                 reader = command.ExecuteReader();
-                reader.NextResult();
+                reader.NextResult(); // Метод отличается от оригинального этой строкой. Требуется принудительное чтение, чтобы не вернулся пустой массив.
                 state = new object[] { connection, reader };
                 return ReadNext(ref state, loadingBufferSize);
             }
