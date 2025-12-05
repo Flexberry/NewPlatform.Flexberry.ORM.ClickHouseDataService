@@ -9,5 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Fix paging.
 
 ### Changed
+* Updated `NewPlatform.Flexberry.ORM` up to `7.2.0`.
+* Updated `NewPlatform.Flexberry.ClickHouse.Ado` up to `1.3.1`.
 
 
