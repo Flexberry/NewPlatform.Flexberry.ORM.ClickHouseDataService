@@ -23,9 +23,6 @@
 
   <PropertyGroup>
     <Configurations>Debug;Release</Configurations>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>
-      .dll;.xml;
-    </AllowedOutputExtensionsInPackageBuildOutputFolder>
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
